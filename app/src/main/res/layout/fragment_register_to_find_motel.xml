@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="status"
+                type="com.emglab.qlsv.common.Status" />
+        <variable
+                name="locationName"
+                type="String" />
+        <variable
+                name="address"
+                type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".modules.searchMotel.fragments.RegisterToFindMotelFragment"
+            tools:ignore="HardcodedText">
+
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="Vị trí, khu vực"
+                        android:textColor="@color/ink500"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/locationLayout2"
+                        style="@style/MainTextLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Vị trí"
+                        app:endIconDrawable="@drawable/ic_add_location"
+                        app:endIconMode="custom">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/locationText"
+                            android:text="@{locationName}"
+                            android:maxLines="3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/radiusLayout"
+                        style="@style/MainTextLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="Bán kính"
+                        app:placeholderText="Nhập bán kính (đơn vị mét)">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/radiusText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:text="" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/addressLayout"
+                        style="@style/MainTextLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="Khu vực"
+                        app:placeholderText="">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/addressText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="2"
+                            android:text="@{address}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="4dp"
+                        android:text="Thông tin nhà trọ"
+                        android:textColor="@color/ink500"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/typeTil"
+                        style="@style/MainTextLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Loại nhà trọ"
+                        app:endIconDrawable="@drawable/ic_arrow_down"
+                        app:endIconMode="custom">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:maxLines="2" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/numberOfPeopleLayout"
+                        style="@style/MainTextLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="Số người ở"
+                        app:placeholderText="Nhập số người ở cùng bạn">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/numberPeopleText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:text="" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:text="Giá cho thuê"
+                            android:textColor="@color/ink500"
+                            android:textSize="14sp" />
+
+                    <TextView
+                            android:id="@+id/priceLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:text="1.000.000 đ - 2.000.000 đ"
+                            android:textColor="@color/ink500"
+                            android:textSize="16sp" />
+                </LinearLayout>
+
+                <com.google.android.material.slider.RangeSlider
+                        android:id="@+id/priceSlider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stepSize="100000"
+                        android:valueFrom="0"
+                        android:valueTo="6000000"
+                        app:values="@array/initial_slider_values" />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="4dp"
+                        android:text="Thời gian cần có phòng"
+                        android:textColor="@color/ink500"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/startDateLayout"
+                            style="@style/MainTextLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="6dp"
+                            android:layout_weight="1"
+                            android:hint="Từ"
+                            app:endIconDrawable="@drawable/ic_calendar"
+                            app:endIconMode="custom">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/endDateLayout"
+                            style="@style/MainTextLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="1"
+                            android:hint="Đến"
+                            app:endIconDrawable="@drawable/ic_calendar"
+                            app:endIconMode="custom">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="4dp"
+                        android:text="Yêu cầu"
+                        android:textColor="@color/ink500"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                <LinearLayout
+                        android:id="@+id/requestsLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="vertical" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/otherRequestLayout"
+                        style="@style/MainTextLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Yêu cầu khác"
+                        app:placeholderText="">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/otherRequestText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="3"
+                            android:text="" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="4dp"
+                        android:text="Bạn có muốn ở ghép với người khác?"
+                        android:textColor="@color/ink500"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/liveWithOtherCheckbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Đồng ý" />
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <com.google.android.material.button.MaterialButton
+                            android:id="@+id/saveButton"
+                            style="@style/ButtonNoInset"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:text="Gửi đăng kí"
+                            android:textAllCaps="false"
+                            app:cornerRadius="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <include
+                layout="@layout/loading_action_state"
+                app:status="@{status}" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

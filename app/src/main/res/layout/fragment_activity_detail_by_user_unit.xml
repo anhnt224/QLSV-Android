@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.emglab.qlsv.common.Status" />
+
+        <import type="com.emglab.qlsv.common.Resource" />
+
+        <import type="com.emglab.qlsv.models.entity.Activity" />
+
+        <variable
+                name="userActivity"
+                type="com.emglab.qlsv.models.entity.UserActivity" />
+
+        <variable
+                name="activityResource"
+                type="Resource" />
+
+        <variable
+                name="assignActivityResource"
+                type="Resource" />
+
+        <variable
+                name="retryCallback"
+                type="com.emglab.qlsv.common.RetryCallback" />
+
+        <variable
+                name="logoutCallback"
+                type="com.emglab.qlsv.common.LogoutCallback" />
+
+        <variable
+                name="mActivity"
+                type="Activity" />
+
+        <variable
+                name="activityStatic"
+                type="com.emglab.qlsv.models.entity.UserActivity.Companion" />
+
+        <variable
+                name="viewmodel"
+                type="com.emglab.qlsv.ui.viewmodels.activity.ActivityDetailByUserUnitViewModel" />
+    </data>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.fragments.activity.ActivityDetailFragment">
+
+        <RelativeLayout
+                app:goneUnless="@{activityResource.status == Status.SUCCESS_NETWORK}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                    android:id="@+id/lineMain"
+                    android:background="@color/mainBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/view1"
+                    android:layout_marginBottom="-2dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                            android:id="@+id/people_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:cardBackgroundColor="@android:color/white"
+                            app:cardCornerRadius="4dp"
+                            app:cardElevation="4dp"
+                            app:contentPaddingBottom="8dp"
+                            app:contentPaddingLeft="8dp"
+                            app:contentPaddingRight="8dp"
+                            app:contentPaddingTop="8dp">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                            <ImageView
+                                    android:id="@+id/imgEvent"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:adjustViewBounds="true"
+                                    android:background="@color/colorBlack"
+                                    android:visibility="gone"
+                                    tools:ignore="ContentDescription" />
+
+                            <RelativeLayout
+                                    android:id="@+id/relativeMain"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                <TextView
+                                        android:id="@+id/txtClassId"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="12dp"
+                                        android:paddingLeft="3dp"
+                                        android:text="@{mActivity.name}"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="20sp"
+                                        android:gravity="center"
+                                        tools:text="Nghiên cứu khoa học"
+                                        tools:ignore="RtlHardcoded" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/relative1"
+                                    android:layout_marginTop="8dp"
+                                    android:paddingRight="16dp"
+                                    tools:ignore="ObsoleteLayoutParam,RtlHardcoded">
+
+                                <TextView
+                                        android:id="@+id/imgTime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Thời gian: "
+                                        tools:ignore="HardcodedText" />
+
+                                <TextView
+                                        android:id="@+id/txtTime"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toRightOf="@+id/imgTime"
+                                        android:paddingLeft="4dp"
+                                        android:paddingRight="4dp"
+                                        android:text="@{mActivity.timeStartAndFinishText()}"
+                                        android:textColor="@color/colorRed"
+                                        tools:text="10:15 - 12:15" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+
+                                    android:layout_marginTop="4dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/relative1"
+                                    android:paddingRight="16dp"
+                                    tools:ignore="ObsoleteLayoutParam,RtlHardcoded">
+
+                                <TextView
+                                        android:text="Địa điểm: "
+                                        android:id="@+id/imgPlace"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@mipmap/ic_location"
+                                        tools:ignore="HardcodedText" />
+
+                                <TextView
+                                        android:id="@+id/txtAPlace"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toRightOf="@+id/imgPlace"
+                                        android:paddingLeft="4dp"
+                                        android:paddingRight="4dp"
+                                        android:text="@{mActivity.place}"
+                                        android:textColor="@color/colorBlack"
+                                        tools:text="C9-419" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:layout_marginTop="4dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/relative1"
+                                    android:paddingRight="16dp">
+
+                                <TextView
+                                        android:text="Tổ chức: "
+                                        android:id="@+id/imgGroup"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:src="@mipmap/ic_home_red" />
+
+                                <TextView
+                                        android:id="@+id/txtAGroup"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toRightOf="@+id/imgGroup"
+                                        android:paddingLeft="4dp"
+                                        android:paddingRight="4dp"
+                                        android:text="@{mActivity.gName}"
+                                        android:textColor="@color/colorBlack"
+                                        tools:text="C9-419" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:layout_marginTop="4dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/relative1"
+                                    android:paddingRight="16dp">
+
+                                <TextView
+                                        android:text="Hạn nộp MC: "
+                                        android:id="@+id/textDeadline"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:src="@mipmap/ic_home_red" />
+
+                                <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toRightOf="@+id/textDeadline"
+                                        android:paddingLeft="4dp"
+                                        android:paddingRight="4dp"
+                                        android:text="@{mActivity.getDeadlineStr()}"
+                                        android:textColor="@color/colorBlack"
+                                        tools:text="C9-419" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:paddingRight="16dp">
+
+
+                                <TextView
+                                        android:id="@+id/txtCriteriaText"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="4dp"
+                                        android:paddingRight="4dp"
+                                        android:text="Các tiêu chí ứng với hoạt động"
+                                        android:textColor="@color/colorBlue2"
+                                        android:textSize="16sp" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:cardBackgroundColor="@android:color/white"
+                            app:cardCornerRadius="4dp"
+                            app:cardElevation="4dp"
+                            app:contentPaddingBottom="8dp"
+                            app:contentPaddingLeft="8dp"
+                            app:contentPaddingRight="8dp"
+                            app:contentPaddingTop="8dp">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                            <RelativeLayout
+                                    android:visibility="gone"
+                                    android:id="@+id/relativeUser"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                <ImageView
+                                        android:id="@+id/imgEven"
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:layout_centerVertical="true"
+                                        android:src="@drawable/ic_member_blue" />
+
+                                <TextView
+                                        android:id="@+id/txtEventText"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="4dp"
+                                        android:layout_toRightOf="@+id/imgEven"
+                                        android:paddingLeft="4dp"
+                                        android:paddingRight="4dp"
+                                        android:text="Thành viên"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+
+                                <TextView
+                                        android:id="@+id/txtEventTextDetail"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:paddingLeft="4dp"
+                                        android:text="Chi tiết"
+                                        android:textColor="@color/colorBlue2"
+                                        android:textSize="16sp" />
+
+                            </RelativeLayout>
+
+
+
+                            <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:paddingRight="8dp">
+                                <TextView
+                                        android:id="@+id/txtADescText"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:paddingLeft="4dp"
+                                        android:paddingRight="4dp"
+                                        android:text="Thông tin chi tiết"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="18sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:paddingRight="16dp">
+
+                                <TextView
+                                        android:gravity="fill_horizontal"
+                                        android:id="@+id/txtADesc"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="3dp"
+                                        android:paddingRight="4dp"
+                                        android:textColor="@color/colorBlack"
+                                        app:htmlText="@{mActivity.desc}"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                        tools:text="Sinh viên nghiên cứu khoa học" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <View
+
+                    android:layout_above="@+id/relativeBotttom"
+                    android:id="@+id/view1"
+                    android:background="@color/iron"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp">
+
+            </View>
+
+            <RelativeLayout
+                    android:layout_margin="8dp"
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/relativeBotttom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                <Button
+                        android:visibility="gone"
+                        android:layout_centerInParent="true"
+                        android:textAllCaps="false"
+                        android:background="@drawable/border_button_main"
+                        android:layout_gravity="center"
+                        android:text="Public hoạt động"
+                        android:textColor="@color/colorWhite"
+                        android:id="@+id/btnApproveActivity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                <com.google.android.material.button.MaterialButton
+                        app:goneUnless="@{userActivity.registerAvailable()}"
+                        android:layout_centerInParent="true"
+                        android:textAllCaps="false"
+                        android:layout_gravity="center"
+                        android:text="Đăng kí"
+                        android:textColor="@color/colorWhite"
+                        android:id="@+id/btnAssignUserActivity"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"/>
+                <com.google.android.material.button.MaterialButton
+                        app:goneUnless="@{userActivity.proofAvailable()}"
+                        android:layout_centerInParent="true"
+                        android:textAllCaps="false"
+                        android:layout_gravity="center"
+                        android:text="Minh chứng tham gia"
+                        android:textColor="@color/colorWhite"
+                        android:id="@+id/btnNextToUserActivityInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+<!--        <include-->
+<!--                android:layout_centerInParent="true"-->
+<!--                layout="@layout/loading_action_state"-->
+<!--                app:resource="@{assignActivityResource}"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent" />-->
+
+<!--        <include-->
+<!--                android:layout_centerInParent="true"-->
+<!--                layout="@layout/error_token"-->
+<!--                app:resource="@{activityResource}"-->
+<!--                app:callback="@{() -> logoutCallback.logout()}"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent" />-->
+
+<!--        <include-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                layout="@layout/loading_state"-->
+<!--                app:callback="@{() -> retryCallback.retry()}"-->
+<!--                app:resource="@{activityResource}"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content" />-->
+
+
+    </RelativeLayout>
+</layout>

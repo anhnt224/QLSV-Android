@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.instacart.truetime-android:library:master-SNAPSHOT@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ec69aebea83c487c2434b5634b804f8e/jetified-library-master-SNAPSHOT/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ec69aebea83c487c2434b5634b804f8e/jetified-library-master-SNAPSHOT/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ec69aebea83c487c2434b5634b804f8e/jetified-library-master-SNAPSHOT/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.instacart.truetime-android/library/master-SNAPSHOT/b1f4131a9daeb1b3d641761f9d1c303b741be35f/library-master-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

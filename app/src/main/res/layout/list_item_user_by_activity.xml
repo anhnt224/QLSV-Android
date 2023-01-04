@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@color/colorWhite"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+
+            android:layout_marginTop="8dp"
+            android:id="@+id/relativeMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ImageView
+                android:padding="4dp"
+                tools:src="@drawable/ic_group_blue"
+                android:layout_marginLeft="16dp"
+                android:id="@+id/imgGName"
+                android:layout_gravity="center_vertical"
+                android:layout_width="45dp"
+                android:layout_height="45dp"/>
+        <RelativeLayout
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="75dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:id="@+id/txtFullName"
+                    tools:text="Đinh Văn Nam"
+                    android:layout_toLeftOf="@+id/btnCheck"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"/>
+            <TextView
+                    tools:text="Số lần check: 5"
+                    android:textColor="@color/half_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:id="@+id/txtNumberCheck"
+                    android:layout_below="@+id/txtFullName" />
+
+            <TextView
+                    tools:text="Lần check gần nhất: 22/05/2019 11:31:55"
+                    android:textColor="@color/half_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:id="@+id/txtCheckInTime"
+                    android:layout_below="@+id/txtNumberCheck" />
+            <TextView
+                    tools:text="Quản lý"
+                    android:textColor="@color/colorBlue2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:id="@+id/txtUserRole"
+                    android:layout_below="@+id/txtCheckInTime" />
+            <Button
+                    android:visibility="gone"
+                    android:layout_marginRight="16dp"
+                    android:textSize="12sp"
+                    android:textAllCaps="false"
+                    android:id="@+id/btnCheck"
+                    android:text="Check"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/colorWhite"
+                    android:background="@drawable/border_button_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <View
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/relativeMain"
+            android:id="@+id/view4"
+            android:background="@color/iron"
+            android:layout_width="match_parent"
+            android:layout_height="1dp">
+    </View>
+
+    <!--<View-->
+            <!--android:visibility="gone"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_below="@+id/relativeMain"-->
+            <!--android:id="@+id/view5"-->
+            <!--android:background="@color/iron"-->
+            <!--android:layout_width="70dp"-->
+            <!--android:layout_height="1dp">-->
+    <!--</View>-->
+
+</RelativeLayout>

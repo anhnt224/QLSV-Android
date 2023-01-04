@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <import type="com.emglab.qlsv.common.Status" />
+
+        <import type="com.emglab.qlsv.common.Resource" />
+
+        <variable
+                name="aName"
+                type="String" />
+
+        <variable
+                name="userCheckInActivityResource"
+                type="Resource" />
+
+        <variable
+                name="checkInActivityResource"
+                type="Resource" />
+
+        <variable
+                name="retryCallback"
+                type="com.emglab.qlsv.common.RetryCallback" />
+
+        <variable
+                name="sizeList"
+                type="Integer" />
+
+    </data>
+
+
+    <RelativeLayout
+            android:background="@color/mainBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.fragments.activity.ActivityDetailFragment">
+
+        <RelativeLayout
+                app:goneUnless="@{userCheckInActivityResource.status == Status.SUCCESS_NETWORK}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+                    android:background="@color/mainBackground"
+                    android:layout_above="@+id/relativeBotttom"
+                    android:id="@+id/lineMain"
+                    android:layout_below="@+id/appbar"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:ignore="UnknownIdInLayout">
+<!--                <androidx.cardview.widget.CardView-->
+<!--                        android:id="@+id/people_card"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_margin="8dp"-->
+<!--                        app:cardBackgroundColor="@android:color/white"-->
+<!--                        app:cardCornerRadius="4dp"-->
+<!--                        app:cardElevation="4dp"-->
+<!--                        android:layout_marginBottom="8dp"-->
+<!--                        android:layout_marginLeft="8dp"-->
+<!--                        android:layout_marginRight="8dp"-->
+<!--                        app:contentPaddingBottom="16dp"-->
+<!--                        app:contentPaddingLeft="16dp"-->
+<!--                        app:contentPaddingRight="16dp"-->
+<!--                        app:contentPaddingTop="16dp">-->
+
+<!--                    <LinearLayout-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content">-->
+<!--                        <RelativeLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content">-->
+
+<!--                            <fragment-->
+<!--                                    android:id="@+id/map"-->
+<!--                                    android:name="com.google.android.gms.maps.SupportMapFragment"-->
+<!--                                    android:layout_width="180dp"-->
+<!--                                    android:layout_height="180dp"/>-->
+
+<!--                            <LinearLayout-->
+<!--                                    android:orientation="vertical"-->
+<!--                                    android:layout_marginLeft="188dp"-->
+<!--                                    android:id="@+id/relativeMain"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content">-->
+
+<!--                                <TextView-->
+<!--                                        android:text="Vị trí"-->
+<!--                                        android:id="@+id/txtLocationText"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_marginRight="12dp"/>-->
+
+<!--                                <TextView-->
+<!--                                        android:textStyle="bold"-->
+<!--                                        tools:text="Giải phóng, Hà Nội, Việt Nam"-->
+<!--                                        android:id="@+id/txtAddress"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:textColor="@color/colorBlue"/>-->
+<!--                            </LinearLayout>-->
+
+<!--                        </RelativeLayout>-->
+
+<!--                        <View-->
+<!--                                android:layout_marginTop="8dp"-->
+<!--                                android:background="@color/iron"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="1dp">-->
+<!--                        </View>-->
+
+<!--                        <TextView-->
+<!--                                android:text="@{aName}"-->
+<!--                                android:layout_marginTop="8dp"-->
+<!--                                tools:text="Giải phóng, Hà Nội, Việt Nam"-->
+<!--                                android:id="@+id/txtAName"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginRight="12dp"-->
+<!--                                android:textColor="@color/colorBlack"/>-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/people_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="4dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        app:contentPaddingBottom="8dp"
+                        app:contentPaddingLeft="8dp"
+                        app:contentPaddingRight="8dp"
+                        app:contentPaddingTop="8dp">
+
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        <LinearLayout
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            <ImageView
+                                    android:layout_weight="1"
+                                    android:id="@+id/imgActivity"
+                                    android:layout_width="0dp"
+                                    android:layout_height="160dp"
+                                    tools:ignore="ContentDescription" />
+
+                            <LinearLayout
+                                    android:padding="16dp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:layout_alignParentRight="true"
+                                    android:id="@+id/relativeMain"
+                                    android:layout_width="0dp"
+                                    android:gravity="center"
+                                    android:layout_height="match_parent"
+                                    tools:ignore="ObsoleteLayoutParam,RtlHardcoded">
+
+                                <com.google.android.material.button.MaterialButton
+                                        android:paddingLeft="8dp"
+                                        android:paddingRight="8dp"
+                                        android:textAllCaps="false"
+                                        android:text="Lấy ảnh minh chứng"
+                                        android:id="@+id/btnTakePhoto"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/colorWhite"
+                                        tools:ignore="HardcodedText" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                                android:layout_marginTop="8dp"
+                                android:background="@color/iron"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp">
+                        </View>
+
+                        <TextView
+                                android:text="@{aName}"
+                                android:textSize="16sp"
+                                android:layout_marginTop="8dp"
+                                tools:text="Giải phóng, Hà Nội, Việt Nam"
+                                android:id="@+id/txtClassId"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorBlack"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="4dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        app:contentPaddingBottom="8dp"
+                        app:contentPaddingLeft="8dp"
+                        app:contentPaddingRight="8dp"
+                        app:contentPaddingTop="0dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <include
+                                android:id="@+id/include"
+                                layout="@layout/loading_state"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                app:callback="@{() -> retryCallback.retry()}"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:resource="@{userCheckInActivityResource}" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/listUserCheckInActivityRecycler"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_above="@+id/btnCheckInActivity"
+                                android:layout_marginTop="44dp"
+                                app:goneUnless="@{userCheckInActivityResource.status == Status.SUCCESS_NETWORK}"
+                                app:layout_constraintBottom_toTopOf="@+id/btnCheckInActivity"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="1.0"
+                                tools:listitem="@layout/list_item_user_check_in_activity">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                        <androidx.cardview.widget.CardView
+                                android:visibility="gone"
+                                android:id="@+id/mapLayout"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:cardElevation="0dp"
+                                app:cardCornerRadius="8dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/listUserCheckInActivityRecycler"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/listUserCheckInActivityRecycler"
+                                app:layout_constraintTop_toTopOf="@+id/listUserCheckInActivityRecycler" >
+                            <com.google.android.gms.maps.MapView
+                                    android:id="@+id/mapView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"/>
+                        </androidx.cardview.widget.CardView>
+
+                        <com.google.android.material.button.MaterialButton
+                                android:enabled="false"
+                                android:id="@+id/btnCheckInActivity"
+                                android:layout_width="match_parent"
+                                android:layout_height="56dp"
+                                android:layout_alignParentBottom="true"
+                                android:text="CheckIn"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorWhite"
+                                app:goneUnless="@{userCheckInActivityResource.status == Status.SUCCESS_NETWORK}"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                tools:ignore="HardcodedText" />
+
+                        <TextView
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="18sp"
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:text="CheckIn hoạt động"
+                                app:layout_constraintBottom_toTopOf="@+id/listUserCheckInActivityRecycler"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="HardcodedText" />
+
+                        <com.google.android.material.button.MaterialButton
+                                android:id="@+id/buttonView"
+                                android:layout_width="48dp"
+                                android:layout_height="wrap_content"
+                                android:padding="0dp"
+                                app:iconGravity="textEnd"
+                                app:icon="@drawable/ic_map"
+                                android:gravity="center"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                app:layout_constraintBottom_toTopOf="@+id/listUserCheckInActivityRecycler"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                    android:layout_margin="16dp"
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/relativeBotttom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+<!--        <include-->
+<!--                android:layout_centerInParent="true"-->
+<!--                layout="@layout/loading_action_state"-->
+<!--                app:resource="@{checkInActivityResource}"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent" />-->
+    </RelativeLayout>
+
+
+</layout>

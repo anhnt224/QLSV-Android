@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="com.emglab.qlsv.common.Status"/>
+        <variable
+                name="status"
+                type="Status" />
+        <variable
+                name="uploadImage1"
+                type="Status" />
+        <variable
+                name="uploadImage2"
+                type="Status" />
+        <variable
+                name="uploadImage3"
+                type="Status" />
+        <variable
+                name="imagePaths"
+                type="java.util.List&lt;String>" />
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.fragments.gift.CreateGiftFragment">
+
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Thông tin quà tặng"
+                        android:textSize="16sp"
+                        android:textColor="@color/textColorPrimary"
+                        tools:ignore="HardcodedText" />
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/giftNameLayout"
+                        android:layout_marginTop="8dp"
+                        android:hint="@string/gift_name_hint"
+                        style="@style/MainTextLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/giftName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/giftTypeLayout"
+                        android:layout_marginTop="8dp"
+                        android:hint="@string/gift_type_hint"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxCornerRadiusBottomStart="8dp"
+                        app:boxCornerRadiusBottomEnd="8dp"
+                        app:boxCornerRadiusTopEnd="8dp"
+                        app:boxCornerRadiusTopStart="8dp"
+                        >
+                    <AutoCompleteTextView
+                            android:id="@+id/giftTypeTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/giftQuantityLayout"
+                        android:layout_marginTop="8dp"
+                        android:hint="@string/gift_quantity_hint"
+                        style="@style/MainTextLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/giftQuantity"
+                            android:inputType="number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/deadlineLayout"
+                        android:layout_marginTop="8dp"
+                        android:hint="@string/gift_deadline_hint"
+                        style="@style/MainTextLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:endIconMode="custom"
+                        app:endIconDrawable="@drawable/ic_calendar_black_24dp"
+                        >
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/deadLineEditText"
+                            android:focusable="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/giftDescriptionLayout"
+                        android:layout_marginTop="8dp"
+                        android:hint="@string/gift_description_hint"
+                        style="@style/MainTextLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/giftDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="5"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                        android:layout_marginTop="12sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ảnh quà tặng"
+                        android:textSize="16sp"
+                        android:textColor="@color/textColorPrimary"
+                        tools:ignore="HardcodedText" />
+
+                <HorizontalScrollView
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        <androidx.cardview.widget.CardView
+                                goneUnless="@{!imagePaths[0].isEmpty()}"
+                                android:id="@+id/image1Layout"
+                                app:cardElevation="0dp"
+                                app:cardCornerRadius="8dp"
+                                android:layout_width="96dp"
+                                android:layout_height="128dp">
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:background="@drawable/list_item_gift_bg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                <ImageView
+                                        android:id="@+id/image1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+
+                                <com.google.android.material.button.MaterialButton
+                                        android:id="@+id/deleteImage1"
+                                        style="@style/TextButtonNoInset"
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_marginEnd="4dp"
+                                        android:layout_marginRight="4dp"
+                                        app:backgroundTint="@color/colorWhite25"
+                                        app:cornerRadius="16dp"
+                                        app:icon="@drawable/ic_close"
+                                        app:iconSize="24dp"
+                                        android:paddingStart="4dp"
+                                        android:paddingEnd="0dp"
+                                        app:iconGravity="textStart"
+                                        android:text=""
+                                        app:iconTint="@color/colorWhite"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                <include
+                                        app:status="@{uploadImage1}"
+                                        layout="@layout/loading_action_state"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                                goneUnless="@{!imagePaths[1].isEmpty()}"
+                                android:id="@+id/image2Layout"
+                                android:layout_marginStart="8dp"
+                                app:cardElevation="0dp"
+                                app:cardCornerRadius="8dp"
+                                android:layout_width="96dp"
+                                android:layout_height="128dp">
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:background="@drawable/list_item_gift_bg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                <ImageView
+                                        android:id="@+id/image2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+
+                                <com.google.android.material.button.MaterialButton
+                                        android:id="@+id/deleteImage2"
+                                        style="@style/TextButtonNoInset"
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_marginEnd="4dp"
+                                        android:layout_marginRight="4dp"
+                                        app:backgroundTint="@color/colorWhite25"
+                                        app:cornerRadius="16dp"
+                                        app:icon="@drawable/ic_close"
+                                        app:iconSize="24dp"
+                                        android:paddingStart="4dp"
+                                        android:paddingEnd="0dp"
+                                        app:iconGravity="textStart"
+                                        android:text=""
+                                        app:iconTint="@color/colorWhite"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                <include
+                                        app:status="@{uploadImage2}"
+                                        layout="@layout/loading_action_state"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                                goneUnless="@{!imagePaths[2].isEmpty()}"
+                                android:id="@+id/image3Layout"
+                                android:layout_marginStart="8dp"
+                                app:cardElevation="0dp"
+                                app:cardCornerRadius="8dp"
+                                android:layout_width="96dp"
+                                android:layout_height="128dp">
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:background="@drawable/list_item_gift_bg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                <ImageView
+                                        android:id="@+id/image3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+
+                                <com.google.android.material.button.MaterialButton
+                                        android:id="@+id/deleteImage3"
+                                        style="@style/TextButtonNoInset"
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_marginEnd="4dp"
+                                        android:layout_marginRight="4dp"
+                                        app:backgroundTint="@color/colorWhite25"
+                                        app:cornerRadius="16dp"
+                                        app:icon="@drawable/ic_close"
+                                        app:iconSize="24dp"
+                                        android:paddingStart="4dp"
+                                        android:paddingEnd="0dp"
+                                        app:iconGravity="textStart"
+                                        android:text=""
+                                        app:iconTint="@color/colorWhite"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                <include
+                                        app:status="@{uploadImage3}"
+                                        layout="@layout/loading_action_state"/>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                                goneUnless="@{imagePaths[0].isEmpty() || imagePaths[1].isEmpty() || imagePaths[2].isEmpty()}"
+                                android:id="@+id/addImageLayout"
+                                app:cardBackgroundColor="@color/mainBackground"
+                                android:layout_marginStart="8dp"
+                                app:cardElevation="0dp"
+                                app:cardCornerRadius="8dp"
+                                android:layout_width="64dp"
+                                android:layout_height="128dp">
+                            <LinearLayout
+                                    android:orientation="vertical"
+                                    android:background="@drawable/take_picture_bg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center">
+                                <LinearLayout
+                                        android:id="@+id/addImage"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        tools:ignore="Suspicious0dp"
+                                        android:orientation="horizontal" />
+                                <ImageView
+                                        app:tint="@color/textColorPrimaryLight"
+                                        android:src="@drawable/ic_round_add"
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"/>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Thông tin nhận quà"
+                        android:textSize="16sp"
+                        android:textColor="@color/textColorPrimary"
+                        tools:ignore="HardcodedText" />
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/addressLayout"
+                        android:layout_marginTop="8dp"
+                        android:hint="@string/gift_address_hint"
+                        style="@style/MainTextLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/receiveAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <CheckBox
+                        android:id="@+id/deliveryEnableCheckBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Gửi tận tay người nhận"
+                        tools:ignore="HardcodedText" />
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/timeStartLayout"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="6dp"
+                            android:hint="@string/time_start_hint"
+                            style="@style/MainTextLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:endIconMode="custom"
+                            app:endIconDrawable="@drawable/ic_clock"
+                            >
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/timeStartEditText"
+                                android:focusable="false"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="07:00"
+                                android:singleLine="true"
+                                tools:ignore="HardcodedText" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/dateStartLayout"
+                            android:layout_weight="1"
+                            android:hint="@string/date_start_hint"
+                            style="@style/MainTextLayout"
+                            android:layout_marginStart="6dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:endIconMode="custom"
+                            app:endIconDrawable="@drawable/ic_calendar_black_24dp"
+                            >
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/dateStartEditText"
+                                android:focusable="false"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+                <!--                <LinearLayout-->
+                <!--                        android:layout_marginTop="8dp"-->
+                <!--                        android:orientation="horizontal"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content">-->
+                <!--                    <com.google.android.material.textfield.TextInputLayout-->
+                <!--                            android:layout_weight="1"-->
+                <!--                            android:layout_marginEnd="6dp"-->
+                <!--                            android:hint="@string/time_end_hint"-->
+                <!--                            style="@style/MainTextLayout"-->
+                <!--                            android:layout_width="match_parent"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            app:endIconMode="custom"-->
+                <!--                            app:endIconDrawable="@drawable/ic_clock"-->
+                <!--                            >-->
+                <!--                        <com.google.android.material.textfield.TextInputEditText-->
+                <!--                                android:focusable="false"-->
+                <!--                                android:layout_width="match_parent"-->
+                <!--                                android:layout_height="wrap_content"-->
+                <!--                                android:singleLine="true"/>-->
+                <!--                    </com.google.android.material.textfield.TextInputLayout>-->
+                <!--                    <com.google.android.material.textfield.TextInputLayout-->
+                <!--                            android:layout_weight="1"-->
+                <!--                            android:hint="@string/date_end_hint"-->
+                <!--                            style="@style/MainTextLayout"-->
+                <!--                            android:layout_marginStart="6dp"-->
+                <!--                            android:layout_width="match_parent"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            app:endIconMode="custom"-->
+                <!--                            app:endIconDrawable="@drawable/ic_calendar_black_24dp"-->
+                <!--                            >-->
+                <!--                        <com.google.android.material.textfield.TextInputEditText-->
+                <!--                                android:focusable="false"-->
+                <!--                                android:layout_width="match_parent"-->
+                <!--                                android:layout_height="wrap_content"-->
+                <!--                                android:singleLine="true"/>-->
+                <!--                    </com.google.android.material.textfield.TextInputLayout>-->
+                <!--                </LinearLayout>-->
+                <TextView
+                        android:layout_marginTop="12sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Thông tin liên hệ"
+                        android:textSize="16sp"
+                        android:textColor="@color/textColorPrimary"
+                        tools:ignore="HardcodedText" />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textColorPrimaryLight"
+                        android:textSize="11sp"
+                        android:text="(Chỉ những người được nhận quà từ bạn mới có thể xem thông tin này để liên hệ nhận quà)"
+                        tools:ignore="HardcodedText" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/fullNameLayout"
+                        android:layout_marginTop="8dp"
+                        android:hint="@string/fullname_title"
+                        style="@style/MainTextLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fullName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/emailLayout"
+                        android:layout_marginTop="8dp"
+                        android:hint="@string/email_hint"
+                        style="@style/MainTextLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/phoneLayout"
+                        android:layout_marginTop="8dp"
+                        android:hint="@string/phone_hint"
+                        style="@style/MainTextLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/phoneNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/facebookLayout"
+                        android:layout_marginTop="8dp"
+                        android:hint="@string/link_hint"
+                        style="@style/MainTextLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/facbook"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                        android:id="@+id/createGift"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/create_gift_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        style="@style/MainButton"/>
+            </LinearLayout>
+        </ScrollView>
+        <include
+                app:status="@{status}"
+                layout="@layout/loading_action_state"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

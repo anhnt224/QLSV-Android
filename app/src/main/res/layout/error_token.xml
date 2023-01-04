@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.emglab.qlsv.common.Status" />
+
+        <import type="com.emglab.qlsv.common.Resource" />
+
+        <variable
+                name="resource"
+                type="Resource" />
+
+        <variable
+                name="callback"
+                type="com.emglab.qlsv.common.LogoutCallback" />
+    </data>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/default_margin"
+            app:goneUnless="@{resource.status == Status.ERROR_TOKEN}"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:text="@{@string/error_token_text}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/logout"
+                android:id="@+id/logout"
+                android:onClick="@{() -> callback.logout()}" />
+    </LinearLayout>
+</layout>
+

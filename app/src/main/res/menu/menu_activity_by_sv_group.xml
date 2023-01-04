@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_users"
+          android:title="Xin tham gia"
+          android:orderInCategory="100"
+          app:showAsAction="never"/>
+    <!--<item android:id="@+id/action_sv_group_by_id"-->
+          <!--android:title="Thông tin chi tiết"-->
+          <!--android:orderInCategory="100"-->
+          <!--app:showAsAction="never"/>-->
+
+</menu>

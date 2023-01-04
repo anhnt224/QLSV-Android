@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@color/colorWhite"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+            android:layout_marginTop="8dp"
+            android:id="@+id/relativeMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:padding="4dp"
+                tools:src="@drawable/ic_group_blue"
+                android:layout_marginLeft="16dp"
+                android:id="@+id/imgGName"
+                android:layout_gravity="center_vertical"
+                android:layout_width="45dp"
+                android:layout_height="45dp"/>
+
+        <RelativeLayout
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="75dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/txtGName"
+                    android:text="Lớp đt "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"/>
+
+
+            <TextView
+                    android:textColor="@color/half_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:id="@+id/txtUUStatus"
+                    android:layout_below="@+id/txtGName" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <View
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/relativeMain"
+            android:id="@+id/view4"
+            android:background="@color/iron"
+            android:layout_width="match_parent"
+            android:layout_height="1dp">
+    </View>
+
+</RelativeLayout>

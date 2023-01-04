@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+                name="status"
+                type="com.emglab.qlsv.common.Status" />
+        <variable
+                name="callback"
+                type="com.emglab.qlsv.common.RetryCallback" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.fragments.timetable.TimeTableFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/list_item_day_of_week"/>
+        <include
+                app:status="@{status}"
+                app:callback="@{callback}"
+            layout="@layout/layout_loading"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

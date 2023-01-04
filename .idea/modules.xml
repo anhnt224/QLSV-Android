@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/QLSV.iml" filepath="$PROJECT_DIR$/.idea/QLSV.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/QLSV.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/QLSV.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/QLSV.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/QLSV.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/QLSV.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/QLSV.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/QLSV.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/QLSV.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>

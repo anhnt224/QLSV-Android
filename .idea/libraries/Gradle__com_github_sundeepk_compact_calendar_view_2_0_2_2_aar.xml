@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.sundeepk:compact-calendar-view:2.0.2.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/88b638823ad4a1d045614e19b6fe20b6/jetified-compact-calendar-view-2.0.2.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/88b638823ad4a1d045614e19b6fe20b6/jetified-compact-calendar-view-2.0.2.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/88b638823ad4a1d045614e19b6fe20b6/jetified-compact-calendar-view-2.0.2.2/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.sundeepk/compact-calendar-view/2.0.2.2/bf6d5ba643ebc30d5609bb7bec157a5d226fd3b5/compact-calendar-view-2.0.2.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.sundeepk/compact-calendar-view/2.0.2.2/429a0e3fd94c146953a08b5aed32c1e1145ef133/compact-calendar-view-2.0.2.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

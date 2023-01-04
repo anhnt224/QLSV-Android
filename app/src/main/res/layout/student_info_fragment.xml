@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+                name="studentInfo"
+                type="com.emglab.qlsv.models.entity.StudentInfo" />
+        <variable
+                name="status"
+                type="com.emglab.qlsv.common.Status" />
+        <variable
+                name="callback"
+                type="com.emglab.qlsv.common.RetryCallback" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".teacher.fragment.student.StudentInfoFragment">
+
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+                    android:background="@color/mainBackground"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <LinearLayout
+                        android:background="@color/colorWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+                    <com.github.mikephil.charting.charts.LineChart
+                            android:layout_margin="8dp"
+                            android:id="@+id/lineChart"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:background="@color/colorWhite"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="vertical"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:minHeight="48dp"
+                            android:layout_height="wrap_content">
+                        <TextView
+                                android:layout_marginLeft="16dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_marginRight="8dp"
+                                android:textSize="@dimen/default_text_size"
+                                android:layout_height="wrap_content"
+                                android:text="Họ tên"/>
+
+                        <TextView
+                                android:textColor="@color/textColorPrimary"
+                                android:gravity="right"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="16dp"
+                                android:textSize="@dimen/default_text_size"
+                                android:layout_height="wrap_content"
+                                android:text="@{studentInfo.name}"/>
+                    </LinearLayout>
+
+                    <include
+                            layout="@layout/divider"
+                        />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:minHeight="48dp"
+                            android:layout_height="wrap_content">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="8dp"
+                                android:text="Giới tính"
+                                android:textSize="@dimen/default_text_size"
+                                tools:ignore="HardcodedText" />
+
+                        <TextView
+                                android:textColor="@color/textColorPrimary"
+                                android:gravity="right"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="16dp"
+                                android:textSize="@dimen/default_text_size"
+                                android:layout_height="wrap_content"
+                                android:text="@{studentInfo.sex}"/>
+                    </LinearLayout>
+
+                    <include
+                            layout="@layout/divider"
+                            />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:minHeight="48dp"
+                            android:layout_height="wrap_content">
+                        <TextView
+                                android:layout_marginLeft="16dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_marginRight="8dp"
+                                android:textSize="@dimen/default_text_size"
+                                android:layout_height="wrap_content"
+                                android:text="Ngày sinh"/>
+
+                        <TextView
+                                android:textColor="@color/textColorPrimary"
+                                android:gravity="right"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="16dp"
+                                android:textSize="@dimen/default_text_size"
+                                android:layout_height="wrap_content"
+                                android:text="@{studentInfo.birthDay}"/>
+                    </LinearLayout>
+
+                    <include
+                            layout="@layout/divider"
+                            />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:minHeight="48dp"
+                            android:layout_height="wrap_content">
+                        <TextView
+                                android:layout_marginLeft="16dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_marginRight="8dp"
+                                android:textSize="@dimen/default_text_size"
+                                android:layout_height="wrap_content"
+                                android:text="Email"/>
+
+                        <TextView
+                                android:textColor="@color/textColorPrimary"
+                                android:gravity="right"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="16dp"
+                                android:textSize="@dimen/default_text_size"
+                                android:layout_height="wrap_content"
+                                android:text="@{studentInfo.email}"/>
+                    </LinearLayout>
+
+                    <include
+                            layout="@layout/divider"
+                            />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:minHeight="48dp"
+                            android:layout_height="wrap_content">
+                        <TextView
+                                android:layout_marginLeft="16dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_marginRight="8dp"
+                                android:textSize="@dimen/default_text_size"
+                                android:layout_height="wrap_content"
+                                android:text="Quê quán"/>
+
+                        <TextView
+                                android:textColor="@color/textColorPrimary"
+                                android:gravity="right"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="16dp"
+                                android:textSize="@dimen/default_text_size"
+                                android:layout_height="wrap_content"
+                                android:text="@{studentInfo.address}"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:background="@color/colorWhite"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="vertical"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:minHeight="48dp"
+                            android:layout_height="wrap_content">
+                        <TextView
+                                android:layout_marginLeft="16dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_marginRight="8dp"
+                                android:textSize="@dimen/default_text_size"
+                                android:layout_height="wrap_content"
+                                android:text="Trạng thái học tập"/>
+
+                        <TextView
+                                android:textColor="@color/textColorPrimary"
+                                android:gravity="right"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="16dp"
+                                android:textSize="@dimen/default_text_size"
+                                android:layout_height="wrap_content"
+                                android:text="@{studentInfo.status}"/>
+                    </LinearLayout>
+
+                    <include
+                            layout="@layout/divider"
+                            />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:minHeight="48dp"
+                            android:layout_height="wrap_content">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="8dp"
+                                android:text="Viện"
+                                android:textSize="@dimen/default_text_size"
+                                tools:ignore="HardcodedText" />
+
+                        <TextView
+                                android:textColor="@color/textColorPrimary"
+                                android:gravity="right"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="16dp"
+                                android:textSize="@dimen/default_text_size"
+                                android:layout_height="wrap_content"
+                                android:text="@{studentInfo.faculty}"/>
+                    </LinearLayout>
+
+                    <include
+                            layout="@layout/divider"
+                            />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:minHeight="48dp"
+                            android:layout_height="wrap_content">
+                        <TextView
+                                android:layout_marginLeft="16dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_marginRight="8dp"
+                                android:textSize="@dimen/default_text_size"
+                                android:layout_height="wrap_content"
+                                android:text="Chương trình"/>
+
+                        <TextView
+                                android:textColor="@color/textColorPrimary"
+                                android:gravity="right"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="16dp"
+                                android:textSize="@dimen/default_text_size"
+                                android:layout_height="wrap_content"
+                                android:text="@{studentInfo.programType}"/>
+                    </LinearLayout>
+
+                    <include
+                            layout="@layout/divider"
+                            />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:minHeight="48dp"
+                            android:layout_height="wrap_content">
+                        <TextView
+                                android:layout_marginLeft="16dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_marginRight="8dp"
+                                android:textSize="@dimen/default_text_size"
+                                android:layout_height="wrap_content"
+                                android:text="Trình độ"/>
+
+                        <TextView
+                                android:textColor="@color/textColorPrimary"
+                                android:gravity="right"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="16dp"
+                                android:textSize="@dimen/default_text_size"
+                                android:layout_height="wrap_content"
+                                android:text="@{studentInfo.levelStudent}"/>
+                    </LinearLayout>
+
+                    <include
+                            layout="@layout/divider"
+                            />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:minHeight="48dp"
+                            android:layout_height="wrap_content">
+                        <TextView
+                                android:layout_marginLeft="16dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_marginRight="8dp"
+                                android:textSize="@dimen/default_text_size"
+                                android:layout_height="wrap_content"
+                                android:text="Mức cảnh cáo"/>
+
+                        <TextView
+                                android:textColor="@color/textColorPrimary"
+                                android:gravity="right"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="16dp"
+                                android:textSize="@dimen/default_text_size"
+                                android:layout_height="wrap_content"
+                                android:text="@{studentInfo.levelWarning}"/>
+                    </LinearLayout>
+
+                    <include
+                            layout="@layout/divider"
+                            />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:minHeight="48dp"
+                            android:layout_height="wrap_content">
+                        <TextView
+                                android:layout_marginLeft="16dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_marginRight="8dp"
+                                android:textSize="@dimen/default_text_size"
+                                android:layout_height="wrap_content"
+                                android:text="Tín chỉ tích luỹ"/>
+
+                        <TextView
+                                android:textColor="@color/textColorPrimary"
+                                android:gravity="right"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="16dp"
+                                android:textSize="@dimen/default_text_size"
+                                android:layout_height="wrap_content"
+                                android:text="@{studentInfo.sumTC}"/>
+                    </LinearLayout>
+
+                    <include
+                            layout="@layout/divider"
+                            />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:minHeight="48dp"
+                            android:layout_height="wrap_content">
+                        <TextView
+                                android:layout_marginLeft="16dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_marginRight="8dp"
+                                android:textSize="@dimen/default_text_size"
+                                android:layout_height="wrap_content"
+                                android:text="Tín chỉ nợ"/>
+
+                        <TextView
+                                android:textColor="@color/textColorPrimary"
+                                android:gravity="right"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="16dp"
+                                android:textSize="@dimen/default_text_size"
+                                android:layout_height="wrap_content"
+                                android:text="@{studentInfo.tcDue}"/>
+                    </LinearLayout>
+
+                    <include
+                            layout="@layout/divider"
+                            />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:minHeight="48dp"
+                            android:layout_height="wrap_content">
+                        <TextView
+                                android:layout_marginLeft="16dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_marginRight="8dp"
+                                android:textSize="@dimen/default_text_size"
+                                android:layout_height="wrap_content"
+                                android:text="CPA"/>
+
+                        <TextView
+                                android:textColor="@color/textColorPrimary"
+                                android:gravity="right"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="16dp"
+                                android:textSize="@dimen/default_text_size"
+                                android:layout_height="wrap_content"
+                                android:text="@{studentInfo.getCurrentCPA()}"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/viewNote"
+                        android:layout_marginBottom="32dp"
+                        android:background="@color/colorWhite"
+                        android:layout_width="match_parent"
+                        android:minHeight="48dp"
+                        android:layout_height="wrap_content">
+                    <TextView
+                            android:layout_marginLeft="16dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:textSize="@dimen/default_text_size"
+                            android:layout_height="wrap_content"
+                            android:text="Ghi chú"/>
+
+                    <TextView
+                            android:textColor="@color/textColorPrimary"
+                            android:gravity="right"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="16dp"
+                            android:textSize="@dimen/default_text_size"
+                            android:layout_height="wrap_content"
+                            android:text="..."/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <include
+                app:status="@{status}"
+                app:callback="@{callback}"
+            layout="@layout/layout_loading"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

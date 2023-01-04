@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+
+        android:paddingRight="32dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <RadioButton
+            android:text="Quản lý"
+            android:id="@+id/rbtnURName"
+            android:layout_toLeftOf="@+id/txtCGPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"/>
+
+</RelativeLayout>

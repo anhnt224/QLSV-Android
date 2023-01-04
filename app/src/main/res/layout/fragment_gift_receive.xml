@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+                name="number"
+                type="Integer" />
+        <variable
+                name="loadPublicGiftStatus"
+                type="com.emglab.qlsv.common.Status" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragments.gift.GiftReceiveFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    <include
+            app:status="@{loadPublicGiftStatus}"
+            layout="@layout/loading_action_state"/>
+    <include
+            app:number = "@{number}"
+            app:title ="@{`Chưa có thông tin quà tặng`}"
+            layout="@layout/layout_empty_data" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

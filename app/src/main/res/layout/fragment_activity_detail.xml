@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_above="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/imgEvent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:background="@color/colorBlack"
+                    tools:ignore="ContentDescription" />
+
+            <RelativeLayout
+                    android:id="@+id/relativeMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <LinearLayout
+                        android:background="@color/colorBlue2"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:padding="8dp"
+                        android:id="@+id/lineDay"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="RtlHardcoded">
+
+                </LinearLayout>
+
+                <TextView
+                        android:layout_marginTop="8dp"
+                        android:id="@+id/txtNameProduct"
+                        android:text="Bach Khoa open day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginRight="12dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+                <TextView
+                        android:textColor="@color/half_black"
+                        android:text="10:15 - 12:15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:textSize="12sp"
+                        android:id="@+id/txtUnitPrice"
+                        android:layout_below="@+id/txtNameProduct"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_below="@+id/relative1"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="ObsoleteLayoutParam">
+                <ImageView
+
+                        android:src="@mipmap/ic_even_grey"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/imgEven"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        tools:ignore="ContentDescription" />
+                <TextView
+                        android:text="@string/organizer"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_toRightOf="@+id/imgEven"
+                        android:id="@+id/txtEventText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack" />
+                <TextView
+                        android:text="20141032 - Ngô Quang Điện"
+                        android:layout_below="@+id/txtEventText"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_toRightOf="@+id/imgEven"
+                        android:id="@+id/txtIdUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack" />
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <ImageView
+
+                        android:src="@mipmap/ic_note_grey"
+
+                        android:id="@+id/imgNote"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp" />
+                <TextView
+                        android:layout_centerVertical="true"
+                        android:text="Nào các bạn, chia sẻ rộng rãi thông tin đến các em học sinh THPT nhé!
+
+👉 Chủ Nhật, ngày 17/3/2019
+👉 Khuôn viên Trường ĐHBK Hà Nội
+
+🎉🎉🎉 Cơ hội để các bạn thí sinh quan tâm tìm hiểu ngay những thông tin bổ ích, cập nhật nhất về mùa tuyển sinh năm 2019 và được các chuyên gia tư vấn, giải đáp trực tiếp mọi thắc mắc về ngành học quan tâm, chỉ tiêu tuyển sinh, chính sách ưu tiên trong tuyển sinh, quy định đăng ký xét tuyển, tuyển thẳng, phương thức xét tuyển, các thông tin về học phí hay “bí kíp” đăng ký xét tuyển hiệu quả, phù hợp nhất với mục tiêu cụ thể của từng thí sinh…
+
+🎉🎉🎉 Bên cạnh đó, bức tranh tổng quan về môi trường học tập, các ngành học, chương trình đào tạo, các hoạt động hợp tác đào tạo quốc tế, thông tin học bổng hay các hoạt động ngoại khóa của Trường ĐHBK Hà Nội cũng sẽ được giới thiệu đến thí sinh và phụ huynh trong các sự kiện này.,Nào các bạn, chia sẻ rộng rãi thông tin đến các em học sinh THPT nhé!
+
+👉 Chủ Nhật, ngày 17/3/2019
+👉 Khuôn viên Trường ĐHBK Hà Nội
+
+🎉🎉🎉 Cơ hội để các bạn thí sinh quan tâm tìm hiểu ngay những thông tin bổ ích, cập nhật nhất về mùa tuyển sinh năm 2019 và được các chuyên gia tư vấn, giải đáp trực tiếp mọi thắc mắc về ngành học quan tâm, chỉ tiêu tuyển sinh, chính sách ưu tiên trong tuyển sinh, quy định đăng ký xét tuyển, tuyển thẳng, phương thức xét tuyển, các thông tin về học phí hay “bí kíp” đăng ký xét tuyển hiệu quả, phù hợp nhất với mục tiêu cụ thể của từng thí sinh…
+
+🎉🎉🎉 Bên cạnh đó, bức tranh tổng quan về môi trường học tập, các ngành học, chương trình đào tạo, các hoạt động hợp tác đào tạo quốc tế, thông tin học bổng hay các hoạt động ngoại khóa của Trường ĐHBK Hà Nội cũng sẽ được giới thiệu đến thí sinh và phụ huynh trong các sự kiện này."
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_toRightOf="@+id/imgNote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <View
+            android:layout_marginBottom="8dp"
+            android:layout_above="@+id/lineBottom"
+            android:id="@+id/view1"
+            android:background="@color/iron"
+            android:layout_width="match_parent"
+            android:layout_height="1dp">
+
+    </View>
+
+    <LinearLayout
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"
+            android:id="@+id/lineBottom"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+                android:textColor="@color/colorBlue2"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="Tham gia"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:textColor="@color/colorBlue2"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="CheckIn"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:textColor="@color/colorBlue2"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="Tham gia"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</RelativeLayout>

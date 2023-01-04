@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/border_dialog"
+        android:layout_height="wrap_content">
+    <LinearLayout
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/imageDialog"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_share_motel"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"/>
+        <TextView
+                android:id="@+id/tittleTxt"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:text="Chia sẻ đánh giá về nhà trọ"
+                android:textColor="@color/textColorPrimary"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:id="@+id/messengerTxt"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bạn có sẵn sàng chia sẻ những thông tin, đánh giá về nhà trọ bạn đang ở cho iCTSV. Chúng tôi sử dụng thông tin này để .... "/>
+
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/skipButton"
+                android:text="Bỏ qua"
+                android:textAllCaps="false"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/agreeButton"
+                android:text="Thêm thông tin"
+                android:insetRight="0dp"
+                style="@style/MainButton"
+                android:insetTop="0dp"
+                android:insetLeft="0dp"
+                android:insetBottom="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginEnd="16dp"
+                android:textAllCaps="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+                name="student"
+                type="com.emglab.qlsv.models.entity.Student" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="2dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/materialCardView2"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/colorPrimary"
+                            app:cardBackgroundColor="@color/colorPrimary"
+                            app:cardCornerRadius="24dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:text="@{student.getFirstCharInName()}"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="24sp" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/materialCardView2"
+                            app:layout_constraintTop_toTopOf="parent">
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{student.name}"
+                                android:textSize="16sp"
+                                android:textColor="@color/textColorPrimary"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text='@{"MSSV: " + student.id}'
+                                android:textSize="14sp"
+                                android:layout_marginTop="2dp"
+                                android:textColor="@color/textColorPrimaryLight"/>
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text='@{"CPA: " + student.cpa}'
+                                android:textSize="14sp"
+                                android:textColor="@color/textColorPrimaryLight"/>
+                        <LinearLayout
+                                android:weightSum="2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            <TextView
+                                    android:id="@+id/textScore"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{student.getStudentScore()}"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/textColorPrimaryLight"/>
+                            <TextView
+                                    android:id="@+id/textTScore"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{student.getTScoreStr()}"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/textColorPrimaryLight"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/layoutWarning"
+                            android:layout_width="80dp"
+                            android:layout_height="32dp"
+                            app:cardCornerRadius="4dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginRight="24dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                                android:id="@+id/textWarning"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:text="@{student.warningLevel}"
+                                android:textColor="@color/colorWhite" />
+                    </com.google.android.material.card.MaterialCardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2dp"
+                        android:background="@color/lightGray"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="8dp"/>
+
+                <LinearLayout
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp">
+                    <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btInfo"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:text="Thông tin"
+                            app:icon="@drawable/ic_info_3"
+                            app:iconSize="20dp"
+                            android:textAllCaps="false"
+                            android:textSize="12sp"
+                            app:iconGravity="textStart"
+                            android:layout_height="wrap_content"/>
+                    <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btActivity"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:text="Hoạt động"
+                            app:iconSize="20dp"
+                            app:icon="@drawable/ic_round_emoji"
+                            android:textAllCaps="false"
+                            android:textSize="12sp"
+                            app:iconGravity="textStart"
+                            android:layout_height="wrap_content"/>
+                    <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btMark"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:text="Chấm điểm"
+                            app:iconSize="20dp"
+                            app:icon="@drawable/ic_round_add2"
+                            android:textAllCaps="false"
+                            android:textSize="12sp"
+                            app:iconGravity="textStart"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

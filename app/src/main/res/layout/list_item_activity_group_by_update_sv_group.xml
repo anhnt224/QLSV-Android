@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+        <variable
+                name="activityGroup"
+                type="com.emglab.qlsv.models.entity.ActivityGroup"/>
+        <variable
+                name="check"
+                type="Boolean"/>
+
+        <variable
+                name="clickListener"
+                type="android.view.View.OnClickListener"/>
+
+    </data>
+    <RelativeLayout
+            android:onClick="@{clickListener}"
+            android:paddingRight="32dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="RtlHardcoded,UnusedAttribute">
+
+        <ImageView
+                app:isGone="@{check}"
+                tools:src="@drawable/ic_radio_check"
+                android:id="@+id/imgCheck"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                tools:ignore="ContentDescription" />
+
+        <ImageView
+                app:isGone="@{check}"
+                tools:src="@drawable/ic_radio_uncheck"
+                android:id="@+id/imgUnCheck"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                tools:ignore="ContentDescription" />
+
+        <TextView
+                android:text="@{activityGroup.agDesc}"
+                android:textColor="@color/half_black"
+                tools:text="aaa"
+                android:layout_centerVertical="true"
+                android:paddingLeft="48dp"
+                android:id="@+id/txtAGDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+</layout>

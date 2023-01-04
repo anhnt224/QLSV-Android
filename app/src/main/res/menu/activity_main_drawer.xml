@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+            android:id="@+id/activityListFragment"
+            android:icon="@drawable/ic_action"
+            android:title="Hoạt động"/>
+
+    <!--        <item-->
+    <!--                android:id="@+id/SVGroupListByUserFragment"-->
+    <!--                android:icon="@drawable/ic_menu_group"-->
+    <!--                android:title="Nhóm"/>-->
+
+    <!--        <item-->
+    <!--                android:id="@+id/criteriaGroupListByUserFragment"-->
+    <!--                android:icon="@drawable/ic_menu_criteria"-->
+    <!--                android:title="Điểm rèn luyện"/>-->
+
+    <item
+            android:id="@+id/userInfoFragment"
+            android:icon="@drawable/ic_menu_account"
+            android:title="Tài khoản"/>
+
+<!--    <group android:checkableBehavior="single">-->
+<!--        <item-->
+<!--                android:id="@+id/activityListFragment"-->
+<!--                android:icon="@drawable/ic_action"-->
+<!--                android:title="Hoạt động"/>-->
+
+<!--&lt;!&ndash;        <item&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/SVGroupListByUserFragment"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:icon="@drawable/ic_menu_group"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:title="Nhóm"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <item&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/criteriaGroupListByUserFragment"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:icon="@drawable/ic_menu_criteria"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:title="Điểm rèn luyện"/>&ndash;&gt;-->
+
+<!--        <item-->
+<!--                android:id="@+id/userInfoFragment"-->
+<!--                android:icon="@drawable/ic_menu_account"-->
+<!--                android:title="Thông tin cá nhân"/>-->
+<!--    </group>-->
+
+    <!--<item android:title="Communicate">-->
+        <!--<menu>-->
+            <!--<item-->
+                    <!--android:id="@+id/nav_share"-->
+                    <!--android:icon="@drawable/ic_menu_share"-->
+                    <!--android:title="Share"/>-->
+            <!--<item-->
+                    <!--android:id="@+id/nav_send"-->
+                    <!--android:icon="@drawable/ic_menu_send"-->
+                    <!--android:title="Send"/>-->
+        <!--</menu>-->
+    <!--</item>-->
+
+</menu>

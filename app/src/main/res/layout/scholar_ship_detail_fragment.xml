@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+                name="scholarShip"
+                type="com.emglab.qlsv.models.entity.ScholarShip" />
+        <variable
+                name="resource"
+                type="com.emglab.qlsv.common.Resource" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.fragments.scholarShip.ScholarShipDetailFragment">
+
+        <ScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/mainBackground"
+                app:layout_constraintBottom_toTopOf="@+id/layoutAction"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:gravity="center"
+                                android:text='@{scholarShip.title}'
+                                android:textColor="@color/done"
+                                android:textSize="18sp" />
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="4dp"
+                                    android:gravity="top|left"
+                                    android:text="Loại:"
+                                    android:textSize="16dp" />
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text='@{scholarShip.typeInfo}'
+                                    android:textColor="@color/textColorPrimary"
+                                    android:textSize="16dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="4dp"
+                                    android:gravity="top|left"
+                                    android:text="Mô tả:"
+                                    android:textSize="16dp" />
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{scholarShip.description}"
+                                    android:textColor="@color/textColorPrimary"
+                                    android:textSize="16dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="4dp"
+                                    android:gravity="top|left"
+                                    android:text="Hạn đăng kí:"
+                                    android:textSize="16dp" />
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text='@{scholarShip.getDeadLine()}'
+                                    android:textColor="@color/textColorPrimary"
+                                    android:textSize="16dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="4dp"
+                                    android:gravity="top|left"
+                                    android:text="Số lượng:"
+                                    android:textSize="16dp" />
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{scholarShip.quantityStr}"
+                                    android:textColor="@color/textColorPrimary"
+                                    android:textSize="16dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="4dp"
+                                    android:gravity="top|left"
+                                    android:text="Giá trị:"
+                                    android:textSize="16dp" />
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text='@{scholarShip.price}'
+                                    android:textColor="@color/textColorPrimary"
+                                    android:textSize="16dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Thông tin chi tiết:"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="18sp" />
+
+                        <TextView
+                                android:id="@+id/textContent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{scholarShip.getScholarShipContent()}"
+                                android:textColor="@color/textColorPrimary"
+                                android:textSize="16sp" />
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+
+                goneUnless='@{!scholarShip.isExpired()}'
+                android:orientation="vertical"
+                android:id="@+id/layoutAction"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" >
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonApply"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="Đăng kí ngay"
+                    android:textAllCaps="false"
+                    android:gravity="center"/>
+        </LinearLayout>
+
+        <include
+
+                layout="@layout/loading_action_state"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:resource='@{resource}' />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

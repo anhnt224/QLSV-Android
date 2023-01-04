@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg"
+    android:layout_margin="32dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Sử dụng vị trí của bạn"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingStart="16sp"
+        android:paddingEnd="16sp"
+        android:textSize="14sp"
+        android:textColor="@color/textColorPrimaryLight"
+        android:gravity="center"
+        android:text="Luôn cho phép iCTSV sử dụng vị trí của bạn để ghi nhận hoạt động chạy bộ trên bản đồ một cách tự động"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingStart="16sp"
+        android:paddingEnd="16sp"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:textColor="@color/textColorPrimaryLight"
+        android:text="iCTSV sử dụng vị trí của bạn dưới ứng dụng nền để bật tính năng ghi nhận hoạt động chạy bộ ngay cả khi ứng dụng bị đóng hoặc không hoạt động."
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+    <LinearLayout
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:weightSum="2"
+        android:layout_marginTop="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancelButton"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Huỷ"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/dialog_cancel_button_bg"/>
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/doneButton"
+                android:layout_marginStart="8dp" android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/dialog_done_button_bg"
+                android:text="Đồng ý"/>
+
+    </LinearLayout>
+
+</LinearLayout>

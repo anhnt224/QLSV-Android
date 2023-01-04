@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+            android:id="@+id/home2Fragment"
+            android:icon="@drawable/ic_round_home"
+            android:title="iCTSV"/>
+
+    <item
+            android:id="@+id/messageListFragment"
+            android:icon="@drawable/ic_round_notification"
+            android:title="Thông báo"/>
+
+    <item
+            app:showAsAction="never"
+            android:id="@+id/scanQR"
+            android:title=""/>
+
+    <item
+            android:id="@+id/helpFragment"
+            android:icon="@drawable/ic_round_help"
+            android:title="Hỗ trợ"/>
+
+    <item
+            android:id="@+id/accountFragment"
+            android:icon="@drawable/ic_round_user"
+            android:title="Tài khoản"/>
+</menu>

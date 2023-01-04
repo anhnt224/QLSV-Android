@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="com.emglab.qlsv.models.entity.Motel"/>
+        <variable
+                name="motel"
+                type="Motel"/>
+    </data>
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/cardViewOpenMotelItem"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/border_motel_item"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{motel.motelTypeWithAddress}"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="8dp">
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_baseline_person_outline_24"
+                        android:layout_gravity="center"/>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text='@{motel.managerName + "-" + motel.managerContact}'
+                        tools:ignore="HardcodedText,RtlHardcoded,UseCompatTextViewDrawableXml"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="8dp">
+                <ImageView
+                        android:src="@drawable/ic_baseline_star_outline_24"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        tools:ignore="ContentDescription" />
+                <RatingBar
+                        android:id="@+id/ratingBar"
+                        android:layout_marginStart="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:numStars="5"
+                        android:stepSize="0.5"
+                        android:progressBackgroundTint="@color/grey"
+                        android:progressTint="@color/pending"
+                        />
+            </LinearLayout>
+
+            <TextView
+                    android:layout_marginStart="38dp"
+                    android:layout_marginEnd="12dp"
+                    android:maxLines="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="@{motel.description}"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

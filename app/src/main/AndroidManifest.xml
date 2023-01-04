@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        package="com.emglab.qlsv">
+
+    <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
+    <application
+            android:name="com.emglab.qlsv.App"
+            android:allowBackup="true"
+            android:hardwareAccelerated="true"
+            android:icon="@mipmap/ic_app_launcher"
+            android:label="@string/app_name"
+            android:requestLegacyExternalStorage="true"
+            android:roundIcon="@mipmap/ic_app_launcher"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            android:usesCleartextTraffic="true"
+            tools:ignore="RtlEnabled"
+            tools:targetApi="n">
+        <activity android:name="com.emglab.qlsv.TeacherActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"></activity>
+
+        <!--Intent filter to capture System Browser or Authenticator calling back to our app after sign-in-->
+        <activity
+                android:exported="true"
+                android:name="com.microsoft.identity.client.BrowserTabActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="msauth"
+                        android:host="qlsv"
+                        android:path="/df1TgV3P5EtAP89964bnnVWS9cU=" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version" />
+        <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="@string/google_maps_key" />
+
+        <provider
+                android:name="androidx.core.content.FileProvider"
+                android:authorities="qlsv"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/file_paths" />
+        </provider>
+
+        <service
+                android:exported="false"
+                android:name="com.emglab.qlsv.service.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGE_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+                android:exported="true"
+                android:name="com.emglab.qlsv.MapsActivity"
+                android:label="@string/title_activity_maps"
+                android:screenOrientation="portrait" />
+        <activity
+                android:exported="true"
+                android:name="com.emglab.qlsv.QRCodeActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:exported="true"
+                android:name="com.emglab.qlsv.MainActivity"
+                android:label="@string/app_name"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+                android:exported="true"
+                android:name="com.emglab.qlsv.LoginActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:exported="true"
+                android:name="com.journeyapps.barcodescanner.CaptureActivity"
+                android:screenOrientation="fullSensor"
+                tools:replace="screenOrientation" />
+
+        <receiver
+                android:exported="false"
+                android:name="com.emglab.qlsv.utilities.noti.AlarmReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <service
+                android:exported="false"
+                android:name="com.emglab.qlsv.service.RunningService"/>
+        <service
+                android:exported="false"
+                android:name="com.emglab.qlsv.service.RunService"/>
+    </application>
+
+</manifest>

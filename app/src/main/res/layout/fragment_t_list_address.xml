@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+                name="resource"
+                type="com.emglab.qlsv.common.Resource" />
+        <variable
+                name="callback"
+                type="com.emglab.qlsv.common.RetryCallback" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/mainBackground">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recyclerview"
+                tools:listitem="@layout/list_item_address"/>
+        <include
+                app:callback="@{callback}"
+                layout="@layout/layout_loading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:status='@{resource.status}' />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+                name="number"
+                type="Integer" />
+        <variable
+                name="title"
+                type="String" />
+    </data>
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            goneUnless="@{number == 0}"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:padding="24dp">
+        <ImageView
+                android:src="@drawable/ic_empty"
+                android:layout_width="80dp"
+                android:layout_marginBottom="16dp"
+                android:layout_height="80dp"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:text="@{title}"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="@color/textColorPrimary"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>

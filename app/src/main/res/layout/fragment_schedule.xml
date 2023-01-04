@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <import type="com.emglab.qlsv.common.Status" />
+
+        <import type="com.emglab.qlsv.common.Resource" />
+
+        <import type="com.emglab.qlsv.models.entity.ScheduleStudent" />
+
+        <variable name="sizeOfScheduleStudent" type="Integer"/>
+
+        <variable
+                name="scheduleStudentsResource"
+                type="Resource" />
+
+        <variable
+                name="retryCallback"
+                type="com.emglab.qlsv.common.RetryCallback" />
+
+        <variable
+                name="logoutCallback"
+                type="com.emglab.qlsv.common.LogoutCallback" />
+
+    </data>
+
+
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            tools:context=".ui.fragments.user.ScheduleFragment">
+
+        <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            <androidx.appcompat.widget.Toolbar
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:title="Danh sách hoạt động"
+                    app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <RelativeLayout
+                            android:layout_marginLeft="16dp"
+                            android:id="@+id/date_picker_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            android:background="?android:selectableItemBackground"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:focusable="true"
+                            tools:ignore="RtlHardcoded,UselessParent">
+
+
+
+                        <TextView
+                                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                                android:text="Lịch học"
+                                android:id="@+id/date_picker_text_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+                                tools:ignore="HardcodedText" />
+
+
+                        <TextView
+                                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                                android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+                                tools:text="Tuần 24"
+                                android:layout_marginRight="8dp"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:padding="8dp"
+                                android:layout_gravity="center"
+                                android:id="@+id/txtWeekNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:ignore="RelativeOverlap" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@+id/appbar"
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        <TextView
+                app:goneUnless="@{sizeOfScheduleStudent == 0}"
+                android:layout_centerInParent="true"
+                android:text="Chưa cập nhật lịch học"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText">
+        </TextView>
+
+
+        <include
+                android:layout_centerInParent="true"
+                layout="@layout/error_token"
+                app:resource="@{scheduleStudentsResource}"
+                app:callback="@{() -> logoutCallback.logout()}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+    </RelativeLayout>
+</layout>

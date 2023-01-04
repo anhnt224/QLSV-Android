@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+                name="gift"
+                type="com.emglab.qlsv.models.entity.gift.Gift" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/list_item_gift_bg">
+
+                <com.google.android.material.button.MaterialButton
+                        android:id="@+id/moreButton"
+                        style="@style/TextButtonNoInset"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        app:icon="@drawable/ic_more"
+                        app:iconTint="@color/textColorPrimaryLight"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView6"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        app:cardCornerRadius="6dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/logo_bkt"
+                            tools:ignore="ContentDescription" />
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/cardView6"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{gift.name}"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="16sp" />
+
+                    <androidx.cardview.widget.CardView
+                            android:layout_marginTop="2dp"
+                            app:cardElevation="0dp"
+                            app:cardCornerRadius="4dp"
+                            android:layout_width="100dp"
+                            android:layout_height="20dp">
+                        <TextView
+                                android:id="@+id/statusText"
+                                android:background="@color/zxing_possible_result_points"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@{gift.getStatusName()}"
+                                android:textSize="12sp"
+                                android:gravity="center"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{gift.description}"
+                            android:textColor="@color/textColorPrimaryLight"
+                            android:textSize="14sp" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{gift.getDeadlineStr()}"
+                            android:textColor="@color/textColorPrimaryLight"
+                            android:textSize="14sp" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{gift.getQuantityStr()}"
+                            android:textColor="@color/textColorPrimaryLight"
+                            android:textSize="14sp" />
+
+                    <androidx.cardview.widget.CardView
+                            android:layout_marginTop="2dp"
+                            app:cardElevation="0dp"
+                            android:layout_width="128dp"
+                            android:layout_height="16dp"
+                            app:cardCornerRadius="8dp">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                            <ProgressBar
+                                    android:id="@+id/register"
+                                    android:max="10"
+                                    android:progress="1"
+                                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:minHeight="16dp"
+                                    android:maxHeight="16dp"
+                                    android:scaleY="4"
+                                    android:layout_height="match_parent"/>
+                            <TextView
+                                    android:text="@{gift.getRegisteredQuantityStr()}"
+                                    android:textSize="11sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

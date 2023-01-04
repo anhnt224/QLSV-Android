@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+                name="criteriaGroup"
+                type="com.emglab.qlsv.models.entity.CriteriaGroup" />
+    </data>
+    <LinearLayout
+            android:background="@color/mainBackground"
+            android:orientation="vertical"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+                android:background="@color/mainBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                    android:background="@color/lightGray"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{criteriaGroup.name}'
+                        android:textSize="16sp"
+                        android:textColor="@color/textColorPrimary"/>
+                <LinearLayout
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                    <TextView
+                            android:textColor="@color/pending"
+                            android:layout_weight="1"
+                            android:text='@{"SV chấm: " + criteriaGroup.getStudentPoint()}'
+                            android:textSize="14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    <TextView
+                            android:textColor="@color/done"
+                            android:layout_weight="1"
+                            android:text='@{"GV chấm: " + criteriaGroup.tPoint}'
+                            android:textSize="14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    <TextView
+                            android:layout_weight="1"
+                            android:text='@{"Tối đa: " + criteriaGroup.maxPoint}'
+                            android:textSize="14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/list_item_user_criteria" />
+    </LinearLayout>
+</layout>

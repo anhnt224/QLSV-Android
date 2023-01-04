@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#b72027</color>
+    <color name="colorPrimaryDark">#800000</color>
+    <color name="colorPrimaryLight">#f05750</color>
+    <color name="colorAccent">#f05750</color>
+    <color name="colorPrimary20">#33B72027</color>
+    <color name="colorPrimary10">#1AB72027</color>
+
+    <color name="textColorPrimary">#000000</color>
+    <color name="textColorPrimaryLight">#99000000</color>
+    <color name="lightGrayTextColor">#D1D1D1</color>
+    <color name="mainBackground">#F8F8FB</color>
+
+    <color name="lightGray">#DFDFDF</color>
+    <color name="back25">#40000000</color>
+    <color name="back50">#80000000</color>
+    <color name="back75">#BF000000</color>
+    <color name="home_title_color">#BF000000</color>
+    <color name="dark_gray_text">#B3000000</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorWhite25">#40FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlack25">#8A000000</color>
+    <color name="half_black">#535353</color>
+    <color name="colorBlue"> #3498db</color>
+    <color name="colorGreen">#569127</color>
+
+    <color name="blue_light">#48307FE2</color>
+    <color name="blue">#307FE2</color>
+    <color name="colorBlueDeep">#216EF3</color>
+    <color name="colorBlue2">#1c36f5</color>
+    <color name="iron">#DFDCDC</color>
+    <color name="colorRed">#ee4035</color>
+
+    <color name="pending">#FFB300</color>
+    <color name="done">#43A047</color>
+    <color name="cancel">#F4511E</color>
+    <color name="titleGreen">#43A047</color>
+
+    <color name="green">#027600</color>
+    <color name="circleMapColor">#1AB72027</color>
+    <color name="grey">#C2C2C2</color>
+
+    <color name="pending_bg">#33FFB300</color>
+    <color name="done_bg">#3343A047</color>
+    <color name="cancel_bg">#33F4511E</color>
+
+    <color name="green5">#D1F8D3</color>
+    <color name="green_light">#241D974A</color>
+
+    <color name="transparent">#00FFFFFF</color>
+
+    <color name="colorRunDashBoardPass">#D1F8D3</color>
+    <color name="colorRunDashBoardFail">#FFD6BA</color>
+
+    <color name="ink500">#22313F</color>
+    <color name="ink450">#B322313F</color>
+    <color name="ink400">#8022313F</color>
+    <color name="ink300">#4D22313F</color>
+    <color name="ink200">#1A22313F</color>
+    <color name="ink100">#0D22313F</color>
+
+    <color name="green500">#00BC3C</color>
+    <color name="green400">#CC00BC3C</color>
+    <color name="green300">#4D00BC3C</color>
+    <color name="green200">#1A00BC3C</color>
+    <color name="green100">#0D00BC3C</color>
+
+    <color name="orange500">#FF821E</color>
+    <color name="orange400">#CCFF821E</color>
+    <color name="orange300">#4DFF821E</color>
+    <color name="orange200">#1AFF821E</color>
+    <color name="orange100">#0DFF821E</color>
+
+    <color name="red500">#E60A32</color>
+    <color name="red400">#CCE60A32</color>
+    <color name="red300">#4DE60A32</color>
+    <color name="red200">#1AE60A32</color>
+    <color name="red100">#0DE60A32</color>
+
+    <color name="blue500">#2F6BFF</color>
+    <color name="blue400">#CC2F6BFF</color>
+    <color name="blue300">#4D2F6BFF</color>
+    <color name="blue200">#1A2F6BFF</color>
+    <color name="blue100">#0D2F6BFF</color>
+
+</resources>

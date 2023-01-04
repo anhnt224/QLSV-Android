@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+    <!--<android.support.v7.widget.Toolbar-->
+            <!--android:id="@+id/toolbar"-->
+            <!--android:visibility="gone"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--app:layout_collapseMode="pin"-->
+            <!--app:popupTheme="@style/AppTheme.PopupOverlay">-->
+
+        <!--&lt;!&ndash;<RelativeLayout&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/date_picker_button"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="?attr/actionBarSize"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="?android:selectableItemBackground"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:clickable="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:orientation="vertical"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:focusable="true">&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/title"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_centerVertical="true"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:ellipsize="end"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:maxLines="1"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="@android:color/white" />&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/date_picker_text_view"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_centerVertical="true"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:ellipsize="end"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:maxLines="1"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="@android:color/black" />&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/date_picker_arrow"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_alignBottom="@id/date_picker_text_view"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_toRightOf="@id/date_picker_text_view"&ndash;&gt;-->
+                    <!--&lt;!&ndash;app:srcCompat="@drawable/ic_arrow_drop_down"&ndash;&gt;-->
+                    <!--&lt;!&ndash;tools:ignore="ContentDescription,RtlHardcoded,VectorDrawableCompat" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;</RelativeLayout>&ndash;&gt;-->
+    <!--</android.support.v7.widget.Toolbar>-->
+
+    <include layout="@layout/content_main"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

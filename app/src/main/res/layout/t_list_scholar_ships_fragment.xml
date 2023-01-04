@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools">
+<data>
+    <variable
+            name="resource"
+            type="com.emglab.qlsv.common.Resource" />
+    <variable
+            name="callback"
+            type="com.emglab.qlsv.common.RetryCallback" />
+</data>
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".teacher.fragment.scholarShip.TListScholarShipsFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/list_item_scholarship"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <include
+            app:callback="@{callback}"
+            layout="@layout/layout_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:status='@{resource.status}' />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

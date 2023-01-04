@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+                name="question"
+                type="com.emglab.qlsv.models.entity.Question" />
+        <variable
+                name="index"
+                type="Integer" />
+    </data>
+    <LinearLayout
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView
+                android:layout_marginTop="8dp"
+                android:text='@{index.toString() + ". " + question.question}'
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="16sp"/>
+        <TextView
+                android:text='@{"- " + question.answer}'
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColorPrimaryLight"
+                android:textSize="16sp"/>
+
+        <LinearLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@color/lightGrayTextColor"/>
+    </LinearLayout>
+</layout>

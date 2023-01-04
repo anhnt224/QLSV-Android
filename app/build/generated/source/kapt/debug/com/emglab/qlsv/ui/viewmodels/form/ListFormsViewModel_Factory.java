@@ -1,0 +1,36 @@
+package com.emglab.qlsv.ui.viewmodels.form;
+
+import com.emglab.qlsv.repositories.FormRepository;
+import dagger.internal.Factory;
+import javax.annotation.processing.Generated;
+import javax.inject.Provider;
+
+@Generated(
+  value = "dagger.internal.codegen.ComponentProcessor",
+  comments = "https://google.github.io/dagger"
+)
+public final class ListFormsViewModel_Factory implements Factory<ListFormsViewModel> {
+  private final Provider<FormRepository> formRepositoryProvider;
+
+  public ListFormsViewModel_Factory(Provider<FormRepository> formRepositoryProvider) {
+    this.formRepositoryProvider = formRepositoryProvider;
+  }
+
+  @Override
+  public ListFormsViewModel get() {
+    return provideInstance(formRepositoryProvider);
+  }
+
+  public static ListFormsViewModel provideInstance(
+      Provider<FormRepository> formRepositoryProvider) {
+    return new ListFormsViewModel(formRepositoryProvider.get());
+  }
+
+  public static ListFormsViewModel_Factory create(Provider<FormRepository> formRepositoryProvider) {
+    return new ListFormsViewModel_Factory(formRepositoryProvider);
+  }
+
+  public static ListFormsViewModel newListFormsViewModel(FormRepository formRepository) {
+    return new ListFormsViewModel(formRepository);
+  }
+}

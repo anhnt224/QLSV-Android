@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <import type="com.emglab.qlsv.common.Status" />
+
+        <import type="com.emglab.qlsv.common.Resource" />
+
+        <import type="com.emglab.qlsv.models.entity.Message" />
+
+        <variable name="sizeOfMessage" type="Integer"/>
+
+        <variable
+                name="messagesResource"
+                type="Resource" />
+
+        <variable
+                name="retryCallback"
+                type="com.emglab.qlsv.common.RetryCallback" />
+
+        <variable
+                name="logoutCallback"
+                type="com.emglab.qlsv.common.LogoutCallback" />
+    </data>
+
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_height="wrap_content"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/appbar">
+
+            <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:title="Thông báo"
+                    app:titleTextColor="@color/colorWhite"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:layout_below="@+id/appbar"
+                app:goneUnless="@{messagesResource.status == Status.SUCCESS_NETWORK}"
+                android:id="@+id/swipeRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                    tools:listitem="@layout/list_item_message"
+                    android:id="@+id/listMessageRecycler"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+        <TextView
+                app:goneUnless="@{sizeOfMessage == 0 &amp;&amp; messagesResource.status == Status.SUCCESS_NETWORK}"
+                android:layout_centerInParent="true"
+                android:text="Chưa có thông báo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText">
+        </TextView>
+
+        <include
+                app:callback="@{retryCallback}"
+                layout="@layout/layout_loading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:status="@{messagesResource.status}" />
+
+<!--        <include-->
+<!--                android:layout_centerInParent="true"-->
+<!--                layout="@layout/error_token"-->
+<!--                app:resource="@{messagesResource}"-->
+<!--                app:callback="@{() -> logoutCallback.logout()}"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent" />-->
+
+    </RelativeLayout>
+
+</layout>

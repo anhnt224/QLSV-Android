@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="schedule"
+            type="com.emglab.qlsv.models.entity.ScheduleStudent" />
+
+    </data>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_height="wrap_content">
+<!--        <RelativeLayout-->
+<!--                android:id="@+id/relativeMain"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+<!--            <LinearLayout-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:layout_marginLeft="16dp"-->
+<!--                    android:padding="4dp"-->
+<!--                    android:id="@+id/lineDay"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content">-->
+<!--                <TextView-->
+<!--                        android:textColor="@color/colorBlack"-->
+<!--                        tools:text="3"-->
+<!--                        android:text="@{activity.nameDayOfMonth}"-->
+<!--                        android:textSize="20sp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:id="@+id/txtDayOfMonth" />-->
+<!--                <TextView-->
+<!--                        android:textColor="@color/colorBlack"-->
+<!--                        android:text="@{activity.nameDayOfWeek}"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:textSize="12sp"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:id="@+id/txtDayOfWeek" />-->
+<!--            </LinearLayout>-->
+
+<!--            <TextView-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:id="@+id/txtClassId"-->
+<!--                    tools:text="[111438]"-->
+<!--                    android:text="@{schedule.classId}"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="70dp"-->
+<!--                    android:layout_marginRight="12dp"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    android:textSize="16sp"/>-->
+
+<!--            <TextView-->
+<!--                    android:layout_toRightOf="@id/txtClassId"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:id="@+id/txtAName"-->
+<!--                    tools:text="SVNCKH"-->
+<!--                    android:text="@{schedule.name}"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="4dp"-->
+<!--                    android:layout_marginRight="12dp"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    android:textSize="16sp"/>-->
+
+<!--            <TextView-->
+<!--                    tools:text="20-11"-->
+
+<!--                    android:textColor="@color/half_black"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="70dp"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:id="@+id/txtStartTime"-->
+<!--                    android:layout_below="@+id/txtAName" />-->
+
+<!--            <TextView-->
+<!--                    android:text="@{userActivity.uAStatusName}"-->
+<!--                    app:goneUnless="@{userActivity.isRegister()}"-->
+<!--                    android:textColor="@color/colorRed"-->
+
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="70dp"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:id="@+id/txtUAStatus"-->
+<!--                    android:layout_below="@+id/txtStartTime" />-->
+
+<!--        </RelativeLayout>-->
+
+
+        <View
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/relativeMain"
+                android:id="@+id/view4"
+                android:background="@color/iron"
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+        </View>
+
+        <View
+                android:visibility="gone"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/relativeMain"
+                android:id="@+id/view5"
+                android:background="@color/iron"
+                android:layout_width="70dp"
+                android:layout_height="1dp">
+        </View>
+
+    </RelativeLayout>
+</layout>

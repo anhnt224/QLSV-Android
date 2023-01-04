@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "689000698899",
+    "project_id": "qlsv-d0bbd",
+    "storage_bucket": "qlsv-d0bbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689000698899:android:f7e2b87b2a86ab88249be6",
+        "android_client_info": {
+          "package_name": "com.emglab.qlsv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "689000698899-6v05u4eopd5h0n5l989hnnun2m1b5hn7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2Z1a0Fl0Ua81Wxpj36XGX2Dm8mJQC5CM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "689000698899-6v05u4eopd5h0n5l989hnnun2m1b5hn7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "689000698899-lmsugl13d0djpqt4o8keh1kaml3ruc87.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.emglab.qlsv"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

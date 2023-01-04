@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+                name="number"
+                type="Integer" />
+        <variable
+                name="resource"
+                type="com.emglab.qlsv.common.Resource" />
+
+        <variable
+                name="callback"
+                type="com.emglab.qlsv.common.RetryCallback" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.fragments.job.ListJobApplyFragment">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/recyclerview"
+                    tools:listitem="@layout/list_item_job_apply"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include
+                app:callback="@{callback}"
+                layout="@layout/layout_loading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:status='@{resource.status}' />
+        <include
+                app:number = "@{number}"
+                app:title ="@{`Chưa có thông tin việc làm`}"
+                layout="@layout/layout_empty_data" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

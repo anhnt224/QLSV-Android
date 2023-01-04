@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/nav_teacher"
+        app:startDestination="@id/THome2Fragment">
+
+    <fragment
+            android:id="@+id/THomeFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.THomeFragment"
+            android:label=" ">
+        <action
+                android:id="@+id/action_THomeFragment_to_TListFormFragment"
+                app:destination="@id/TListFormFragment" />
+        <action
+                android:id="@+id/action_THomeFragment_to_TListActivitiesFragment2"
+                app:destination="@id/TListActivitiesFragment" />
+        <action
+                android:id="@+id/action_THomeFragment_to_TListScholarShipsFragment"
+                app:destination="@id/TListScholarShipsFragment" />
+        <action
+                android:id="@+id/action_THomeFragment_to_TListJobsFragment"
+                app:destination="@id/TListJobsFragment" />
+        <action
+                android:id="@+id/action_THomeFragment_to_listStudentFragment"
+                app:destination="@id/listStudentFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/TListFormFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.form.TListFormFragment"
+            android:label="Danh sách biểu mẫu"
+            tools:layout="@layout/t_list_form_fragment">
+        <action
+                android:id="@+id/action_TListFormFragment_to_TFormDetailFragment"
+                app:destination="@id/TFormDetailFragment" />
+        <action
+                android:id="@+id/action_TListFormFragment_to_TListFormRegisteredFragment"
+                app:destination="@id/TListFormRegisteredFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/TFormDetailFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.form.TFormDetailFragment"
+            android:label="Chi tiết biểu mẫu"
+            tools:layout="@layout/t_form_detail_fragment">
+        <action
+                android:id="@+id/action_TFormDetailFragment_to_TRegisterFormFragment"
+                app:destination="@id/TRegisterFormFragment" />
+        <argument
+                android:name="form"
+                app:argType="com.emglab.qlsv.models.entity.Form" />
+    </fragment>
+    <fragment
+            android:id="@+id/TListFormRegisteredFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.form.TListFormRegisteredFragment"
+            android:label="Biểu mẫu đã đăng kí"
+            tools:layout="@layout/t_list_form_registered_fragment">
+        <action
+                android:id="@+id/action_TListFormRegisteredFragment_to_TFormRegisteredFragment"
+                app:destination="@id/TFormRegisteredFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/TFormRegisteredFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.form.TFormRegisteredFragment"
+            android:label="Chi tiết"
+            tools:layout="@layout/t_form_registered_fragment">
+        <argument
+                android:name="form"
+                app:argType="com.emglab.qlsv.models.entity.Form" />
+        <action
+                android:id="@+id/action_TFormRegisteredFragment_to_TEditFormFragment"
+                app:destination="@id/TEditFormFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/TRegisterFormFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.form.TRegisterFormFragment"
+            android:label="Đăng kí "
+            tools:layout="@layout/t_register_form_fragment">
+        <argument
+                android:name="form"
+                app:argType="com.emglab.qlsv.models.entity.Form" />
+    </fragment>
+    <fragment
+            android:id="@+id/TEditFormFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.form.TEditFormFragment"
+            android:label="Chỉnh sửa biểu mẫu"
+            tools:layout="@layout/t_edit_form_fragment">
+        <argument
+                android:name="form"
+                app:argType="com.emglab.qlsv.models.entity.Form" />
+        <argument
+                android:name="questions"
+                app:argType="com.emglab.qlsv.models.entity.Question[]" />
+    </fragment>
+    <fragment
+            android:id="@+id/TListActivitiesFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.activity.TListActivitiesFragment"
+            android:label="Danh sách hoạt động" >
+        <action
+                android:id="@+id/action_TListActivitiesFragment_to_TActivityInfoFragment"
+                app:destination="@id/TActivityInfoFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/TActivityInfoFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.activity.TActivityInfoFragment"
+            android:label="Chi tiết hoạt động"
+            tools:layout="@layout/t_activity_info_fragment">
+        <argument
+                android:name="AId"
+                app:argType="integer" />
+    </fragment>
+    <fragment
+            android:id="@+id/TListScholarShipsFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.scholarShip.TListScholarShipsFragment"
+            android:label="Danh sách học bổng">
+        <action
+                android:id="@+id/action_TListScholarShipsFragment_to_TScholarShipDetailFragment"
+                app:destination="@id/TScholarShipDetailFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/TScholarShipDetailFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.scholarShip.TScholarShipDetailFragment"
+            android:label="Chi tiết học bổng"
+            tools:layout="@layout/t_scholar_ship_detail_fragment">
+        <argument
+                android:name="scholarShip"
+                app:argType="com.emglab.qlsv.models.entity.ScholarShip" />
+    </fragment>
+    <fragment
+            android:id="@+id/TListJobsFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.job.TListJobsFragment"
+            android:label="Danh sách việc làm"
+            tools:layout="@layout/t_list_jobs_fragment">
+        <action
+                android:id="@+id/action_TListJobsFragment_to_TJobDetailFragment"
+                app:destination="@id/TJobDetailFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/TJobDetailFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.job.TJobDetailFragment"
+            android:label="Chi tiết việc làm"
+            tools:layout="@layout/t_job_detail_fragment">
+        <argument
+                android:name="job"
+                app:argType="com.emglab.qlsv.models.entity.Job" />
+    </fragment>
+    <fragment
+            android:id="@+id/TListNotificationsFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.TListNotificationsFragment"
+            android:label="TListNotificationsFragment" />
+    <fragment
+            android:id="@+id/TAccountFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.account.TAccountFragment"
+            android:label=" ">
+        <action
+                android:id="@+id/action_TAccountFragment_to_TChangePasswordFragment"
+                app:destination="@id/TChangePasswordFragment" />
+        <action
+                android:id="@+id/action_TAccountFragment_to_teacherInfoFragment"
+                app:destination="@id/teacherInfoFragment" />
+        <action
+                android:id="@+id/action_TAccountFragment_to_runDashboardFragment2"
+                app:destination="@id/runDashboardFragment2" />
+    </fragment>
+    <fragment
+            android:id="@+id/TChangePasswordFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.account.TChangePasswordFragment"
+            android:label="Đổi mật khẩu" />
+    <fragment
+            android:id="@+id/teacherInfoFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.account.TeacherInfoFragment"
+            android:label="Thông tin tài khoản"
+            tools:layout="@layout/teacher_info_fragment" />
+    <fragment
+            android:id="@+id/listStudentFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.student.ListStudentFragment"
+            android:label="Danh sách sinh viên"
+            tools:layout="@layout/list_student_fragment" >
+        <action
+                android:id="@+id/action_listStudentFragment_to_listActivitiesOfStudentFragment"
+                app:destination="@id/listActivitiesOfStudentFragment" />
+        <action
+                android:id="@+id/action_listStudentFragment_to_teacherMarkFragment"
+                app:destination="@id/teacherMarkFragment" />
+        <action
+                android:id="@+id/action_listStudentFragment_to_studentInfoFragment"
+                app:destination="@id/studentInfoFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/listActivitiesOfStudentFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.student.ListActivitiesOfStudentFragment"
+            android:label="Hoạt động tham gia" >
+        <argument
+                android:name="student"
+                app:argType="com.emglab.qlsv.models.entity.Student" />
+    </fragment>
+    <fragment
+            android:id="@+id/teacherMarkFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.student.TeacherMarkFragment"
+            android:label="Chấm điểm rèn luyện"
+            tools:layout="@layout/teacher_mark_fragment">
+        <argument
+                android:name="studentId"
+                app:argType="string" />
+        <argument
+                android:name="studentName"
+                app:argType="string" />
+        <argument
+                android:name="semester"
+                app:argType="string" />
+    </fragment>
+    <fragment
+            android:id="@+id/studentInfoFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.student.StudentInfoFragment"
+            android:label="Thông tin sinh viên">
+        <argument
+                android:name="studentId"
+                app:argType="string" />
+        <action
+                android:id="@+id/action_studentInfoFragment_to_TStudentNoteFragment"
+                app:destination="@id/TStudentNoteFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/TStudentNoteFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.student.TStudentNoteFragment"
+            android:label="Ghi chú" >
+        <argument
+                android:name="studentID"
+                app:argType="string" />
+    </fragment>
+    <fragment
+            android:id="@+id/runDashboardFragment2"
+            android:name="com.emglab.qlsv.ui.fragments.running.RunDashboardFragment"
+            android:label="Chạy bộ">
+        <action
+                android:id="@+id/action_runDashboardFragment2_to_runFragment2"
+                app:destination="@id/runFragment2" />
+        <argument
+                android:name="isTeacher"
+                app:argType="boolean"
+                android:defaultValue="false" />
+    </fragment>
+    <fragment
+            android:id="@+id/runFragment2"
+            android:name="com.emglab.qlsv.ui.fragments.running.RunFragment"
+            android:label="Chạy bộ" />
+    <fragment
+            android:id="@+id/THome2Fragment"
+            android:name="com.emglab.qlsv.teacher.fragment.THome2Fragment"
+            android:label="THome2Fragment" >
+        <action
+                android:id="@+id/action_THome2Fragment_to_TListFormFragment"
+                app:destination="@id/TListFormFragment" />
+        <action
+                android:id="@+id/action_THome2Fragment_to_TListActivitiesFragment"
+                app:destination="@id/TListActivitiesFragment" />
+        <action
+                android:id="@+id/action_THome2Fragment_to_TListScholarShipsFragment"
+                app:destination="@id/TListScholarShipsFragment" />
+        <action
+                android:id="@+id/action_THome2Fragment_to_TListJobsFragment"
+                app:destination="@id/TListJobsFragment" />
+        <action
+                android:id="@+id/action_THome2Fragment_to_listStudentFragment"
+                app:destination="@id/listStudentFragment" />
+        <action
+                android:id="@+id/action_THome2Fragment_to_runDashboardFragment2"
+                app:destination="@id/runDashboardFragment2" />
+        <action
+                android:id="@+id/action_THome2Fragment_to_TGiftGivenFragment"
+                app:destination="@id/TGiftGivenFragment" />
+        <action
+                android:id="@+id/action_THome2Fragment_to_TGiftFragment"
+                app:destination="@id/TGiftFragment" />
+        <action
+                android:id="@+id/action_THome2Fragment_to_TGiftReceivedFragment"
+                app:destination="@id/TGiftReceivedFragment" />
+        <action
+                android:id="@+id/action_THome2Fragment_to_TSearchMotelFragment"
+                app:destination="@id/TSearchMotelFragment" />
+        <action
+                android:id="@+id/action_THome2Fragment_to_TMoreJobFragment"
+                app:destination="@id/TMoreJobFragment" />
+        <action
+                android:id="@+id/action_THome2Fragment_to_TListAddressFragment"
+                app:destination="@id/TListAddressFragment" />
+        <action
+                android:id="@+id/action_THome2Fragment_to_TTutorFragment"
+                app:destination="@id/TTutorFragment" />
+        <action
+                android:id="@+id/action_THome2Fragment_to_studentList2Fragment"
+                app:destination="@id/studentList2Fragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/TGiftGivenFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.gift.TGiftGivenFragment"
+            android:label="Danh sách quà tặng"
+            tools:layout="@layout/t_gift_given_fragment">
+        <action
+                android:id="@+id/action_TGiftGivenFragment_to_TListRegisterFragment"
+                app:destination="@id/TListRegisterFragment" />
+        <action
+                android:id="@+id/action_TGiftGivenFragment_to_TCreateGiftFragment"
+                app:destination="@id/TCreateGiftFragment" />
+        <argument
+                android:name="reloadData"
+                app:argType="boolean" />
+    </fragment>
+    <fragment
+            android:id="@+id/TListRegisterFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.gift.TListRegisterFragment"
+            android:label="Danh sách người đăng ký"
+            tools:layout="@layout/t_list_register_fragment">
+        <argument
+                android:name="gift"
+                app:argType="com.emglab.qlsv.models.entity.gift.Gift" />
+    </fragment>
+    <fragment
+            android:id="@+id/TCreateGiftFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.gift.TCreateGiftFragment"
+            android:label="Quà đã tặng"
+            tools:layout="@layout/t_create_gift_fragment">
+        <action
+                android:id="@+id/action_TCreateGiftFragment_to_TGiftGivenFragment"
+                app:destination="@id/TGiftGivenFragment"
+                app:popUpTo="@id/TGiftGivenFragment"
+                app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+            android:id="@+id/TGiftFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.gift.TGiftFragment"
+            android:label="Danh sách quà tặng">
+        <action
+                android:id="@+id/action_TGiftFragment_to_TGiftInfoFragment"
+                app:destination="@id/TGiftInfoFragment" />
+        <action
+                android:id="@+id/action_TGiftFragment_to_TGiftReceivedFragment"
+                app:destination="@id/TGiftReceivedFragment" />
+        <argument
+                android:name="reloadData"
+                app:argType="boolean" />
+    </fragment>
+    <fragment
+            android:id="@+id/TGiftInfoFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.gift.TGiftInfoFragment"
+            android:label="Thông tin quà tặng">
+        <argument
+                android:name="gift"
+                app:argType="com.emglab.qlsv.models.entity.gift.Gift" />
+        <action
+                android:id="@+id/action_TGiftInfoFragment_to_TGiftReceivedFragment"
+                app:destination="@id/TGiftReceivedFragment"
+                app:popUpTo="@id/TGiftReceivedFragment"
+                app:popUpToInclusive="true" />
+        <action
+                android:id="@+id/action_TGiftInfoFragment_to_TApplyGiftFragment"
+                app:destination="@id/TApplyGiftFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/TGiftReceivedFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.gift.TGiftReceivedFragment"
+            android:label="Quà đã đăng ký">
+        <action
+                android:id="@+id/action_TGiftReceivedFragment_to_TGiftInfoFragment"
+                app:destination="@id/TGiftInfoFragment" />
+        <action
+                android:id="@+id/action_TGiftReceivedFragment_to_TGiftFragment"
+                app:destination="@id/TGiftFragment"
+                app:popUpTo="@id/TGiftFragment"
+                app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+            android:id="@+id/TSearchMotelFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.motel.TSearchMotelFragment"
+            android:label="Nhà trọ"
+            tools:layout="@layout/fragment_t_search_motel">
+        <action
+                android:id="@+id/action_TSearchMotelFragment_to_TMotelInfoFragment"
+                app:destination="@id/TMotelInfoFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/TMotelInfoFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.motel.TMotelInfoFragment"
+            android:label="Thông tin nhà trọ"
+            tools:layout="@layout/fragment_t_motel_info" >
+        <argument
+                android:name="motel"
+                app:argType="com.emglab.qlsv.models.entity.Motel" />
+    </fragment>
+    <fragment
+            android:id="@+id/TMoreJobFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.job.TMoreJobFragment"
+            android:label="Việc làm thêm"
+            tools:layout="@layout/fragment_t_more_job">
+        <action
+                android:id="@+id/action_TMoreJobFragment_to_TJobDetailFragment"
+                app:destination="@id/TJobDetailFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/TListAddressFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.motel.TListAddressFragment"
+            android:label="Danh sách địa chỉ"
+            tools:layout="@layout/fragment_t_list_address">
+        <action
+                android:id="@+id/action_TListAddressFragment_to_TAddNewAddressFragment"
+                app:destination="@id/TAddNewAddressFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/TAddNewAddressFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.motel.TAddNewAddressFragment"
+            android:label="Thêm địa chỉ mới"
+            tools:layout="@layout/fragment_t_add_new_address">
+        <action
+                android:id="@+id/action_TAddNewAddressFragment_to_TAddMotelInfoFragment"
+                app:destination="@id/TAddMotelInfoFragment" />
+        <action
+                android:id="@+id/action_TAddNewAddressFragment_to_TPickLocationFragment"
+                app:destination="@id/TPickLocationFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/TAddMotelInfoFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.motel.TAddMotelInfoFragment"
+            android:label="Thêm thông tin nhà trọ">
+        <action
+                android:id="@+id/action_TAddMotelInfoFragment_to_TImageMotelFragment"
+                app:destination="@id/TImageMotelFragment" />
+        <action
+                android:id="@+id/action_TAddMotelInfoFragment_to_TListAddressFragment"
+                app:destination="@id/TListAddressFragment"
+                app:popUpTo="@id/TListAddressFragment"
+                app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+            android:id="@+id/TImageMotelFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.motel.TImageMotelFragment"
+            android:label="Thêm ảnh nhà trọ"
+            tools:layout="@layout/fragment_t_image_motel">
+        <action
+                android:id="@+id/action_TImageMotelFragment_to_TListAddressFragment"
+                app:destination="@id/TListAddressFragment"
+                app:popUpTo="@id/TListAddressFragment"
+                app:popUpToInclusive="true" />
+        <argument
+                android:name="motelID"
+                app:argType="integer" />
+    </fragment>
+    <fragment
+            android:id="@+id/TPickLocationFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.motel.TPickLocationFragment"
+            android:label="Chỉnh sửa tọa độ"
+            tools:layout="@layout/fragment_t_pick_location" />
+    <fragment
+            android:id="@+id/TApplyGiftFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.gift.TApplyGiftFragment"
+            android:label="Đăng ký nhận quà"
+            tools:layout="@layout/fragment_t_apply_gift">
+        <action
+                android:id="@+id/action_TApplyGiftFragment_to_TGiftFragment"
+                app:destination="@id/TGiftFragment"
+                app:popUpTo="@id/TGiftFragment"
+                app:popUpToInclusive="true" />
+        <argument
+                android:name="gift"
+                app:argType="com.emglab.qlsv.models.entity.gift.Gift" />
+        <action
+                android:id="@+id/action_TApplyGiftFragment_to_TReceiverAddressFragment"
+                app:destination="@id/TReceiverAddressFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/TReceiverAddressFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.gift.TReceiverAddressFragment"
+            android:label="Chọn địa chỉ nhận quà"
+            tools:layout="@layout/fragment_t_receiver_address" />
+    <fragment
+            android:id="@+id/TTutorFragment"
+            android:name="com.emglab.qlsv.teacher.fragment.TTutorFragment"
+            android:label="TTutorFragment" />
+    <fragment
+            android:id="@+id/studentList2Fragment"
+            android:name="com.emglab.qlsv.modules_teacher.contactParent.StudentList2Fragment"
+            android:label="Sinh viên cần liên hệ" >
+        <action
+                android:id="@+id/action_studentList2Fragment_to_studentInfoFragment"
+                app:destination="@id/studentInfoFragment" />
+        <action
+                android:id="@+id/action_studentList2Fragment_to_TStudentNoteFragment"
+                app:destination="@id/TStudentNoteFragment" />
+    </fragment>
+</navigation>

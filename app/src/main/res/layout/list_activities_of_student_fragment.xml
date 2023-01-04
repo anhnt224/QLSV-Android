@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+                name="status"
+                type="com.emglab.qlsv.common.Status" />
+        <variable
+                name="callback"
+                type="com.emglab.qlsv.common.RetryCallback" />
+    </data>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".teacher.fragment.student.ListActivitiesOfStudentFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                tools:listitem="@layout/list_item_activity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        <include
+                app:status="@{status}"
+                app:callback="@{callback}"
+                layout="@layout/layout_loading"/>
+    </FrameLayout>
+</layout>

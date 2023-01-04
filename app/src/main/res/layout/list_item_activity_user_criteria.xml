@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_height="wrap_content"
+        tools:ignore="UnusedAttribute">
+    <RelativeLayout
+            android:id="@+id/relativeMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:padding="4dp"
+                android:id="@+id/lineDay"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="RtlHardcoded">
+            <TextView
+                    android:textColor="@color/colorBlack"
+                    android:text="3"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtTower"
+                    tools:ignore="HardcodedText" />
+            <TextView
+                    android:textColor="@color/colorBlack"
+
+                    android:layout_gravity="center"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtRoom" />
+        </LinearLayout>
+
+        <TextView
+                android:layout_marginTop="8dp"
+                android:id="@+id/txtClassId"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="12dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                tools:ignore="RtlHardcoded" />
+        <TextView
+                android:textColor="@color/half_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:textSize="12sp"
+                android:id="@+id/txtStartTime"
+                android:layout_below="@+id/txtClassId"
+                tools:ignore="RtlHardcoded" />
+        <!--<TextView-->
+        <!--android:textColor="@color/half_black"-->
+
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="70dp"-->
+        <!--android:textSize="12sp"-->
+        <!--android:id="@+id/txtFinishTime"-->
+        <!--android:layout_below="@+id/txtStartTime" />-->
+    </RelativeLayout>
+
+
+    <View
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/relativeMain"
+            android:id="@+id/view4"
+            android:background="@color/iron"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            tools:ignore="RtlHardcoded">
+    </View>
+
+    <View
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/relativeMain"
+            android:id="@+id/view5"
+            android:background="@color/iron"
+            android:layout_width="70dp"
+            android:layout_height="1dp">
+    </View>
+
+</RelativeLayout>

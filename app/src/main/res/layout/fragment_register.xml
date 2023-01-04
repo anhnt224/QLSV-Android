@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <import type="com.emglab.qlsv.common.Status" />
+
+        <import type="com.emglab.qlsv.common.Resource" />
+
+        <variable
+                name="registerResource"
+                type="Resource" />
+
+    </data>
+
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            style="AppTheme.NoActionBar"
+            tools:context=".LoginActivity">
+
+
+        <LinearLayout
+                android:id="@+id/lineMain"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/logo"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    tools:ignore="ContentDescription" />
+            <EditText
+                    android:id="@+id/edtUserCode"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="8dp"
+                    android:background="@drawable/border_edit_text"
+                    android:hint="Họ và tên"
+                    android:drawableRight="@mipmap/ic_account_blue"
+                    android:layout_gravity="center"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"/>
+            <EditText
+                    android:id="@+id/edtEmail"
+                    android:layout_marginTop="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="8dp"
+                    android:background="@drawable/border_edit_text"
+                    android:hint="Email"
+                    android:drawableRight="@mipmap/ic_email_blue"
+                    android:layout_gravity="center"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"/>
+            <EditText
+                    android:inputType="phone"
+                    android:id="@+id/edtMobile"
+                    android:layout_marginTop="8dp"
+                    android:hint="Số điện thoại"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="8dp"
+                    android:background="@drawable/border_edit_text"
+                    android:drawableRight="@mipmap/ic_phone_blue"
+                    android:layout_gravity="center"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"/>
+            <Button
+                    android:id="@+id/btnRegister"
+                    android:textColor="@color/colorWhite"
+                    android:textAllCaps="false"
+                    android:background="@drawable/border_button_main"
+                    android:layout_marginTop="24dp"
+                    android:layout_gravity="center"
+                    android:text="Đăng kí"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+        <include
+                android:layout_centerInParent="true"
+                layout="@layout/loading_action_state"
+                app:resource="@{registerResource}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+    </RelativeLayout>
+</layout>

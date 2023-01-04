@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    //Account
+    <entry>
+        <key>book</key>
+        <value>http://ctsv.hust.edu.vn/pdf-viewer/STSV-BK2019.pdf</value>
+    </entry>
+    <entry>
+        <key>feedback</key>
+        <value>https://forms.gle/J54Sangzsz33ME4Y7</value>
+    </entry>
+    <entry>
+        <key>error</key>
+        <value>https://forms.gle/1CWNGyJYsSztmyCX6</value>
+    </entry>
+    <entry>
+        <key>aboutCTSV</key>
+        <value>http://ctsv.hust.edu.vn/#/</value>
+    </entry>
+
+    <entry>
+        <key>firstWeek</key>
+        <value>2020-09-07 00:00:00</value>
+    </entry>
+
+    <entry>
+        <key>form_delivery_note</key>
+        <value>Sinh viên tự chi trả chi phí giao nhận giấy tờ. Thông tin chi tiết sẽ được gửi lại khi thầy cô tiếp nhận, xử lý hồ sơ và liên hệ với đơn vị giao nhận của bưu điện</value>
+    </entry>
+
+    <entry>
+        <key>receive_at_home</key>
+        <value>Nhận tại nhà</value>
+    </entry>
+
+    <entry>
+        <key>receive_at_school</key>
+        <value>Nhận tại trường</value>
+    </entry>
+
+    <entry>
+        <key>receive_scan_file</key>
+        <value>Nhận bản scan</value>
+    </entry>
+
+    <entry>
+        <key>running_title</key>
+        <value>Giải chạy 10000 bước</value>
+    </entry>
+
+    <entry>
+        <key>running_target</key>
+        <value>Mục tiêu: 3km</value>
+    </entry>
+
+    <entry>
+        <key>note_link</key>
+        <value>https://sv-ctt.hust.edu.vn/#/so-tay-sv</value>
+    </entry>
+
+    <entry>
+        <key>titleWelcome2</key>
+        <value>Chúc bạn một ngày tốt lành</value>
+    </entry>
+
+    <entry>
+        <key>type_motel</key>
+        <value>Nhà chung chủ, Nhà trọ tự quản lý, Chung cư mini, Chung cư, Nhà trọ homestay</value>
+    </entry>
+
+    <entry>
+        <key>tutor_job</key>
+        <value>{
+            "title": "Dự án An sinh",
+            "description": "Theo thống kê, có trên 30% sinh viên Bách khoa đã từng hoặc có nguyện vọng làm gia sư các môn như Toán, LýHóa, tiếng Anh, Tin học, ... Nhằm giảm thiểu các chi phí về thời gian và tiền bạc cho các bên liên quan, Dự án An sinh phát triển một hệ thống CNTT hỗ trợ tìm kiếm sinh viên dạy kèm phù hợp với nhu cầu gia sư của Phụ huynh. \n\nChúng tôi mong nhận được sự hỗ trợ của các Phụ huynh, thông qua việc cung cấp thông tin tìm gia sư theo phiếu gửi yêu cầu dưới đây. Hệ thống sẽ tự động tìm kiếm, gửi danh sách các sinh viên phù hợp với yêu cầu của Phụ huynh theo thông tin quý vị cung cấp",
+            "copyright": "Nhóm ICTSV &amp; EMGLAB",
+            "tutorRegistrationLink": "http://ansinh.emglab.vn/#/gia-su",
+            "tutorRegistrationTitle": "Tìm việc gia sư - dạy kèm",
+            "tutorRegistrationDesc": "Để tìm việc gia sư - dạy kèm, hãy truy cập vào link sau.",
+            "findTutorLink": "http://ansinh.emglab.vn/#/",
+            "findTutorTitle": "Tìm gia sư - dạy kèm",
+            "findTutorDesc": "Để tìm gia sư - dạy kèm, hãy truy cập vào link sau."
+            }</value>
+    </entry>
+
+    <entry>
+        <key>motel_types</key>
+        <value>Nhà trọ chung chủ|Nhà trọ không chung chủ|Chung cư mini|Nhà nguyên căn</value>
+    </entry>
+
+    <entry>
+        <key>motel_user_requests</key>
+        <value>Có điều hoà|Có máy giặt|Có chỗ nấu ăn|Có ban công</value>
+    </entry>
+
+    <entry>
+        <key>motel_pending_message</key>
+        <value>Yêu cầu của bạn đã được chấp nhận, chúng tôi đã gửi một thông báo qua email cho bạn. Vui lòng kiểm tra email và làm theo hướng dẫn.</value>
+    </entry>
+
+    <entry>
+        <key>search_motel_feature_enabled</key>
+        <value>true</value>
+    </entry>
+
+</defaultsMap>

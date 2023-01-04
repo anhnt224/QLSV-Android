@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:paddingTop="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UnusedAttribute">
+    <RelativeLayout
+            android:id="@+id/relative1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/txtCCode"
+                tools:text="[TC 1.1]"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="12dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                tools:ignore="RtlHardcoded" />
+        <TextView
+                android:layout_toRightOf="@+id/txtCCode"
+                android:id="@+id/txtCName"
+                tools:text="Đi học chuyên cần và thái độ học tập tích cực trên lớp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="12dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                tools:ignore="RtlHardcoded" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+
+            android:id="@+id/line2"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/relative1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <Button
+                android:layout_centerVertical="true"
+                android:textAllCaps="false"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/border_button_main"
+                android:layout_marginLeft="16dp"
+                android:id="@+id/btnNextToActivity"
+                android:text="@string/proof"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                tools:ignore="RtlHardcoded" />
+
+        <LinearLayout
+                android:layout_toLeftOf="@+id/linePoint"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:id="@+id/line1"
+                android:layout_toRightOf="@+id/btnNextToActivity"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="RtlHardcoded">
+
+            <TextView
+                    android:textColor="@color/colorBlack"
+                    android:text="Điểm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+            <TextView
+                    android:id="@+id/UCPoint"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    tools:text="10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/linePoint"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="RtlHardcoded">
+
+            <TextView
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorBlack"
+                    android:text="Điểm max"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+            <TextView
+                    android:id="@+id/CMaxPoint"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    tools:text="12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_below="@+id/line2"
+            android:id="@+id/view4"
+            android:background="@color/iron"
+            android:layout_width="match_parent"
+            android:layout_height="1dp">
+    </View>
+</RelativeLayout>
+<!--<RelativeLayout-->
+        <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+        <!--xmlns:tools="http://schemas.android.com/tools"-->
+        <!--android:paddingBottom="16dp"-->
+        <!--android:paddingTop="16dp"-->
+        <!--android:background="@color/colorWhite"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+    <!--<TextView-->
+
+            <!--android:id="@+id/txtCName"-->
+            <!--android:text="Đi học chuyên cần và thái độ học tập tích cực trên lớp"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="16dp"-->
+            <!--android:layout_marginRight="12dp"-->
+            <!--android:textColor="@color/colorBlack"-->
+            <!--android:textSize="16sp"/>-->
+    <!--<TextView-->
+            <!--android:textColor="@color/half_black"-->
+            <!--android:text="Điểm: 20/25"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_marginLeft="16dp"-->
+            <!--android:textSize="12sp"-->
+            <!--android:id="@+id/txtUCPoint"-->
+            <!--android:layout_below="@+id/txtCName" />-->
+<!--</RelativeLayout>-->

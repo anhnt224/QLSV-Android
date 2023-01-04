@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@color/colorWhite"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/btnApprove"
+            android:layout_marginLeft="16dp"
+            android:id="@+id/relativeMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+                tools:src="@mipmap/ic_people"
+                android:layout_marginTop="8dp"
+                android:id="@+id/imgAvatar"
+                android:layout_gravity="center_vertical"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/colorWhite"/>
+
+        <TextView
+                android:layout_marginTop="8dp"
+                android:id="@+id/txtFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="61dp"
+                android:layout_marginRight="12dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"/>
+        <TextView
+                android:textColor="@color/half_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="61dp"
+                android:textSize="12sp"
+                android:id="@+id/txtReason"
+                android:layout_below="@+id/txtFullName" />
+
+    </RelativeLayout>
+
+    <Button
+            android:layout_marginRight="8dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/btnApprove"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="Duyệt"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/border_button_main"
+            android:layout_width="70dp"
+            android:layout_height="28dp"/>
+    <View
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/relativeMain"
+            android:id="@+id/view4"
+            android:background="@color/iron"
+            android:layout_width="match_parent"
+            android:layout_height="1dp">
+    </View>
+
+    <View
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/relativeMain"
+            android:id="@+id/view5"
+            android:background="@color/iron"
+            android:layout_width="70dp"
+            android:layout_height="1dp">
+    </View>
+
+</RelativeLayout>
