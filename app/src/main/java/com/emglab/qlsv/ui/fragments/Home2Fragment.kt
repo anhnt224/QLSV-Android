@@ -1,8 +1,6 @@
 package com.emglab.qlsv.ui.fragments
 
 import android.annotation.SuppressLint
-import android.content.Intent
-import android.net.Uri
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,32 +10,27 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.observe
 import androidx.navigation.Navigation
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.PagerSnapHelper
 import com.emglab.qlsv.R
 import com.emglab.qlsv.databinding.Home2FragmentBinding
 import com.emglab.qlsv.di.Injectable
 import com.emglab.qlsv.di.ViewModelFactory
-import com.emglab.qlsv.extension.checkLocationPermission
 import com.emglab.qlsv.extension.checkResource
 import com.emglab.qlsv.extension.showToast
 import com.emglab.qlsv.helper.SharedPrefsHelper
 import com.emglab.qlsv.models.entity.Activity
-import com.emglab.qlsv.models.entity.HomeItem
+import com.emglab.qlsv.modules.home.model.HomeItem
 import com.emglab.qlsv.models.entity.Semester
-import com.emglab.qlsv.ui.adapter.HomeItem2Adapter
-import com.emglab.qlsv.ui.adapter.HomeItem3Adapter
-import com.emglab.qlsv.ui.adapter.HomeItemAdapter
+import com.emglab.qlsv.modules.home.adapter.HomeMenuGroupAdapter
+import com.emglab.qlsv.modules.home.adapter.HomeMenuItemListener
+import com.emglab.qlsv.modules.home.adapter.PublicActivityAdapter
 import com.emglab.qlsv.ui.adapter.activity.EventAdapter
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.remoteconfig.ktx.remoteConfig
-import java.lang.Exception
 import javax.inject.Inject
 
 class Home2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
-    HomeItemAdapter.OnItemClickListener, HomeItem2Adapter.OnItemClickListener,
-    HomeItem3Adapter.OnItemClickListener {
+    HomeMenuItemListener {
 
     private lateinit var viewModel: Home2ViewModel
 
@@ -47,33 +40,22 @@ class Home2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
     @Inject
     lateinit var sharedPrefsHelper: SharedPrefsHelper
     private lateinit var binding: Home2FragmentBinding
-    private lateinit var eventAdapter: EventAdapter
-    private val remoteConfig = Firebase.remoteConfig
+    private lateinit var publicActivityAdapter: PublicActivityAdapter
     private var semesters: List<Semester> = listOf()
-    private lateinit var homeAdapter1: HomeItemAdapter
-    private lateinit var homeAdapter2: HomeItem2Adapter
-    private lateinit var homeAdapter3: HomeItem3Adapter
-    private var homeItems1 = arrayListOf(
-        HomeItem("Chấm điểm rèn luyện", R.drawable.ic_mark),
-        HomeItem("Kết quả rèn luyện", R.drawable.ic_score),
-        HomeItem("Hoạt động ngoại khóa", R.drawable.ic_activity),
-        HomeItem("Sổ tay", R.drawable.ic_notebook),
-        HomeItem("Dịch vụ công", R.drawable.ic_service),
-        HomeItem("Học bổng", R.drawable.ic_scholarship)
-    )
-    private var homeItems2 = arrayListOf(
-        HomeItem("Việc làm", R.drawable.ic_job),
-        HomeItem("Việc làm thêm", R.drawable.ic_time_end_money),
-        HomeItem("Gia sư", R.drawable.ic_tutor)
-    )
+    private lateinit var homeMenuGroupAdapter: HomeMenuGroupAdapter
+    private val snapHelper = PagerSnapHelper()
 
-    private var homeItems3 = arrayListOf(
-        HomeItem("10.000 bước", R.drawable.ic_running),
-        HomeItem("Sổ địa chỉ", R.drawable.ic_home_location),
-        HomeItem("Nhà trọ", R.drawable.ic_motel),
-        HomeItem("Quà tặng", R.drawable.ic_gift),
-        HomeItem("Cho/tặng quà", R.drawable.ic_receive_gift),
-        HomeItem("Đăng kí tìm trọ", R.drawable.home_icon_search_motel)
+    private var menuGroups: Map<String, List<HomeItem>> = mapOf(
+        "Ngoại khoá" to listOf(
+            HomeItem("mark", "Chấm điểm rèn luyện", R.drawable.ic_home_mark),
+            HomeItem("act_result", "Kết quả rèn luyện", R.drawable.ic_home_act_result),
+            HomeItem("activity", "Hoạt động ngoại khóa", R.drawable.ic_home_athletics)
+        ),
+        "Hành chính" to listOf(
+            HomeItem("service", "Dịch vụ công", R.drawable.ic_home_service),
+            HomeItem("scholarship", "Học bổng", R.drawable.ic_home_scholarship),
+            HomeItem("address", "Sổ địa chỉ", R.drawable.ic_home_address)
+        )
     )
 
 
@@ -90,14 +72,14 @@ class Home2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
             false
         )
         binding.apply {
-            titleTextView.text = "Chào ${sharedPrefsHelper.getFullName()}"
-            titleWelcome.text = remoteConfig.getString("titleWelcome2")
+            titleTextView.text = sharedPrefsHelper.getFullName()
+            titleWelcome.text = sharedPrefsHelper.getUserName()
             retryButton.setOnClickListener {
                 viewModel.getPublicActivities()
             }
         }
         viewModel.getListSemester()
-        setUpRecyclerView(binding)
+        setUpRecyclerView()
         subscribeUi()
         return binding.root
     }
@@ -106,35 +88,29 @@ class Home2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
         viewModel = ViewModelProvider(this, factory).get(Home2ViewModel::class.java)
     }
 
-    private fun setUpRecyclerView(binding: Home2FragmentBinding) {
-        eventAdapter = EventAdapter(listOf(), requireActivity(), this)
-        binding.recyclerView.apply {
-            adapter = eventAdapter
-            layoutManager = LinearLayoutManager(
-                context,
-                LinearLayoutManager.HORIZONTAL,
-                false
-            )
+    private fun setUpRecyclerView() {
+        publicActivityAdapter = PublicActivityAdapter(listOf(), requireActivity(), this)
+        binding.apply {
+            recyclerView.apply {
+                adapter = publicActivityAdapter
+                layoutManager = LinearLayoutManager(
+                    context,
+                    LinearLayoutManager.HORIZONTAL,
+                    false
+                )
+            }
+            snapHelper.attachToRecyclerView(recyclerView)
+            indicator.attachToRecyclerView(recyclerView, snapHelper)
+
+            publicActivityAdapter.registerAdapterDataObserver(indicator.adapterDataObserver)
         }
 
-        homeAdapter1 = HomeItemAdapter(homeItems1, this)
-        binding.recyclerView1.apply {
-            adapter = homeAdapter1
-            layoutManager = GridLayoutManager(context, 3)
+        homeMenuGroupAdapter = HomeMenuGroupAdapter(menuGroups, this)
+        binding.homeMenu.apply {
+            setHasFixedSize(true)
+            adapter = homeMenuGroupAdapter
+            layoutManager = LinearLayoutManager(requireContext())
         }
-
-        homeAdapter2 = HomeItem2Adapter(homeItems2, this)
-        binding.recyclerView2.apply {
-            adapter = homeAdapter2
-            layoutManager = GridLayoutManager(context, 3)
-        }
-
-        homeAdapter3 = HomeItem3Adapter(homeItems3, this)
-        binding.recyclerView3.apply {
-            adapter = homeAdapter3
-            layoutManager = GridLayoutManager(context, 3)
-        }
-
     }
 
     @SuppressLint("NotifyDataSetChanged")
@@ -143,8 +119,8 @@ class Home2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
             activities.observe(viewLifecycleOwner) {
                 binding.getActivityStatus = it.status
                 if (checkResource(it)) {
-                    eventAdapter.activities = it.data ?: listOf()
-                    eventAdapter.notifyDataSetChanged()
+                    publicActivityAdapter.activities = it.data ?: listOf()
+                    publicActivityAdapter.notifyDataSetChanged()
                 }
             }
             semesters.observe(viewLifecycleOwner) {
@@ -176,11 +152,6 @@ class Home2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
         Navigation.findNavController(requireView()).navigate(action)
     }
 
-    private fun navigateToSearchMotelFragment() {
-        val action = Home2FragmentDirections.actionHome2FragmentToSearchMotelFragment()
-        Navigation.findNavController(requireView()).navigate(action)
-    }
-
     private fun navigateToCriteriaFragment() {
         val action = Home2FragmentDirections.actionHome2FragmentToTrainingPointFragment()
         Navigation.findNavController(requireView()).navigate(action)
@@ -196,11 +167,6 @@ class Home2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
         Navigation.findNavController(requireView()).navigate(action)
     }
 
-    private fun navigateToListJobsFragment() {
-        val action = Home2FragmentDirections.actionHome2FragmentToListJobsFragment()
-        Navigation.findNavController(requireView()).navigate(action)
-    }
-
     private fun navigateToListScholarShips() {
         val action = Home2FragmentDirections.actionHome2FragmentToListScholarShipsFragment()
         Navigation.findNavController(requireView()).navigate(action)
@@ -211,87 +177,21 @@ class Home2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
         Navigation.findNavController(requireView()).navigate(action)
     }
 
-    private fun navigateToRunDashboard() {
-        val action = Home2FragmentDirections.actionHome2FragmentToRunDashboardFragment()
-        Navigation.findNavController(requireView()).navigate(action)
-    }
-
-    private fun navigateToGift() {
-        val action = Home2FragmentDirections.actionHome2FragmentToGiftFragment(true)
-        Navigation.findNavController(requireView()).navigate(action)
-    }
-
-    private fun navigateGivenGift() {
-        val action = Home2FragmentDirections.actionHome2FragmentToGiftGivenFragment(true)
-        Navigation.findNavController(requireView()).navigate(action)
-    }
-
-    private fun navigateToPartTime() {
-        val action = Home2FragmentDirections.actionHome2FragmentToMoreJobFragment()
-        Navigation.findNavController(requireView()).navigate(action)
-    }
-
-    private fun navigateToTutorFragment() {
-        val action = Home2FragmentDirections.actionHome2FragmentToTutorFragment()
-        Navigation.findNavController(requireView()).navigate(action)
-    }
-
-    private fun navigateToMotelRegistrationList() {
-        val searchMotelEnabled = remoteConfig.getValue("search_motel_feature_enabled").asBoolean()
-        if (searchMotelEnabled) {
-            val action =
-                Home2FragmentDirections.actionHome2FragmentToMotelRegistrationListFragment()
-            Navigation.findNavController(requireView()).navigate(action)
-        } else {
-            showToast("Tính năng này sẽ được phát hành trong thời gian tới")
-        }
-    }
-
-    private fun openLink(link: String) {
-        try {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
-            startActivity(intent)
-        } catch (e: Exception) {
-        }
-    }
-
     override fun onItemClick(activity: Activity) {
         val action =
             Home2FragmentDirections.actionHome2FragmentToActivityDetailByUserUnitFragment(activity.id)
         Navigation.findNavController(requireView()).navigate(action)
     }
 
-    override fun onClick1(position: Int) {
-        when (position) {
-            0 -> chooseSemester()
-            1 -> navigateToCriteriaFragment()
-            2 -> navigateToActivityFragment()
-            3 -> openLink(remoteConfig.getString("note_link"))
-            4 -> navigateToListFormFragment()
-            5 -> navigateToListScholarShips()
-        }
-    }
-
-    override fun onClick2(position: Int) {
-        when (position) {
-            0 -> navigateToListJobsFragment()
-            1 -> navigateToPartTime()
-            2 -> navigateToTutorFragment()
-        }
-    }
-
-    override fun onClick3(position: Int) {
-        when (position) {
-            0 -> navigateToRunDashboard()
-            1 -> navigateToListAddressFragment()
-            2 -> {
-                if (checkLocationPermission()) {
-                    navigateToSearchMotelFragment()
-                }
-            }
-            3 -> navigateToGift()
-            4 -> navigateGivenGift()
-            5 -> navigateToMotelRegistrationList()
+    override fun onHomeItemClick(homeItem: HomeItem) {
+        showToast(homeItem.id)
+        when (homeItem.id) {
+            "mark" -> chooseSemester()
+            "act_result" -> navigateToCriteriaFragment()
+            "activity" -> navigateToActivityFragment()
+            "service" -> navigateToListFormFragment()
+            "scholarship" -> navigateToListScholarShips()
+            "address" -> navigateToListAddressFragment()
         }
     }
 }

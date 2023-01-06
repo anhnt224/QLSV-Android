@@ -71,6 +71,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+animator scale_with_alpha
 array initial_slider_values
 attr action
 attr actionBarDivider
@@ -263,6 +264,15 @@ attr chipStrokeColor
 attr chipStrokeWidth
 attr chipStyle
 attr chipSurfaceColor
+attr ci_animator
+attr ci_animator_reverse
+attr ci_drawable
+attr ci_drawable_unselected
+attr ci_gravity
+attr ci_height
+attr ci_margin
+attr ci_orientation
+attr ci_width
 attr circleCrop
 attr circleRadius
 attr circularProgressIndicatorStyle
@@ -2082,10 +2092,17 @@ drawable ic_group
 drawable ic_group_blue
 drawable ic_group_blue_24dp
 drawable ic_history
+drawable ic_home_account
+drawable ic_home_act_result
+drawable ic_home_address
+drawable ic_home_athletics
 drawable ic_home_black_24dp
 drawable ic_home_gift
 drawable ic_home_location
+drawable ic_home_mark
+drawable ic_home_scholarship
 drawable ic_home_send_gift
+drawable ic_home_service
 drawable ic_image_motel
 drawable ic_in_gift1
 drawable ic_info_3
@@ -2174,6 +2191,8 @@ drawable image_motel_one
 drawable image_motel_three
 drawable image_motel_two
 drawable img
+drawable indicator_drawable
+drawable indicator_drawable_unselected
 drawable info_2
 drawable job
 drawable job_3
@@ -2251,6 +2270,7 @@ drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable trex
 drawable tutor_banner
+drawable white_radius
 drawable winner
 drawable winner_gray
 drawable worried
@@ -2657,6 +2677,7 @@ id common_auth_webview
 id common_auth_webview_progressbar
 id confirm_button
 id constraintLayout
+id constraintLayout2
 id constraintMotelInfoShow
 id contact
 id contactButton
@@ -2826,6 +2847,7 @@ id home
 id home2Fragment
 id homeAsUp
 id homeFragment
+id homeMenu
 id home_fragment
 id honorRequest
 id horizontal
@@ -2862,6 +2884,7 @@ id imageView13
 id imageView14
 id imageView15
 id imageView16
+id imageView17
 id imageView18
 id imageView2
 id imageView3
@@ -2902,6 +2925,7 @@ id include
 id include2
 id include3
 id include4
+id indicator
 id info
 id infoButton
 id info_layout
@@ -3016,6 +3040,7 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id media_actions
+id menuList
 id message
 id messageListFragment
 id messageTextView
@@ -3423,6 +3448,7 @@ id timeTableFragment
 id timeTextView
 id title
 id titleDividerNoCustom
+id titleText
 id titleTextView
 id titleView
 id titleWelcome
@@ -3537,7 +3563,6 @@ id viewFeedback
 id viewForm
 id viewJob
 id viewListMotelInfo
-id viewLoginWithMs
 id viewLogout
 id viewNote
 id viewNotes
@@ -3782,6 +3807,8 @@ layout list_item_gift_register_2
 layout list_item_gift_type
 layout list_item_help
 layout list_item_home
+layout list_item_home_menu
+layout list_item_home_menu_group
 layout list_item_image_motel
 layout list_item_job_apply
 layout list_item_loading
@@ -3789,6 +3816,7 @@ layout list_item_message
 layout list_item_motel_image
 layout list_item_motel_info
 layout list_item_note
+layout list_item_public_activity
 layout list_item_received_gift
 layout list_item_run_result
 layout list_item_running_data
@@ -5096,6 +5124,7 @@ styleable AppCompatTheme android_windowIsFloating android_windowAnimationStyle a
 styleable Badge backgroundColor badgeGravity badgeTextColor horizontalOffset maxCharacterCount number verticalOffset
 styleable Banner banner_auto_loop banner_indicator_gravity banner_indicator_height banner_indicator_margin banner_indicator_marginBottom banner_indicator_marginLeft banner_indicator_marginRight banner_indicator_marginTop banner_indicator_normal_color banner_indicator_normal_width banner_indicator_radius banner_indicator_selected_color banner_indicator_selected_width banner_indicator_space banner_infinite_loop banner_loop_time banner_orientation banner_radius banner_round_bottom_left banner_round_bottom_right banner_round_top_left banner_round_top_right
 styleable BarcodeReader auto_focus use_flash
+styleable BaseCircleIndicator ci_animator ci_animator_reverse ci_drawable ci_drawable_unselected ci_gravity ci_height ci_margin ci_orientation ci_width
 styleable BaseProgressIndicator android_indeterminate hideAnimationBehavior indicatorColor minHideDelay showAnimationBehavior showDelay trackColor trackCornerRadius trackThickness
 styleable BottomAppBar backgroundTint elevation fabAlignmentMode fabAnimationMode fabCradleMargin fabCradleRoundedCornerRadius fabCradleVerticalOffset hideOnScroll paddingBottomSystemWindowInsets paddingLeftSystemWindowInsets paddingRightSystemWindowInsets
 styleable BottomNavigationView itemHorizontalTranslationEnabled

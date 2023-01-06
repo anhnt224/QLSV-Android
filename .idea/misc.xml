@@ -142,6 +142,8 @@
         <entry key="app/src/main/res/drawable/dialog_notification_bg.xml" value="0.38333333333333336" />
         <entry key="app/src/main/res/drawable/enable_background_button.xml" value="0.124" />
         <entry key="app/src/main/res/drawable/ic_calendar_black_24dp.xml" value="0.3861111111111111" />
+        <entry key="app/src/main/res/drawable/indicator_drawable.xml" value="0.201" />
+        <entry key="app/src/main/res/drawable/indicator_drawable_unselected.xml" value="0.201" />
         <entry key="app/src/main/res/drawable/list_item_gift_bg.xml" value="0.38981481481481484" />
         <entry key="app/src/main/res/drawable/seekbar_progress.xml" value="0.124" />
         <entry key="app/src/main/res/drawable/seekbar_progress_style.xml" value="0.124" />
@@ -255,6 +257,8 @@
         <entry key="app/src/main/res/layout/list_item_gift_register_2.xml" value="0.14114583333333333" />
         <entry key="app/src/main/res/layout/list_item_gift_type.xml" value="0.3890625" />
         <entry key="app/src/main/res/layout/list_item_home.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/list_item_home_menu.xml" value="0.3591485507246377" />
+        <entry key="app/src/main/res/layout/list_item_home_menu_group.xml" value="0.3591485507246377" />
         <entry key="app/src/main/res/layout/list_item_image_motel.xml" value="0.182518115942029" />
         <entry key="app/src/main/res/layout/list_item_job_apply.xml" value="0.1" />
         <entry key="app/src/main/res/layout/list_item_loading.xml" value="0.1" />
@@ -262,6 +266,7 @@
         <entry key="app/src/main/res/layout/list_item_motel_image.xml" value="0.182518115942029" />
         <entry key="app/src/main/res/layout/list_item_motel_info.xml" value="0.182518115942029" />
         <entry key="app/src/main/res/layout/list_item_note.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/list_item_public_activity.xml" value="0.3591485507246377" />
         <entry key="app/src/main/res/layout/list_item_received_gift.xml" value="0.25" />
         <entry key="app/src/main/res/layout/list_item_reciever_giftt.xml" value="0.165" />
         <entry key="app/src/main/res/layout/list_item_run_resublt.xml" value="0.22282608695652173" />

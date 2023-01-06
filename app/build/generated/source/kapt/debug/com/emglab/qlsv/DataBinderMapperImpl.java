@@ -90,12 +90,15 @@ import com.emglab.qlsv.databinding.ListItemGiftRegister2BindingImpl;
 import com.emglab.qlsv.databinding.ListItemGiftRegisterBindingImpl;
 import com.emglab.qlsv.databinding.ListItemHelpBindingImpl;
 import com.emglab.qlsv.databinding.ListItemHomeBindingImpl;
+import com.emglab.qlsv.databinding.ListItemHomeMenuBindingImpl;
+import com.emglab.qlsv.databinding.ListItemHomeMenuGroupBindingImpl;
 import com.emglab.qlsv.databinding.ListItemImageMotelBindingImpl;
 import com.emglab.qlsv.databinding.ListItemJobApplyBindingImpl;
 import com.emglab.qlsv.databinding.ListItemMessageBindingImpl;
 import com.emglab.qlsv.databinding.ListItemMotelImageBindingImpl;
 import com.emglab.qlsv.databinding.ListItemMotelInfoBindingImpl;
 import com.emglab.qlsv.databinding.ListItemNoteBindingImpl;
+import com.emglab.qlsv.databinding.ListItemPublicActivityBindingImpl;
 import com.emglab.qlsv.databinding.ListItemReceivedGiftBindingImpl;
 import com.emglab.qlsv.databinding.ListItemRunResultBindingImpl;
 import com.emglab.qlsv.databinding.ListItemRunningDataBindingImpl;
@@ -341,151 +344,157 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_LISTITEMHOME = 84;
 
-  private static final int LAYOUT_LISTITEMIMAGEMOTEL = 85;
+  private static final int LAYOUT_LISTITEMHOMEMENU = 85;
 
-  private static final int LAYOUT_LISTITEMJOBAPPLY = 86;
+  private static final int LAYOUT_LISTITEMHOMEMENUGROUP = 86;
 
-  private static final int LAYOUT_LISTITEMMESSAGE = 87;
+  private static final int LAYOUT_LISTITEMIMAGEMOTEL = 87;
 
-  private static final int LAYOUT_LISTITEMMOTELIMAGE = 88;
+  private static final int LAYOUT_LISTITEMJOBAPPLY = 88;
 
-  private static final int LAYOUT_LISTITEMMOTELINFO = 89;
+  private static final int LAYOUT_LISTITEMMESSAGE = 89;
 
-  private static final int LAYOUT_LISTITEMNOTE = 90;
+  private static final int LAYOUT_LISTITEMMOTELIMAGE = 90;
 
-  private static final int LAYOUT_LISTITEMRECEIVEDGIFT = 91;
+  private static final int LAYOUT_LISTITEMMOTELINFO = 91;
 
-  private static final int LAYOUT_LISTITEMRUNRESULT = 92;
+  private static final int LAYOUT_LISTITEMNOTE = 92;
 
-  private static final int LAYOUT_LISTITEMRUNNINGDATA = 93;
+  private static final int LAYOUT_LISTITEMPUBLICACTIVITY = 93;
 
-  private static final int LAYOUT_LISTITEMSCHEDULE = 94;
+  private static final int LAYOUT_LISTITEMRECEIVEDGIFT = 94;
 
-  private static final int LAYOUT_LISTITEMSCHOLARSHIP = 95;
+  private static final int LAYOUT_LISTITEMRUNRESULT = 95;
 
-  private static final int LAYOUT_LISTITEMSCHOLARSHIPAPPLIED = 96;
+  private static final int LAYOUT_LISTITEMRUNNINGDATA = 96;
 
-  private static final int LAYOUT_LISTITEMSTUDENT = 97;
+  private static final int LAYOUT_LISTITEMSCHEDULE = 97;
 
-  private static final int LAYOUT_LISTITEMSTUDENT2 = 98;
+  private static final int LAYOUT_LISTITEMSCHOLARSHIP = 98;
 
-  private static final int LAYOUT_LISTITEMSTUDENTCRITERIA = 99;
+  private static final int LAYOUT_LISTITEMSCHOLARSHIPAPPLIED = 99;
 
-  private static final int LAYOUT_LISTITEMSTUDENTCRITERIAGROUPS = 100;
+  private static final int LAYOUT_LISTITEMSTUDENT = 100;
 
-  private static final int LAYOUT_LISTITEMSUBJECT = 101;
+  private static final int LAYOUT_LISTITEMSTUDENT2 = 101;
 
-  private static final int LAYOUT_LISTITEMTUTORIAL = 102;
+  private static final int LAYOUT_LISTITEMSTUDENTCRITERIA = 102;
 
-  private static final int LAYOUT_LISTITEMUSERCHECKINACTIVITY = 103;
+  private static final int LAYOUT_LISTITEMSTUDENTCRITERIAGROUPS = 103;
 
-  private static final int LAYOUT_LISTITEMUSERCRITERIA = 104;
+  private static final int LAYOUT_LISTITEMSUBJECT = 104;
 
-  private static final int LAYOUT_LISTJOBAPPLYFRAGMENT = 105;
+  private static final int LAYOUT_LISTITEMTUTORIAL = 105;
 
-  private static final int LAYOUT_LISTJOBSFRAGMENT = 106;
+  private static final int LAYOUT_LISTITEMUSERCHECKINACTIVITY = 106;
 
-  private static final int LAYOUT_LISTREGISTERFRAGMENT = 107;
+  private static final int LAYOUT_LISTITEMUSERCRITERIA = 107;
 
-  private static final int LAYOUT_LISTRUNRESULTITEM = 108;
+  private static final int LAYOUT_LISTJOBAPPLYFRAGMENT = 108;
 
-  private static final int LAYOUT_LISTSCHOLARSHIPAPPLIEDFRAGMENT = 109;
+  private static final int LAYOUT_LISTJOBSFRAGMENT = 109;
 
-  private static final int LAYOUT_LISTSCHOLARSHIPSFRAGMENT = 110;
+  private static final int LAYOUT_LISTREGISTERFRAGMENT = 110;
 
-  private static final int LAYOUT_LISTSTUDENTFRAGMENT = 111;
+  private static final int LAYOUT_LISTRUNRESULTITEM = 111;
 
-  private static final int LAYOUT_LOADINGACTIONSTATE = 112;
+  private static final int LAYOUT_LISTSCHOLARSHIPAPPLIEDFRAGMENT = 112;
 
-  private static final int LAYOUT_LOADINGSTATE = 113;
+  private static final int LAYOUT_LISTSCHOLARSHIPSFRAGMENT = 113;
 
-  private static final int LAYOUT_MAPDIALOG = 114;
+  private static final int LAYOUT_LISTSTUDENTFRAGMENT = 114;
 
-  private static final int LAYOUT_MOTELINFOFRAGMENT = 115;
+  private static final int LAYOUT_LOADINGACTIONSTATE = 115;
 
-  private static final int LAYOUT_MOTELREGISTRATIONITEM = 116;
+  private static final int LAYOUT_LOADINGSTATE = 116;
 
-  private static final int LAYOUT_NOTESFRAGMENT = 117;
+  private static final int LAYOUT_MAPDIALOG = 117;
 
-  private static final int LAYOUT_PICKLOCATIONFRAGMENT = 118;
+  private static final int LAYOUT_MOTELINFOFRAGMENT = 118;
 
-  private static final int LAYOUT_QRSTUDENTFRAGMENT = 119;
+  private static final int LAYOUT_MOTELREGISTRATIONITEM = 119;
 
-  private static final int LAYOUT_RECEIVERADDRESSFRAGMENT = 120;
+  private static final int LAYOUT_NOTESFRAGMENT = 120;
 
-  private static final int LAYOUT_REGISTFORMFRAGMENT = 121;
+  private static final int LAYOUT_PICKLOCATIONFRAGMENT = 121;
 
-  private static final int LAYOUT_REGISTGIFTFRAGMENT = 122;
+  private static final int LAYOUT_QRSTUDENTFRAGMENT = 122;
 
-  private static final int LAYOUT_RUNDASHBOARDFRAGMENT = 123;
+  private static final int LAYOUT_RECEIVERADDRESSFRAGMENT = 123;
 
-  private static final int LAYOUT_RUNFRAGMENT = 124;
+  private static final int LAYOUT_REGISTFORMFRAGMENT = 124;
 
-  private static final int LAYOUT_RUNNINGDATAFRAGMENT = 125;
+  private static final int LAYOUT_REGISTGIFTFRAGMENT = 125;
 
-  private static final int LAYOUT_RUNNINGFRAGMENT = 126;
+  private static final int LAYOUT_RUNDASHBOARDFRAGMENT = 126;
 
-  private static final int LAYOUT_SCHOLARSHIPDETAILFRAGMENT = 127;
+  private static final int LAYOUT_RUNFRAGMENT = 127;
 
-  private static final int LAYOUT_SEARCHMOTELFRAGMENT = 128;
+  private static final int LAYOUT_RUNNINGDATAFRAGMENT = 128;
 
-  private static final int LAYOUT_STUDENTINFOFRAGMENT = 129;
+  private static final int LAYOUT_RUNNINGFRAGMENT = 129;
 
-  private static final int LAYOUT_TACCOUNTFRAGMENT = 130;
+  private static final int LAYOUT_SCHOLARSHIPDETAILFRAGMENT = 130;
 
-  private static final int LAYOUT_TACTIVITYINFOFRAGMENT = 131;
+  private static final int LAYOUT_SEARCHMOTELFRAGMENT = 131;
 
-  private static final int LAYOUT_TCHANGEPASSWORDFRAGMENT = 132;
+  private static final int LAYOUT_STUDENTINFOFRAGMENT = 132;
 
-  private static final int LAYOUT_TCREATEGIFTFRAGMENT = 133;
+  private static final int LAYOUT_TACCOUNTFRAGMENT = 133;
 
-  private static final int LAYOUT_TEDITFORMFRAGMENT = 134;
+  private static final int LAYOUT_TACTIVITYINFOFRAGMENT = 134;
 
-  private static final int LAYOUT_TFORMDETAILFRAGMENT = 135;
+  private static final int LAYOUT_TCHANGEPASSWORDFRAGMENT = 135;
 
-  private static final int LAYOUT_TFORMREGISTEREDFRAGMENT = 136;
+  private static final int LAYOUT_TCREATEGIFTFRAGMENT = 136;
 
-  private static final int LAYOUT_TGIFTFRAGMENT = 137;
+  private static final int LAYOUT_TEDITFORMFRAGMENT = 137;
 
-  private static final int LAYOUT_TGIFTGIVENFRAGMENT = 138;
+  private static final int LAYOUT_TFORMDETAILFRAGMENT = 138;
 
-  private static final int LAYOUT_TGIFTINFOFRAGMENT = 139;
+  private static final int LAYOUT_TFORMREGISTEREDFRAGMENT = 139;
 
-  private static final int LAYOUT_THOME2FRAGMENT = 140;
+  private static final int LAYOUT_TGIFTFRAGMENT = 140;
 
-  private static final int LAYOUT_THOMEFRAGMENT = 141;
+  private static final int LAYOUT_TGIFTGIVENFRAGMENT = 141;
 
-  private static final int LAYOUT_TJOBDETAILFRAGMENT = 142;
+  private static final int LAYOUT_TGIFTINFOFRAGMENT = 142;
 
-  private static final int LAYOUT_TLISTACTIVITIESFRAGMENT = 143;
+  private static final int LAYOUT_THOME2FRAGMENT = 143;
 
-  private static final int LAYOUT_TLISTFORMFRAGMENT = 144;
+  private static final int LAYOUT_THOMEFRAGMENT = 144;
 
-  private static final int LAYOUT_TLISTFORMREGISTEREDFRAGMENT = 145;
+  private static final int LAYOUT_TJOBDETAILFRAGMENT = 145;
 
-  private static final int LAYOUT_TLISTJOBSFRAGMENT = 146;
+  private static final int LAYOUT_TLISTACTIVITIESFRAGMENT = 146;
 
-  private static final int LAYOUT_TLISTNOTIFICATIONSFRAGMENT = 147;
+  private static final int LAYOUT_TLISTFORMFRAGMENT = 147;
 
-  private static final int LAYOUT_TLISTREGISTERFRAGMENT = 148;
+  private static final int LAYOUT_TLISTFORMREGISTEREDFRAGMENT = 148;
 
-  private static final int LAYOUT_TLISTSCHOLARSHIPSFRAGMENT = 149;
+  private static final int LAYOUT_TLISTJOBSFRAGMENT = 149;
 
-  private static final int LAYOUT_TREGISTERFORMFRAGMENT = 150;
+  private static final int LAYOUT_TLISTNOTIFICATIONSFRAGMENT = 150;
 
-  private static final int LAYOUT_TSCHOLARSHIPDETAILFRAGMENT = 151;
+  private static final int LAYOUT_TLISTREGISTERFRAGMENT = 151;
 
-  private static final int LAYOUT_TSTUDENTNOTEFRAGMENT = 152;
+  private static final int LAYOUT_TLISTSCHOLARSHIPSFRAGMENT = 152;
 
-  private static final int LAYOUT_TEACHERINFOFRAGMENT = 153;
+  private static final int LAYOUT_TREGISTERFORMFRAGMENT = 153;
 
-  private static final int LAYOUT_TEACHERMARKFRAGMENT = 154;
+  private static final int LAYOUT_TSCHOLARSHIPDETAILFRAGMENT = 154;
 
-  private static final int LAYOUT_TIMETABLEFRAGMENT = 155;
+  private static final int LAYOUT_TSTUDENTNOTEFRAGMENT = 155;
 
-  private static final int LAYOUT_TRAININGPOINTFRAGMENT = 156;
+  private static final int LAYOUT_TEACHERINFOFRAGMENT = 156;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(156);
+  private static final int LAYOUT_TEACHERMARKFRAGMENT = 157;
+
+  private static final int LAYOUT_TIMETABLEFRAGMENT = 158;
+
+  private static final int LAYOUT_TRAININGPOINTFRAGMENT = 159;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(159);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.emglab.qlsv.R.layout.account_fragment, LAYOUT_ACCOUNTFRAGMENT);
@@ -572,12 +581,15 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.emglab.qlsv.R.layout.list_item_gift_register_2, LAYOUT_LISTITEMGIFTREGISTER2);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.emglab.qlsv.R.layout.list_item_help, LAYOUT_LISTITEMHELP);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.emglab.qlsv.R.layout.list_item_home, LAYOUT_LISTITEMHOME);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.emglab.qlsv.R.layout.list_item_home_menu, LAYOUT_LISTITEMHOMEMENU);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.emglab.qlsv.R.layout.list_item_home_menu_group, LAYOUT_LISTITEMHOMEMENUGROUP);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.emglab.qlsv.R.layout.list_item_image_motel, LAYOUT_LISTITEMIMAGEMOTEL);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.emglab.qlsv.R.layout.list_item_job_apply, LAYOUT_LISTITEMJOBAPPLY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.emglab.qlsv.R.layout.list_item_message, LAYOUT_LISTITEMMESSAGE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.emglab.qlsv.R.layout.list_item_motel_image, LAYOUT_LISTITEMMOTELIMAGE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.emglab.qlsv.R.layout.list_item_motel_info, LAYOUT_LISTITEMMOTELINFO);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.emglab.qlsv.R.layout.list_item_note, LAYOUT_LISTITEMNOTE);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.emglab.qlsv.R.layout.list_item_public_activity, LAYOUT_LISTITEMPUBLICACTIVITY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.emglab.qlsv.R.layout.list_item_received_gift, LAYOUT_LISTITEMRECEIVEDGIFT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.emglab.qlsv.R.layout.list_item_run_result, LAYOUT_LISTITEMRUNRESULT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.emglab.qlsv.R.layout.list_item_running_data, LAYOUT_LISTITEMRUNNINGDATA);
@@ -1160,6 +1172,18 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for list_item_home is invalid. Received: " + tag);
       }
+      case  LAYOUT_LISTITEMHOMEMENU: {
+        if ("layout/list_item_home_menu_0".equals(tag)) {
+          return new ListItemHomeMenuBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for list_item_home_menu is invalid. Received: " + tag);
+      }
+      case  LAYOUT_LISTITEMHOMEMENUGROUP: {
+        if ("layout/list_item_home_menu_group_0".equals(tag)) {
+          return new ListItemHomeMenuGroupBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for list_item_home_menu_group is invalid. Received: " + tag);
+      }
       case  LAYOUT_LISTITEMIMAGEMOTEL: {
         if ("layout/list_item_image_motel_0".equals(tag)) {
           return new ListItemImageMotelBindingImpl(component, view);
@@ -1195,6 +1219,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           return new ListItemNoteBindingImpl(component, view);
         }
         throw new IllegalArgumentException("The tag for list_item_note is invalid. Received: " + tag);
+      }
+      case  LAYOUT_LISTITEMPUBLICACTIVITY: {
+        if ("layout/list_item_public_activity_0".equals(tag)) {
+          return new ListItemPublicActivityBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for list_item_public_activity is invalid. Received: " + tag);
       }
       case  LAYOUT_LISTITEMRECEIVEDGIFT: {
         if ("layout/list_item_received_gift_0".equals(tag)) {
@@ -1238,6 +1268,13 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for list_item_student is invalid. Received: " + tag);
       }
+    }
+    return null;
+  }
+
+  private final ViewDataBinding internalGetViewDataBinding2(DataBindingComponent component,
+      View view, int internalId, Object tag) {
+    switch(internalId) {
       case  LAYOUT_LISTITEMSTUDENT2: {
         if ("layout/list_item_student2_0".equals(tag)) {
           return new ListItemStudent2BindingImpl(component, view);
@@ -1256,13 +1293,6 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for list_item_student_criteria_groups is invalid. Received: " + tag);
       }
-    }
-    return null;
-  }
-
-  private final ViewDataBinding internalGetViewDataBinding2(DataBindingComponent component,
-      View view, int internalId, Object tag) {
-    switch(internalId) {
       case  LAYOUT_LISTITEMSUBJECT: {
         if ("layout/list_item_subject_0".equals(tag)) {
           return new ListItemSubjectBindingImpl(component, view);
@@ -1545,6 +1575,13 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for t_list_notifications_fragment is invalid. Received: " + tag);
       }
+    }
+    return null;
+  }
+
+  private final ViewDataBinding internalGetViewDataBinding3(DataBindingComponent component,
+      View view, int internalId, Object tag) {
+    switch(internalId) {
       case  LAYOUT_TLISTREGISTERFRAGMENT: {
         if ("layout/t_list_register_fragment_0".equals(tag)) {
           return new TListRegisterFragmentBindingImpl(component, view);
@@ -1563,13 +1600,6 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for t_register_form_fragment is invalid. Received: " + tag);
       }
-    }
-    return null;
-  }
-
-  private final ViewDataBinding internalGetViewDataBinding3(DataBindingComponent component,
-      View view, int internalId, Object tag) {
-    switch(internalId) {
       case  LAYOUT_TSCHOLARSHIPDETAILFRAGMENT: {
         if ("layout/t_scholar_ship_detail_fragment_0".equals(tag)) {
           return new TScholarShipDetailFragmentBindingImpl(component, view);
@@ -1764,7 +1794,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(156);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(159);
 
     static {
       sKeys.put("layout/account_fragment_0", com.emglab.qlsv.R.layout.account_fragment);
@@ -1851,12 +1881,15 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/list_item_gift_register_2_0", com.emglab.qlsv.R.layout.list_item_gift_register_2);
       sKeys.put("layout/list_item_help_0", com.emglab.qlsv.R.layout.list_item_help);
       sKeys.put("layout/list_item_home_0", com.emglab.qlsv.R.layout.list_item_home);
+      sKeys.put("layout/list_item_home_menu_0", com.emglab.qlsv.R.layout.list_item_home_menu);
+      sKeys.put("layout/list_item_home_menu_group_0", com.emglab.qlsv.R.layout.list_item_home_menu_group);
       sKeys.put("layout/list_item_image_motel_0", com.emglab.qlsv.R.layout.list_item_image_motel);
       sKeys.put("layout/list_item_job_apply_0", com.emglab.qlsv.R.layout.list_item_job_apply);
       sKeys.put("layout/list_item_message_0", com.emglab.qlsv.R.layout.list_item_message);
       sKeys.put("layout/list_item_motel_image_0", com.emglab.qlsv.R.layout.list_item_motel_image);
       sKeys.put("layout/list_item_motel_info_0", com.emglab.qlsv.R.layout.list_item_motel_info);
       sKeys.put("layout/list_item_note_0", com.emglab.qlsv.R.layout.list_item_note);
+      sKeys.put("layout/list_item_public_activity_0", com.emglab.qlsv.R.layout.list_item_public_activity);
       sKeys.put("layout/list_item_received_gift_0", com.emglab.qlsv.R.layout.list_item_received_gift);
       sKeys.put("layout/list_item_run_result_0", com.emglab.qlsv.R.layout.list_item_run_result);
       sKeys.put("layout/list_item_running_data_0", com.emglab.qlsv.R.layout.list_item_running_data);

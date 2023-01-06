@@ -4,6 +4,7 @@ package com.emglab.qlsv.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -18,8 +19,18 @@ import com.emglab.qlsv.common.Status;
 import com.google.android.material.button.MaterialButton;
 import java.lang.Deprecated;
 import java.lang.Object;
+import me.relex.circleindicator.CircleIndicator2;
 
 public abstract class Home2FragmentBinding extends ViewDataBinding {
+  @NonNull
+  public final RecyclerView homeMenu;
+
+  @NonNull
+  public final ImageView imageView17;
+
+  @NonNull
+  public final CircleIndicator2 indicator;
+
   @NonNull
   public final LinearLayout linearLayout;
 
@@ -31,15 +42,6 @@ public abstract class Home2FragmentBinding extends ViewDataBinding {
 
   @NonNull
   public final RecyclerView recyclerView;
-
-  @NonNull
-  public final RecyclerView recyclerView1;
-
-  @NonNull
-  public final RecyclerView recyclerView2;
-
-  @NonNull
-  public final RecyclerView recyclerView3;
 
   @NonNull
   public final MaterialButton retryButton;
@@ -54,18 +56,18 @@ public abstract class Home2FragmentBinding extends ViewDataBinding {
   protected Status mGetActivityStatus;
 
   protected Home2FragmentBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      RecyclerView homeMenu, ImageView imageView17, CircleIndicator2 indicator,
       LinearLayout linearLayout, LinearLayout linearLayout15, ProgressBar progressBar2,
-      RecyclerView recyclerView, RecyclerView recyclerView1, RecyclerView recyclerView2,
-      RecyclerView recyclerView3, MaterialButton retryButton, TextView titleTextView,
+      RecyclerView recyclerView, MaterialButton retryButton, TextView titleTextView,
       TextView titleWelcome) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.homeMenu = homeMenu;
+    this.imageView17 = imageView17;
+    this.indicator = indicator;
     this.linearLayout = linearLayout;
     this.linearLayout15 = linearLayout15;
     this.progressBar2 = progressBar2;
     this.recyclerView = recyclerView;
-    this.recyclerView1 = recyclerView1;
-    this.recyclerView2 = recyclerView2;
-    this.recyclerView3 = recyclerView3;
     this.retryButton = retryButton;
     this.titleTextView = titleTextView;
     this.titleWelcome = titleWelcome;

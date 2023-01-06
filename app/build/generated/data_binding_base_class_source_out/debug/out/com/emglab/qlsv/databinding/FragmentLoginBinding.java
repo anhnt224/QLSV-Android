@@ -34,22 +34,18 @@ public abstract class FragmentLoginBinding extends ViewDataBinding {
   @NonNull
   public final LinearLayout lineMain;
 
-  @NonNull
-  public final LinearLayout viewLoginWithMs;
-
   @Bindable
   protected Resource mLoginResource;
 
   protected FragmentLoginBinding(Object _bindingComponent, View _root, int _localFieldCount,
       MaterialButton btnLogin, TextView btnLostPassword, TextInputEditText edtPassword,
-      TextInputEditText edtUserCode, LinearLayout lineMain, LinearLayout viewLoginWithMs) {
+      TextInputEditText edtUserCode, LinearLayout lineMain) {
     super(_bindingComponent, _root, _localFieldCount);
     this.btnLogin = btnLogin;
     this.btnLostPassword = btnLostPassword;
     this.edtPassword = edtPassword;
     this.edtUserCode = edtUserCode;
     this.lineMain = lineMain;
-    this.viewLoginWithMs = viewLoginWithMs;
   }
 
   public abstract void setLoginResource(@Nullable Resource loginResource);

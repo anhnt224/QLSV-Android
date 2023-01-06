@@ -18,11 +18,11 @@ public class Home2FragmentBindingImpl extends Home2FragmentBinding  {
         sViewsWithIds.put(R.id.linearLayout15, 4);
         sViewsWithIds.put(R.id.titleTextView, 5);
         sViewsWithIds.put(R.id.titleWelcome, 6);
-        sViewsWithIds.put(R.id.recyclerView, 7);
-        sViewsWithIds.put(R.id.retryButton, 8);
-        sViewsWithIds.put(R.id.recyclerView1, 9);
-        sViewsWithIds.put(R.id.recyclerView2, 10);
-        sViewsWithIds.put(R.id.recyclerView3, 11);
+        sViewsWithIds.put(R.id.imageView17, 7);
+        sViewsWithIds.put(R.id.recyclerView, 8);
+        sViewsWithIds.put(R.id.retryButton, 9);
+        sViewsWithIds.put(R.id.indicator, 10);
+        sViewsWithIds.put(R.id.homeMenu, 11);
     }
     // views
     @NonNull
@@ -39,14 +39,14 @@ public class Home2FragmentBindingImpl extends Home2FragmentBinding  {
     }
     private Home2FragmentBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
+            , (androidx.recyclerview.widget.RecyclerView) bindings[11]
+            , (android.widget.ImageView) bindings[7]
+            , (me.relex.circleindicator.CircleIndicator2) bindings[10]
             , (android.widget.LinearLayout) bindings[3]
             , (android.widget.LinearLayout) bindings[4]
             , (android.widget.ProgressBar) bindings[1]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[7]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[9]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[10]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[11]
-            , (com.google.android.material.button.MaterialButton) bindings[8]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[8]
+            , (com.google.android.material.button.MaterialButton) bindings[9]
             , (android.widget.TextView) bindings[5]
             , (android.widget.TextView) bindings[6]
             );

@@ -3,7 +3,6 @@ package com.emglab.qlsv.ui.fragments.user
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,9 +21,6 @@ import com.emglab.qlsv.extension.showToast
 import com.emglab.qlsv.helper.SharedPrefsHelper
 import com.emglab.qlsv.ui.viewmodels.user.LoginViewModel
 import com.emglab.qlsv.utilities.autoCleared
-import com.emglab.qlsv.utilities.runOnIoThread
-import com.microsoft.identity.client.*
-import com.microsoft.identity.client.exception.MsalException
 import javax.inject.Inject
 
 
@@ -36,16 +32,12 @@ class LoginFragment : androidx.fragment.app.Fragment(), Injectable {
     @Inject
     lateinit var sharedPrefsHelper: SharedPrefsHelper
     private var binding by autoCleared<FragmentLoginBinding>()
-    private var mAccount: IAccount? = null
-    private var mSingleAccountApp: ISingleAccountPublicClientApplication? = null
-    private val TAG = "_LOGIN_WITH_MS"
     private var email: String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+    ): View {
         binding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_login, container, false)
 
@@ -61,18 +53,6 @@ class LoginFragment : androidx.fragment.app.Fragment(), Injectable {
         setupViewModel()
         subscribeUi()
 
-        PublicClientApplication.createSingleAccountPublicClientApplication(requireContext(), R.raw.auth_config_single_account, object: IPublicClientApplication.ISingleAccountApplicationCreatedListener {
-            override fun onCreated(application: ISingleAccountPublicClientApplication?) {
-                mSingleAccountApp = application
-                loadAccount()
-            }
-
-            override fun onError(exception: MsalException?) {
-                Log.d(TAG, "$exception")
-            }
-
-        })
-
         binding.apply {
             lifecycleOwner = this@LoginFragment
 
@@ -83,14 +63,6 @@ class LoginFragment : androidx.fragment.app.Fragment(), Injectable {
             btnLostPassword.setOnClickListener {
                 Navigation.findNavController(it).
                     navigate(LoginFragmentDirections.actionLoginFragmentToLostPasswordFragment())
-            }
-
-            viewLoginWithMs.setOnClickListener {
-                if(mSingleAccountApp == null){
-                    return@setOnClickListener
-                }
-
-                mSingleAccountApp!!.signIn(requireActivity(), null, arrayOf("ea31a64a-f14a-454a-b749-a872f78caf3b/access_as_user"), getAuthInteractiveCallback())
             }
         }
 
@@ -116,12 +88,6 @@ class LoginFragment : androidx.fragment.app.Fragment(), Injectable {
                         }
                     }
                     if (resource.status == Status.ERROR){
-                        runOnIoThread {
-                            if(mSingleAccountApp != null && mSingleAccountApp!!.currentAccount != null){
-                                mSingleAccountApp!!.signOut()
-                            }
-                        }
-
                         showToast(resource.respText!!)
                         isSuccess = false
                     }
@@ -138,14 +104,19 @@ class LoginFragment : androidx.fragment.app.Fragment(), Injectable {
             showToast("Nhập tài khoản")
             return
         }
+
         if (password == ""){
             showToast("Nhập mật khẩu")
             return
         }
 
+        if (userCode != "hung.phammanh@hust.edu.vn" && userCode != "quang.dv193066@sis.hust.edu.vn"){
+            showToast("Tài khoản không tồn tại")
+            return
+        }
+
         email = userCode
         viewModel.login(userCode,password)
-
     }
 
     private fun nextToMainActivity() {
@@ -156,70 +127,5 @@ class LoginFragment : androidx.fragment.app.Fragment(), Injectable {
     private fun nextToTeacherActivity(){
         startActivity(Intent(context, TeacherActivity::class.java))
         requireActivity().finish()
-    }
-
-    /**
-     * Load current account in caches
-     */
-    private fun loadAccount(){
-        if (mSingleAccountApp == null){
-            return
-        }
-
-        mSingleAccountApp!!.getCurrentAccountAsync(object: ISingleAccountPublicClientApplication.CurrentAccountCallback {
-            override fun onAccountLoaded(activeAccount: IAccount?) {
-                mAccount = activeAccount
-                updateUI()
-            }
-
-            override fun onAccountChanged(priorAccount: IAccount?, currentAccount: IAccount?) {
-                Log.d(TAG, "Account changed")
-            }
-
-            override fun onError(exception: MsalException) {
-                Log.d(TAG,"ASYNC error: $exception")
-            }
-
-        })
-    }
-
-    /**
-     * Updates UI base on the current account
-     */
-    private fun updateUI(){
-        if(mAccount != null){
-            email = mAccount!!.username
-        }
-    }
-
-    /**
-     *
-     */
-    private fun getAuthInteractiveCallback(): AuthenticationCallback {
-        return object: AuthenticationCallback {
-            override fun onSuccess(authenticationResult: IAuthenticationResult) {
-                mAccount = authenticationResult.account
-                Log.d(TAG, "Access Token: ${authenticationResult.accessToken}")
-                email = authenticationResult.account.username
-                val accessToken = authenticationResult.accessToken
-                viewModel.loginWithMSAccount(mapOf("Authorization" to "Bearer $accessToken"))
-            }
-
-            override fun onCancel() {
-                Log.d(TAG, "User cancelled login.")
-            }
-
-            override fun onError(exception: MsalException?) {
-                runOnIoThread {
-                    try{
-                        if(mAccount != null){
-                            mSingleAccountApp!!.signOut()
-                        }
-                    }catch (e: Exception){
-
-                    }
-                }
-            }
-        }
     }
 }

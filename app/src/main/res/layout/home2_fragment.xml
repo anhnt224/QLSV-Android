@@ -43,17 +43,18 @@
                         android:layout_height="wrap_content">
                     <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
-                            android:layout_height="56dp">
+                            android:layout_height="64dp">
 
                         <LinearLayout
                                 android:id="@+id/linearLayout15"
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="12dp"
                                 android:layout_marginLeft="12dp"
                                 android:orientation="vertical"
                                 app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/imageView17"
                                 app:layout_constraintTop_toTopOf="parent">
 
                             <TextView
@@ -71,13 +72,14 @@
                         </LinearLayout>
 
                         <ImageView
+                                android:id="@+id/imageView17"
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
-                                android:layout_marginEnd="12dp"
-                                android:layout_marginRight="12dp"
-                                android:src="@drawable/ic_student"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginLeft="16dp"
+                                android:src="@drawable/ic_home_account"
                                 app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
                                 tools:ignore="ContentDescription" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -135,6 +137,13 @@
                         </LinearLayout>
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
+                    <me.relex.circleindicator.CircleIndicator2
+                            android:id="@+id/indicator"
+                            android:layout_width="match_parent"
+                            app:ci_drawable="@drawable/indicator_drawable"
+                            app:ci_drawable_unselected="@drawable/indicator_drawable_unselected"
+                            android:layout_height="32dp"/>
+
                     <LinearLayout
                             android:layout_marginStart="12dp"
                             android:layout_marginEnd="12dp"
@@ -142,63 +151,13 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"/>
 
-                    <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="12dp"
-                            android:text="Hành chính - ngoại khóa"
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/textColorPrimary"
-                            tools:ignore="HardcodedText" />
-
                     <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/recyclerView1"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_gravity="center"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
-
-                    <TextView
+                            android:id="@+id/homeMenu"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="12dp"
-                            android:text="Hướng nghiệp"
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/textColorPrimary"
-                            tools:ignore="HardcodedText" />
-                    <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/recyclerView2"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_gravity="center"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
-
-                    <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="12dp"
-                            android:text="Tiện ích"
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/textColorPrimary"
-                            tools:ignore="HardcodedText" />
-                    <LinearLayout
-                            android:layout_marginBottom="30dp"
-                            android:gravity="center"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-                        <androidx.recyclerview.widget.RecyclerView
-                                android:id="@+id/recyclerView3"
-                                android:layout_marginStart="16dp"
-                                android:layout_marginEnd="16dp"
-                                android:layout_gravity="center"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"/>
-                    </LinearLayout>
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="32dp"
+                            tools:listitem="@layout/list_item_home_menu_group" />
 
                 </LinearLayout>
             </ScrollView>

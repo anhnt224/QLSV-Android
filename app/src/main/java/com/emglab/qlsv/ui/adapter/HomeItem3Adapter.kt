@@ -7,7 +7,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.emglab.qlsv.R
 import com.emglab.qlsv.databinding.ListItemHomeBinding
-import com.emglab.qlsv.models.entity.HomeItem
+import com.emglab.qlsv.modules.home.model.HomeItem
 
 class HomeItem3Adapter(var items: List<HomeItem>, private val onItemClickListener: OnItemClickListener): RecyclerView.Adapter<HomeItem3Adapter.ViewHolder>(){
     class ViewHolder(val binding: ListItemHomeBinding, private val onItemClickListener: OnItemClickListener): RecyclerView.ViewHolder(binding.root){

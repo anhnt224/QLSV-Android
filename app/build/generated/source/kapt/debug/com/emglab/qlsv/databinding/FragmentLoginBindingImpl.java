@@ -12,7 +12,7 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding  {
     @Nullable
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
-        sIncludes = new androidx.databinding.ViewDataBinding.IncludedLayouts(8);
+        sIncludes = new androidx.databinding.ViewDataBinding.IncludedLayouts(7);
         sIncludes.setIncludes(0, 
             new String[] {"loading_action_state"},
             new int[] {1},
@@ -23,7 +23,6 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding  {
         sViewsWithIds.put(R.id.edtPassword, 4);
         sViewsWithIds.put(R.id.btnLogin, 5);
         sViewsWithIds.put(R.id.btnLostPassword, 6);
-        sViewsWithIds.put(R.id.viewLoginWithMs, 7);
     }
     // views
     @Nullable
@@ -36,7 +35,7 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding  {
     // Inverse Binding Event Handlers
 
     public FragmentLoginBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 8, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
     }
     private FragmentLoginBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
@@ -45,7 +44,6 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding  {
             , (com.google.android.material.textfield.TextInputEditText) bindings[4]
             , (com.google.android.material.textfield.TextInputEditText) bindings[3]
             , (android.widget.LinearLayout) bindings[2]
-            , (android.widget.LinearLayout) bindings[7]
             );
         this.mboundView0 = (com.emglab.qlsv.databinding.LoadingActionStateBinding) bindings[1];
         setContainedBinding(this.mboundView0);
