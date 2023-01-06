@@ -2134,6 +2134,10 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_nav_account
+drawable ic_nav_help
+drawable ic_nav_home
+drawable ic_nav_notification
 drawable ic_navigation
 drawable ic_next
 drawable ic_notebook
@@ -4219,6 +4223,7 @@ string hide_bottom_view_on_scroll_behavior
 string ho_n_t_t_ng_k
 string ho_n_th_nh
 string ho_t_ng_minh_ch_ng
+string home_title
 string http_auth_dialog_cancel
 string http_auth_dialog_login
 string http_auth_dialog_password
@@ -4294,11 +4299,14 @@ string mtrl_picker_toggle_to_calendar_input_mode
 string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
+string nav_account
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
 string nav_header_desc
 string nav_header_subtitle
 string nav_header_title
+string nav_notification
+string nav_support
 string navigation_drawer_close
 string navigation_drawer_open
 string no_camera_permission

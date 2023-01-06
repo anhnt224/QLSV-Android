@@ -24,7 +24,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="/private/var/folders/hm/ptr4r10s7j136t6r05y_hxxr0000gn/T/baseline_forward_to_inbox_24.xml" />
+                                                <entry key="imagePath" value="/private/var/folders/hm/ptr4r10s7j136t6r05y_hxxr0000gn/T/baseline_account_circle_24.xml" />
                                                 <entry key="opacityPercent" value="60" />
                                               </map>
                                             </option>
@@ -36,7 +36,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialicons/forward_to_inbox/baseline_forward_to_inbox_24.xml" />
+                                                <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialicons/account_circle/baseline_account_circle_24.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -82,7 +82,7 @@
                                   <option name="values">
                                     <map>
                                       <entry key="imageAsset" value="$USER_HOME$/Desktop/Icon-1024.png" />
-                                      <entry key="outputName" value="ic_send_sms" />
+                                      <entry key="outputName" value="ic_nav_account" />
                                       <entry key="themeColor" value="9d0e0e" />
                                     </map>
                                   </option>

@@ -93,4 +93,8 @@
     <string name="fragment_motel_registration_list">"Đăng kí tìm trọ"</string>
     <string name="fragment_motel_registration_info">"Thông tin đăng kí"</string>
     <string name="delete">Xoá</string>
+    <string name="home_title">iCTSV</string>
+    <string name="nav_notification">Thông báo</string>
+    <string name="nav_support">Hỗ trợ</string>
+    <string name="nav_account">Tài khoản</string>
 </resources>

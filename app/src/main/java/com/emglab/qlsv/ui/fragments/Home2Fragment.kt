@@ -184,7 +184,6 @@ class Home2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
     }
 
     override fun onHomeItemClick(homeItem: HomeItem) {
-        showToast(homeItem.id)
         when (homeItem.id) {
             "mark" -> chooseSemester()
             "act_result" -> navigateToCriteriaFragment()

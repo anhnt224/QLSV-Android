@@ -120,6 +120,10 @@
         <entry key="app/src/main/res/drawable-anydpi/ic_call.xml" value="0.2225" />
         <entry key="app/src/main/res/drawable-anydpi/ic_clock.xml" value="0.3861111111111111" />
         <entry key="app/src/main/res/drawable-anydpi/ic_list_added.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-anydpi/ic_nav_account.xml" value="0.201" />
+        <entry key="app/src/main/res/drawable-anydpi/ic_nav_help.xml" value="0.201" />
+        <entry key="app/src/main/res/drawable-anydpi/ic_nav_home.xml" value="0.201" />
+        <entry key="app/src/main/res/drawable-anydpi/ic_nav_notification.xml" value="0.201" />
         <entry key="app/src/main/res/drawable-anydpi/ic_send_sms.xml" value="0.2225" />
         <entry key="app/src/main/res/drawable-anydpi/ic_share_round.xml" value="0.1735" />
         <entry key="app/src/main/res/drawable/border_background_gray.xml" value="0.1115" />
