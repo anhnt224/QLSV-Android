@@ -36,62 +36,9 @@
                         android:background="@color/mainBackground"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="80dp"
-                            android:background="@color/colorWhite">
-
-                        <androidx.cardview.widget.CardView
-                                android:id="@+id/cardView"
-                                android:layout_width="64dp"
-                                android:layout_height="64dp"
-                                android:layout_marginStart="16dp"
-                                android:layout_marginLeft="16dp"
-                                app:cardCornerRadius="32dp"
-                                app:cardElevation="0dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent">
-
-                            <ImageView
-                                    android:background="@color/mainBackground"
-                                    android:id="@+id/imageStudent"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:src="@drawable/winner"
-                                    tools:ignore="ContentDescription" />
-                        </androidx.cardview.widget.CardView>
-
-                        <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="8dp"
-                                android:layout_marginLeft="8dp"
-                                android:layout_marginEnd="16dp"
-                                android:layout_marginRight="16dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toEndOf="@+id/cardView"
-                                app:layout_constraintTop_toTopOf="parent">
-
-                            <TextView
-                                    android:id="@+id/textFullName"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textColor="@color/textColorPrimary"
-                                    android:textSize="18sp"/>
-                            <TextView
-                                    android:id="@+id/textStudentID"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textColor="@color/textColorPrimaryLight" />
-                        </LinearLayout>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <LinearLayout
                             android:orientation="vertical"
-                            android:layout_marginTop="32dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
                         <androidx.constraintlayout.widget.ConstraintLayout
@@ -106,10 +53,11 @@
                                     android:layout_height="20dp"
                                     android:layout_marginStart="16dp"
                                     android:layout_marginLeft="16dp"
-                                    android:src="@drawable/info_2"
+                                    android:src="@drawable/ic_home_account"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="ContentDescription" />
 
                             <TextView
                                     android:layout_width="0dp"
@@ -158,7 +106,7 @@
                                     android:layout_height="20dp"
                                     android:layout_marginStart="16dp"
                                     android:layout_marginLeft="16dp"
-                                    android:src="@drawable/change_pass"
+                                    android:src="@drawable/ic_account_password"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent" />
@@ -211,7 +159,7 @@
                                     android:layout_height="20dp"
                                     android:layout_marginStart="16dp"
                                     android:layout_marginLeft="16dp"
-                                    android:src="@drawable/form"
+                                    android:src="@drawable/ic_home_address"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent" />
@@ -253,268 +201,6 @@
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <androidx.constraintlayout.widget.ConstraintLayout
-                                android:id="@+id/viewBook"
-                                android:layout_width="match_parent"
-                                android:background="@color/colorWhite"
-                                android:layout_height="44dp">
-
-                            <ImageView
-                                    android:id="@+id/imageView8"
-                                    android:layout_width="20dp"
-                                    android:layout_height="20dp"
-                                    android:layout_marginStart="16dp"
-                                    android:layout_marginLeft="16dp"
-                                    android:src="@drawable/book"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                            <TextView
-                                    android:id="@+id/textView3"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginStart="8dp"
-                                    android:layout_marginLeft="8dp"
-                                    android:layout_marginEnd="32dp"
-                                    android:layout_marginRight="32dp"
-                                    android:text="Sinh viên cần biết"
-                                    android:textColor="@color/textColorPrimary"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toEndOf="@+id/imageView8"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                            <ImageView
-                                    android:layout_width="16dp"
-                                    android:layout_height="16dp"
-                                    android:layout_marginEnd="8dp"
-                                    android:layout_marginRight="8dp"
-                                    android:alpha="0.6"
-                                    android:src="@drawable/ic_arrow_back"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                            <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="0.25dp"
-                                    android:layout_marginStart="44dp"
-                                    android:layout_marginLeft="44dp"
-                                    android:background="@color/lightGray"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                                android:id="@+id/viewQRStudent"
-                                android:layout_width="match_parent"
-                                android:background="@color/colorWhite"
-                                android:layout_height="44dp">
-
-                            <ImageView
-                                    android:id="@+id/imageView84"
-                                    android:layout_width="20dp"
-                                    android:layout_height="20dp"
-                                    android:layout_marginStart="16dp"
-                                    android:layout_marginLeft="16dp"
-                                    android:src="@drawable/qr_code"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                            <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginStart="8dp"
-                                    android:layout_marginLeft="8dp"
-                                    android:layout_marginEnd="32dp"
-                                    android:layout_marginRight="32dp"
-                                    android:text="QR sinh viên"
-                                    android:textColor="@color/textColorPrimary"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toEndOf="@+id/imageView84"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                            <ImageView
-                                    android:layout_width="16dp"
-                                    android:layout_height="16dp"
-                                    android:layout_marginEnd="8dp"
-                                    android:layout_marginRight="8dp"
-                                    android:alpha="0.6"
-                                    android:src="@drawable/ic_arrow_back"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                            <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="0.25dp"
-                                    android:layout_marginStart="44dp"
-                                    android:layout_marginLeft="44dp"
-                                    android:background="@color/lightGray"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                                android:id="@+id/runningView"
-                                android:layout_width="match_parent"
-                                android:background="@color/colorWhite"
-                                android:layout_height="44dp">
-
-                            <ImageView
-                                    android:id="@+id/imageView88"
-                                    android:layout_width="20dp"
-                                    android:layout_height="20dp"
-                                    android:layout_marginStart="16dp"
-                                    android:layout_marginLeft="16dp"
-                                    android:src="@drawable/running"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                            <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginStart="8dp"
-                                    android:layout_marginLeft="8dp"
-                                    android:layout_marginEnd="32dp"
-                                    android:layout_marginRight="32dp"
-                                    android:text="Chạy bộ"
-                                    android:textColor="@color/textColorPrimary"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toEndOf="@+id/imageView88"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                            <ImageView
-                                    android:layout_width="16dp"
-                                    android:layout_height="16dp"
-                                    android:layout_marginEnd="8dp"
-                                    android:layout_marginRight="8dp"
-                                    android:alpha="0.6"
-                                    android:src="@drawable/ic_arrow_back"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                            <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="0.25dp"
-                                    android:layout_marginStart="44dp"
-                                    android:layout_marginLeft="44dp"
-                                    android:background="@color/lightGray"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                                android:id="@+id/viewNotes"
-                                android:layout_width="match_parent"
-                                android:background="@color/colorWhite"
-                                android:layout_height="44dp">
-
-                            <ImageView
-                                    android:id="@+id/imageView84x"
-                                    android:layout_width="20dp"
-                                    android:layout_height="20dp"
-                                    android:layout_marginStart="16dp"
-                                    android:layout_marginLeft="16dp"
-                                    android:src="@mipmap/notes"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                            <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginStart="8dp"
-                                    android:layout_marginLeft="8dp"
-                                    android:layout_marginEnd="32dp"
-                                    android:layout_marginRight="32dp"
-                                    android:text="Nhận xét của giảng viên"
-                                    android:textColor="@color/textColorPrimary"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toEndOf="@+id/imageView84x"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                            <ImageView
-                                    android:layout_width="16dp"
-                                    android:layout_height="16dp"
-                                    android:layout_marginEnd="8dp"
-                                    android:layout_marginRight="8dp"
-                                    android:alpha="0.6"
-                                    android:src="@drawable/ic_arrow_back"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_marginTop="32dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                                android:id="@+id/viewAbout"
-                                android:layout_width="match_parent"
-                                android:background="@color/colorWhite"
-                                android:layout_height="44dp">
-
-                            <ImageView
-                                    android:id="@+id/imageView9"
-                                    android:layout_width="20dp"
-                                    android:layout_height="20dp"
-                                    android:layout_marginStart="16dp"
-                                    android:layout_marginLeft="16dp"
-                                    android:src="@drawable/logo"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                            <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginStart="8dp"
-                                    android:layout_marginLeft="8dp"
-                                    android:layout_marginEnd="32dp"
-                                    android:layout_marginRight="32dp"
-                                    android:text="Về iCTSV"
-                                    android:textColor="@color/textColorPrimary"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toEndOf="@+id/imageView9"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                            <ImageView
-                                    android:layout_width="16dp"
-                                    android:layout_height="16dp"
-                                    android:layout_marginEnd="8dp"
-                                    android:layout_marginRight="8dp"
-                                    android:alpha="0.6"
-                                    android:src="@drawable/ic_arrow_back"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                            <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="0.25dp"
-                                    android:layout_marginStart="44dp"
-                                    android:layout_marginLeft="44dp"
-                                    android:background="@color/lightGray"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
                                 android:id="@+id/viewFeedback"
                                 android:layout_width="match_parent"
                                 android:background="@color/colorWhite"
@@ -526,7 +212,7 @@
                                     android:layout_height="20dp"
                                     android:layout_marginStart="16dp"
                                     android:layout_marginLeft="16dp"
-                                    android:src="@drawable/feedback"
+                                    android:src="@drawable/ic_account_feedback"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent" />
@@ -566,50 +252,6 @@
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent" />
                         </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                                android:layout_width="match_parent"
-                                android:background="@color/colorWhite"
-                                android:layout_height="44dp"
-                                android:id="@+id/viewError">
-
-                            <ImageView
-                                    android:id="@+id/imageView841"
-                                    android:layout_width="20dp"
-                                    android:layout_height="20dp"
-                                    android:layout_marginStart="16dp"
-                                    android:layout_marginLeft="16dp"
-                                    android:src="@drawable/error"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                            <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginStart="8dp"
-                                    android:layout_marginLeft="8dp"
-                                    android:layout_marginEnd="32dp"
-                                    android:layout_marginRight="32dp"
-                                    android:text="Báo lỗi"
-                                    android:textColor="@color/textColorPrimary"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toEndOf="@+id/imageView841"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                            <ImageView
-                                    android:layout_width="16dp"
-                                    android:layout_height="16dp"
-                                    android:layout_marginEnd="8dp"
-                                    android:layout_marginRight="8dp"
-                                    android:alpha="0.6"
-                                    android:src="@drawable/ic_arrow_back"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
                     </LinearLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -625,7 +267,7 @@
                                 android:layout_height="20dp"
                                 android:layout_marginStart="16dp"
                                 android:layout_marginLeft="16dp"
-                                android:src="@drawable/logout"
+                                android:src="@drawable/ic_account_logout"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />

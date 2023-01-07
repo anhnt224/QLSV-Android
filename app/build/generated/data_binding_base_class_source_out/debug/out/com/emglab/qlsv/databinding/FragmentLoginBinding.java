@@ -4,7 +4,7 @@ package com.emglab.qlsv.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -32,14 +32,14 @@ public abstract class FragmentLoginBinding extends ViewDataBinding {
   public final TextInputEditText edtUserCode;
 
   @NonNull
-  public final LinearLayout lineMain;
+  public final ScrollView lineMain;
 
   @Bindable
   protected Resource mLoginResource;
 
   protected FragmentLoginBinding(Object _bindingComponent, View _root, int _localFieldCount,
       MaterialButton btnLogin, TextView btnLostPassword, TextInputEditText edtPassword,
-      TextInputEditText edtUserCode, LinearLayout lineMain) {
+      TextInputEditText edtUserCode, ScrollView lineMain) {
     super(_bindingComponent, _root, _localFieldCount);
     this.btnLogin = btnLogin;
     this.btnLostPassword = btnLostPassword;

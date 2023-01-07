@@ -17,7 +17,7 @@ import com.emglab.qlsv.databinding.Home2FragmentBinding
 import com.emglab.qlsv.di.Injectable
 import com.emglab.qlsv.di.ViewModelFactory
 import com.emglab.qlsv.extension.checkResource
-import com.emglab.qlsv.extension.showToast
+import com.emglab.qlsv.extension.openLink
 import com.emglab.qlsv.helper.SharedPrefsHelper
 import com.emglab.qlsv.models.entity.Activity
 import com.emglab.qlsv.modules.home.model.HomeItem
@@ -27,6 +27,7 @@ import com.emglab.qlsv.modules.home.adapter.HomeMenuItemListener
 import com.emglab.qlsv.modules.home.adapter.PublicActivityAdapter
 import com.emglab.qlsv.ui.adapter.activity.EventAdapter
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import javax.inject.Inject
 
 class Home2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
@@ -44,17 +45,23 @@ class Home2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
     private var semesters: List<Semester> = listOf()
     private lateinit var homeMenuGroupAdapter: HomeMenuGroupAdapter
     private val snapHelper = PagerSnapHelper()
+    private val remoteConfig = FirebaseRemoteConfig.getInstance()
 
     private var menuGroups: Map<String, List<HomeItem>> = mapOf(
-        "Ngoại khoá" to listOf(
+        "Hoạt động ngoại khoá" to listOf(
             HomeItem("mark", "Chấm điểm rèn luyện", R.drawable.ic_home_mark),
             HomeItem("act_result", "Kết quả rèn luyện", R.drawable.ic_home_act_result),
             HomeItem("activity", "Hoạt động ngoại khóa", R.drawable.ic_home_athletics)
         ),
-        "Hành chính" to listOf(
-            HomeItem("service", "Dịch vụ công", R.drawable.ic_home_service),
+        "Thủ tục hành chính" to listOf(
+            HomeItem("news", "Tin tức", R.drawable.ic_home_new),
+            HomeItem("address", "Sổ địa chỉ", R.drawable.ic_home_address),
+            HomeItem("service", "Dịch vụ công", R.drawable.ic_home_service)
+        ),
+        "Việc làm - Tài chính" to listOf(
             HomeItem("scholarship", "Học bổng", R.drawable.ic_home_scholarship),
-            HomeItem("address", "Sổ địa chỉ", R.drawable.ic_home_address)
+            HomeItem("job", "Việc làm", R.drawable.ic_home_job),
+            HomeItem("parttime_job", "Việc làm thêm", R.drawable.ic_home_partime_job)
         )
     )
 
@@ -183,6 +190,21 @@ class Home2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
         Navigation.findNavController(requireView()).navigate(action)
     }
 
+    private fun navigateToListJobsFragment() {
+        val action = Home2FragmentDirections.actionHome2FragmentToListJobsFragment()
+        Navigation.findNavController(requireView()).navigate(action)
+    }
+
+    private fun navigateToPartTime() {
+        val action = Home2FragmentDirections.actionHome2FragmentToMoreJobFragment()
+        Navigation.findNavController(requireView()).navigate(action)
+    }
+
+    private fun handleNewsTap(){
+        val newsLink = remoteConfig.getString("news_link")
+        openLink(newsLink)
+    }
+
     override fun onHomeItemClick(homeItem: HomeItem) {
         when (homeItem.id) {
             "mark" -> chooseSemester()
@@ -191,6 +213,9 @@ class Home2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
             "service" -> navigateToListFormFragment()
             "scholarship" -> navigateToListScholarShips()
             "address" -> navigateToListAddressFragment()
+            "job" -> navigateToListJobsFragment()
+            "parttime_job" -> navigateToPartTime()
+            "news" -> handleNewsTap()
         }
     }
 }

@@ -106,7 +106,7 @@ class RunningService: Service() {
         val notification = NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID)
             .setContentTitle("Thông tin hoạt động")
             .setContentText("Thời gian: $time - Quãng đường: ${runningData.distance}")
-            .setSmallIcon(R.drawable.logo_bkt)
+            .setSmallIcon(R.drawable.ic_launcher)
             .build()
         startForeground(1, notification)
     }
@@ -115,7 +115,7 @@ class RunningService: Service() {
         val notification = NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID)
             .setContentTitle(content)
             .setContentText(title)
-            .setSmallIcon(R.drawable.logo_bkt)
+            .setSmallIcon(R.drawable.ic_launcher)
             .build()
         startForeground(1, notification)
     }

@@ -43,7 +43,7 @@ class PublicActivityAdapter(
             Glide.with(activity)
                 .load(imageURL)
                 .placeholder(R.color.colorPrimary10)
-                .error(R.drawable.logo)
+                .error(R.drawable.ic_launcher)
                 .centerCrop()
                 .into(imageView)
         }

@@ -4,21 +4,21 @@
 
     <item
             android:id="@+id/THome2Fragment"
-            android:icon="@drawable/ic_round_home"
-            android:title="iCTSV"/>
+            android:icon="@drawable/ic_nav_home"
+            android:title="@string/home_title"/>
 
     <item
             android:id="@+id/TListNotificationsFragment"
-            android:icon="@drawable/ic_round_notification"
-            android:title="Thông báo"/>
+            android:icon="@drawable/ic_nav_notification"
+            android:title="@string/nav_notification"/>
 
     <item
             android:id="@+id/helpFragment"
-            android:icon="@drawable/ic_round_help"
-            android:title="Hỗ trợ"/>
+            android:icon="@drawable/ic_nav_help"
+            android:title="@string/nav_support"/>
 
     <item
             android:id="@+id/TAccountFragment"
-            android:icon="@drawable/ic_round_user"
-            android:title="Tài khoản"/>
+            android:icon="@drawable/ic_nav_account"
+            android:title="@string/nav_account"/>
 </menu>

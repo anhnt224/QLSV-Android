@@ -146,6 +146,8 @@
         <entry key="app/src/main/res/drawable/dialog_notification_bg.xml" value="0.38333333333333336" />
         <entry key="app/src/main/res/drawable/enable_background_button.xml" value="0.124" />
         <entry key="app/src/main/res/drawable/ic_calendar_black_24dp.xml" value="0.3861111111111111" />
+        <entry key="app/src/main/res/drawable/ic_launcher.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.201" />
         <entry key="app/src/main/res/drawable/indicator_drawable.xml" value="0.201" />
         <entry key="app/src/main/res/drawable/indicator_drawable_unselected.xml" value="0.201" />
         <entry key="app/src/main/res/drawable/list_item_gift_bg.xml" value="0.38981481481481484" />
@@ -303,6 +305,7 @@
         <entry key="app/src/main/res/layout/notes_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/pick_location_fragment.xml" value="0.12259371833839919" />
         <entry key="app/src/main/res/layout/privacy_dialog.xml" value="0.38722826086956524" />
+        <entry key="app/src/main/res/layout/qr_student_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/receiver_address_fragment.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/regist_form_fragment.xml" value="0.12259371833839919" />
         <entry key="app/src/main/res/layout/regist_gift_fragment.xml" value="0.33" />

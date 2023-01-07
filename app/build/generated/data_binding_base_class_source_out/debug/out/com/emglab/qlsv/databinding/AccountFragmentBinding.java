@@ -9,7 +9,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -19,37 +18,13 @@ import java.lang.Object;
 
 public abstract class AccountFragmentBinding extends ViewDataBinding {
   @NonNull
-  public final CardView cardView;
-
-  @NonNull
-  public final ImageView imageStudent;
-
-  @NonNull
-  public final ImageView imageView8;
-
-  @NonNull
   public final ImageView imageView81;
 
   @NonNull
   public final ImageView imageView82;
 
   @NonNull
-  public final ImageView imageView84;
-
-  @NonNull
-  public final ImageView imageView841;
-
-  @NonNull
-  public final ImageView imageView84x;
-
-  @NonNull
   public final ImageView imageView85;
-
-  @NonNull
-  public final ImageView imageView88;
-
-  @NonNull
-  public final ImageView imageView9;
 
   @NonNull
   public final ImageView imageView91;
@@ -61,34 +36,13 @@ public abstract class AccountFragmentBinding extends ViewDataBinding {
   public final LinearLayout linearLayout;
 
   @NonNull
-  public final ConstraintLayout runningView;
-
-  @NonNull
-  public final TextView textFullName;
-
-  @NonNull
-  public final TextView textStudentID;
-
-  @NonNull
   public final TextView textVersion;
-
-  @NonNull
-  public final TextView textView3;
-
-  @NonNull
-  public final ConstraintLayout viewAbout;
 
   @NonNull
   public final ConstraintLayout viewAddress;
 
   @NonNull
-  public final ConstraintLayout viewBook;
-
-  @NonNull
   public final ConstraintLayout viewChangePassword;
-
-  @NonNull
-  public final ConstraintLayout viewError;
 
   @NonNull
   public final ConstraintLayout viewFeedback;
@@ -97,53 +51,25 @@ public abstract class AccountFragmentBinding extends ViewDataBinding {
   public final ConstraintLayout viewLogout;
 
   @NonNull
-  public final ConstraintLayout viewNotes;
-
-  @NonNull
-  public final ConstraintLayout viewQRStudent;
-
-  @NonNull
   public final ConstraintLayout viewUserInfo;
 
   protected AccountFragmentBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CardView cardView, ImageView imageStudent, ImageView imageView8, ImageView imageView81,
-      ImageView imageView82, ImageView imageView84, ImageView imageView841, ImageView imageView84x,
-      ImageView imageView85, ImageView imageView88, ImageView imageView9, ImageView imageView91,
-      ImageView imageViewx, LinearLayout linearLayout, ConstraintLayout runningView,
-      TextView textFullName, TextView textStudentID, TextView textVersion, TextView textView3,
-      ConstraintLayout viewAbout, ConstraintLayout viewAddress, ConstraintLayout viewBook,
-      ConstraintLayout viewChangePassword, ConstraintLayout viewError,
-      ConstraintLayout viewFeedback, ConstraintLayout viewLogout, ConstraintLayout viewNotes,
-      ConstraintLayout viewQRStudent, ConstraintLayout viewUserInfo) {
+      ImageView imageView81, ImageView imageView82, ImageView imageView85, ImageView imageView91,
+      ImageView imageViewx, LinearLayout linearLayout, TextView textVersion,
+      ConstraintLayout viewAddress, ConstraintLayout viewChangePassword,
+      ConstraintLayout viewFeedback, ConstraintLayout viewLogout, ConstraintLayout viewUserInfo) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.cardView = cardView;
-    this.imageStudent = imageStudent;
-    this.imageView8 = imageView8;
     this.imageView81 = imageView81;
     this.imageView82 = imageView82;
-    this.imageView84 = imageView84;
-    this.imageView841 = imageView841;
-    this.imageView84x = imageView84x;
     this.imageView85 = imageView85;
-    this.imageView88 = imageView88;
-    this.imageView9 = imageView9;
     this.imageView91 = imageView91;
     this.imageViewx = imageViewx;
     this.linearLayout = linearLayout;
-    this.runningView = runningView;
-    this.textFullName = textFullName;
-    this.textStudentID = textStudentID;
     this.textVersion = textVersion;
-    this.textView3 = textView3;
-    this.viewAbout = viewAbout;
     this.viewAddress = viewAddress;
-    this.viewBook = viewBook;
     this.viewChangePassword = viewChangePassword;
-    this.viewError = viewError;
     this.viewFeedback = viewFeedback;
     this.viewLogout = viewLogout;
-    this.viewNotes = viewNotes;
-    this.viewQRStudent = viewQRStudent;
     this.viewUserInfo = viewUserInfo;
   }
 

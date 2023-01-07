@@ -37,10 +37,7 @@ class HelpFragment : Fragment(), OnItemClickListener<Tutorial> {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-//        setUpRemoteConfig()
-//        fetchRemoteConfig()
-
+    ): View {
         val helpsStr = remoteConfig.getString("helps")
         if(helpsStr.isNotEmpty() && GsonBuilder().create().fromJson(helpsStr, Array<Help>::class.java) != null){
             helps = GsonBuilder().create().fromJson(helpsStr, Array<Help>::class.java).toList()
@@ -59,23 +56,6 @@ class HelpFragment : Fragment(), OnItemClickListener<Tutorial> {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(HelpViewModel::class.java)
     }
-
-//    private fun setUpRemoteConfig(){
-//        val configSettings = remoteConfigSettings {
-//            minimumFetchIntervalInSeconds = 0
-//        }
-//        remoteConfig.setConfigSettingsAsync(configSettings)
-//        remoteConfig.setDefaultsAsync(R.xml.remote_config_defaults)
-//    }
-//
-//    private fun fetchRemoteConfig(){
-//        remoteConfig.fetchAndActivate()
-//            .addOnCompleteListener {task ->
-//                if(task.isSuccessful){
-//                    remoteConfig.activate()
-//                }
-//            }
-//    }
 
     override fun onClick(value: Tutorial) {
         openLink(value.link)

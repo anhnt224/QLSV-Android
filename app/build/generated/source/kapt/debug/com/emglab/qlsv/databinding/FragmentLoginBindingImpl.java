@@ -43,7 +43,7 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding  {
             , (android.widget.TextView) bindings[6]
             , (com.google.android.material.textfield.TextInputEditText) bindings[4]
             , (com.google.android.material.textfield.TextInputEditText) bindings[3]
-            , (android.widget.LinearLayout) bindings[2]
+            , (android.widget.ScrollView) bindings[2]
             );
         this.mboundView0 = (com.emglab.qlsv.databinding.LoadingActionStateBinding) bindings[1];
         setContainedBinding(this.mboundView0);

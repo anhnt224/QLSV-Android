@@ -96,7 +96,7 @@ class RunService: Service() {
         val notification = NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID)
             .setContentTitle(content)
             .setContentText(title)
-            .setSmallIcon(R.drawable.logo_bkt)
+            .setSmallIcon(R.drawable.ic_launcher)
             .build()
         startForeground(1, notification)
     }

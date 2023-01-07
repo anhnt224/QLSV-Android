@@ -22,7 +22,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="20dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
@@ -79,8 +79,16 @@
                         android:textSize="12sp"
                         android:maxLines="1"
                         android:textColor="@color/textColorPrimaryLight"
-                        android:text="@{activity.place}"/>
+                        android:text='@{"Tổ chức: " + activity.gName}'/>
                 <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:maxLines="1"
+                        android:textColor="@color/textColorPrimaryLight"
+                        android:text='@{"Địa điểm: " + activity.place}'/>
+                <TextView
+                        android:layout_marginTop="4dp"
                         android:id="@+id/statusTextView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

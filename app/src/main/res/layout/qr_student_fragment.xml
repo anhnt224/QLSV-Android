@@ -92,7 +92,7 @@
                 <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/logo_bkt"
+                        android:src="@drawable/ic_launcher"
                         app:layout_constraintBottom_toBottomOf="@+id/imageQR"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"

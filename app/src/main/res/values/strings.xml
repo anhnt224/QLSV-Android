@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">iCTSV</string>
+    <string name="app_name">HCMIU</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -93,8 +93,8 @@
     <string name="fragment_motel_registration_list">"Đăng kí tìm trọ"</string>
     <string name="fragment_motel_registration_info">"Thông tin đăng kí"</string>
     <string name="delete">Xoá</string>
-    <string name="home_title">iCTSV</string>
-    <string name="nav_notification">Thông báo</string>
-    <string name="nav_support">Hỗ trợ</string>
+    <string name="home_title">Trang chủ</string>
+    <string name="nav_notification">Hộp thư</string>
+    <string name="nav_support">Trợ giúp</string>
     <string name="nav_account">Tài khoản</string>
 </resources>

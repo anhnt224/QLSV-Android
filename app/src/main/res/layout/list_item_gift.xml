@@ -46,7 +46,7 @@
                             android:id="@+id/imageView"
                             android:layout_width="64dp"
                             android:layout_height="64dp"
-                            android:src="@drawable/logo_bkt"
+                            android:src="@drawable/ic_launcher"
                             tools:ignore="ContentDescription" />
                 </androidx.cardview.widget.CardView>
 

@@ -598,7 +598,7 @@ class RunFragment : Fragment(), Injectable, OnMapReadyCallback {
         val notification = NotificationCompat.Builder(requireContext(), NOTIFICATION_CHANNEL_ID)
             .setContentTitle(title)
             .setContentText(content)
-            .setSmallIcon(R.drawable.logo_bkt)
+            .setSmallIcon(R.drawable.ic_play)
             .build()
 
         val notificationManager = requireContext().getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
