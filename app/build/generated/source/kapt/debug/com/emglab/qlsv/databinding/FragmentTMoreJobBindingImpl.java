@@ -12,7 +12,7 @@ public class FragmentTMoreJobBindingImpl extends FragmentTMoreJobBinding  {
     @Nullable
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
-        sIncludes = new androidx.databinding.ViewDataBinding.IncludedLayouts(5);
+        sIncludes = new androidx.databinding.ViewDataBinding.IncludedLayouts(4);
         sIncludes.setIncludes(0, 
             new String[] {"layout_loading", "layout_empty_data"},
             new int[] {1, 2},
@@ -20,7 +20,6 @@ public class FragmentTMoreJobBindingImpl extends FragmentTMoreJobBinding  {
                 com.emglab.qlsv.R.layout.layout_empty_data});
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.recyclerView, 3);
-        sViewsWithIds.put(R.id.tvData, 4);
     }
     // views
     @NonNull
@@ -33,13 +32,12 @@ public class FragmentTMoreJobBindingImpl extends FragmentTMoreJobBinding  {
     // Inverse Binding Event Handlers
 
     public FragmentTMoreJobBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
     }
     private FragmentTMoreJobBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (com.emglab.qlsv.databinding.LayoutLoadingBinding) bindings[1]
             , (androidx.recyclerview.widget.RecyclerView) bindings[3]
-            , (android.widget.TextView) bindings[4]
             );
         setContainedBinding(this.include4);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];

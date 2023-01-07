@@ -24,12 +24,12 @@
         "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/layout/fragment_register.xml"
     },
     {
-        "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/list_item_criteria_activity.xml",
-        "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/layout/list_item_criteria_activity.xml"
-    },
-    {
         "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_list_motel_results.xml",
         "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/layout/fragment_list_motel_results.xml"
+    },
+    {
+        "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/list_item_criteria_activity.xml",
+        "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/layout/list_item_criteria_activity.xml"
     },
     {
         "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/home2_fragment.xml",
@@ -44,12 +44,12 @@
         "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/layout/add_new_address_fragment.xml"
     },
     {
-        "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/list_item_address_picker.xml",
-        "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/layout/list_item_address_picker.xml"
-    },
-    {
         "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/list_item_user_criteria.xml",
         "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/layout/list_item_user_criteria.xml"
+    },
+    {
+        "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/list_item_address_picker.xml",
+        "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/layout/list_item_address_picker.xml"
     },
     {
         "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/account_fragment.xml",

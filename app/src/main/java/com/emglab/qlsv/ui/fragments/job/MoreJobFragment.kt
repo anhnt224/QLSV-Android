@@ -1,5 +1,6 @@
 package com.emglab.qlsv.ui.fragments.job
 
+import android.annotation.SuppressLint
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.view.*
@@ -40,7 +41,6 @@ class MoreJobFragment : Fragment(), Injectable, OnItemClickListener<Job> {
             override fun retry() {
                 viewModel.getMoreJob()
             }
-
         }
 
         subscribeUI()
@@ -55,6 +55,7 @@ class MoreJobFragment : Fragment(), Injectable, OnItemClickListener<Job> {
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun subscribeUI(){
         with(viewModel){
             jobMediatorLiveData.observe(viewLifecycleOwner){

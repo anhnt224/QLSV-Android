@@ -2888,7 +2888,6 @@ id imageMotel1
 id imageMotel2
 id imageMotelFragment
 id imageQR
-id imageStudent
 id imageView
 id imageView10
 id imageView11
@@ -2908,7 +2907,6 @@ id imageView7
 id imageView81
 id imageView82
 id imageView85
-id imageView88
 id imageView91
 id imageViewZoom
 id imageViewx
@@ -3230,7 +3228,6 @@ id runFragment
 id runFragment2
 id runningDataFragment
 id runningFragment
-id runningView
 id satellite
 id saveButton
 id save_non_transition_alpha
@@ -3478,7 +3475,6 @@ id transition_transform
 id triangle
 id tutorFragment
 id tutorRegistrationButton
-id tvData
 id tvQuan
 id tvQuanRegister
 id tvTitle

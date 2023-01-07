@@ -1,5 +1,6 @@
 package com.emglab.qlsv.teacher.fragment.job
 
+import android.annotation.SuppressLint
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -56,6 +57,7 @@ class TMoreJobFragment : Fragment(), Injectable, OnItemClickListener<Job> {
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun subscriceUI(){
         with(viewModel){
             jobMediatorLiveData.observe(viewLifecycleOwner){

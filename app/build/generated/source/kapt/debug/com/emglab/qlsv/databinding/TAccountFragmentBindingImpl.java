@@ -15,19 +15,15 @@ public class TAccountFragmentBindingImpl extends TAccountFragmentBinding  {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.linearLayout, 1);
-        sViewsWithIds.put(R.id.cardView, 2);
-        sViewsWithIds.put(R.id.imageStudent, 3);
-        sViewsWithIds.put(R.id.textFullName, 4);
-        sViewsWithIds.put(R.id.textStudentID, 5);
-        sViewsWithIds.put(R.id.viewUserInfo, 6);
-        sViewsWithIds.put(R.id.imageViewx, 7);
-        sViewsWithIds.put(R.id.viewChangePassword, 8);
-        sViewsWithIds.put(R.id.imageView81, 9);
-        sViewsWithIds.put(R.id.runningView, 10);
-        sViewsWithIds.put(R.id.imageView88, 11);
-        sViewsWithIds.put(R.id.viewLogout, 12);
-        sViewsWithIds.put(R.id.imageView91, 13);
-        sViewsWithIds.put(R.id.textVersion, 14);
+        sViewsWithIds.put(R.id.viewUserInfo, 2);
+        sViewsWithIds.put(R.id.imageViewx, 3);
+        sViewsWithIds.put(R.id.viewChangePassword, 4);
+        sViewsWithIds.put(R.id.imageView81, 5);
+        sViewsWithIds.put(R.id.viewFeedback, 6);
+        sViewsWithIds.put(R.id.imageView85, 7);
+        sViewsWithIds.put(R.id.viewLogout, 8);
+        sViewsWithIds.put(R.id.imageView91, 9);
+        sViewsWithIds.put(R.id.textVersion, 10);
     }
     // views
     @NonNull
@@ -38,24 +34,20 @@ public class TAccountFragmentBindingImpl extends TAccountFragmentBinding  {
     // Inverse Binding Event Handlers
 
     public TAccountFragmentBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 15, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 11, sIncludes, sViewsWithIds));
     }
     private TAccountFragmentBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (androidx.cardview.widget.CardView) bindings[2]
-            , (android.widget.ImageView) bindings[3]
-            , (android.widget.ImageView) bindings[9]
-            , (android.widget.ImageView) bindings[11]
-            , (android.widget.ImageView) bindings[13]
+            , (android.widget.ImageView) bindings[5]
             , (android.widget.ImageView) bindings[7]
+            , (android.widget.ImageView) bindings[9]
+            , (android.widget.ImageView) bindings[3]
             , (android.widget.LinearLayout) bindings[1]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[10]
-            , (android.widget.TextView) bindings[4]
-            , (android.widget.TextView) bindings[5]
-            , (android.widget.TextView) bindings[14]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[8]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[12]
+            , (android.widget.TextView) bindings[10]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[4]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[6]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[8]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[2]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
