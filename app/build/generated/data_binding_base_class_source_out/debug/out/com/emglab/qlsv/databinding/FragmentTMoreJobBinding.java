@@ -4,7 +4,6 @@ package com.emglab.qlsv.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
@@ -24,9 +23,6 @@ public abstract class FragmentTMoreJobBinding extends ViewDataBinding {
   @NonNull
   public final RecyclerView recyclerView;
 
-  @NonNull
-  public final TextView tvData;
-
   @Bindable
   protected Integer mNumber;
 
@@ -37,11 +33,10 @@ public abstract class FragmentTMoreJobBinding extends ViewDataBinding {
   protected RetryCallback mCallback;
 
   protected FragmentTMoreJobBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      LayoutLoadingBinding include4, RecyclerView recyclerView, TextView tvData) {
+      LayoutLoadingBinding include4, RecyclerView recyclerView) {
     super(_bindingComponent, _root, _localFieldCount);
     this.include4 = include4;
     this.recyclerView = recyclerView;
-    this.tvData = tvData;
   }
 
   public abstract void setNumber(@Nullable Integer number);

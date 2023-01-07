@@ -12,16 +12,16 @@
         "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/drawable-xxhdpi/job_search_gray.png"
     },
     {
-        "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_image_motel_five.png.flat",
-        "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/drawable-xxxhdpi/image_motel_five.png"
+        "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_baseline_more_vert_24.png.flat",
+        "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_baseline_more_vert_24.png"
     },
     {
         "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_search.png.flat",
         "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/generated/res/pngs/debug/drawable-ldpi/ic_search.png"
     },
     {
-        "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_baseline_more_vert_24.png.flat",
-        "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_baseline_more_vert_24.png"
+        "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_image_motel_five.png.flat",
+        "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/drawable-xxxhdpi/image_motel_five.png"
     },
     {
         "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/mipmap-mdpi_c.png.flat",
@@ -32,12 +32,12 @@
         "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/drawable/ic_home_location.png"
     },
     {
-        "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_timer_24dp.png.flat",
-        "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_timer_24dp.png"
-    },
-    {
         "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/mipmap-xhdpi_j.png.flat",
         "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/mipmap-xhdpi/j.png"
+    },
+    {
+        "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_timer_24dp.png.flat",
+        "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_timer_24dp.png"
     },
     {
         "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_search_white.png.flat",
@@ -100,24 +100,24 @@
         "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/mipmap-xhdpi/y.png"
     },
     {
-        "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/layout_notes_fragment.xml.flat",
-        "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/layout/notes_fragment.xml"
+        "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_empty.png.flat",
+        "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/drawable-xhdpi/ic_empty.png"
     },
     {
         "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_z.png.flat",
         "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/mipmap-xxhdpi/z.png"
     },
     {
-        "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_empty.png.flat",
-        "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/drawable-xhdpi/ic_empty.png"
-    },
-    {
-        "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_time_blue.xml.flat",
-        "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_time_blue.xml"
+        "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/layout_notes_fragment.xml.flat",
+        "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/layout/notes_fragment.xml"
     },
     {
         "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_account_password.png.flat",
         "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/drawable-xhdpi/ic_account_password.png"
+    },
+    {
+        "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_time_blue.xml.flat",
+        "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_time_blue.xml"
     },
     {
         "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_group.xml.flat",
@@ -152,20 +152,20 @@
         "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_baseline_keyboard_arrow_down_24.xml"
     },
     {
-        "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/layout_t_scholar_ship_detail_fragment.xml.flat",
-        "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/layout/t_scholar_ship_detail_fragment.xml"
-    },
-    {
         "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/layout_create_gift_fragment.xml.flat",
         "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/layout/create_gift_fragment.xml"
     },
     {
-        "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_phone_blue.png.flat",
-        "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/mipmap-xxhdpi/ic_phone_blue.png"
+        "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/layout_t_scholar_ship_detail_fragment.xml.flat",
+        "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/layout/t_scholar_ship_detail_fragment.xml"
     },
     {
         "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_info_3.xml.flat",
         "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_info_3.xml"
+    },
+    {
+        "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_phone_blue.png.flat",
+        "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/mipmap-xxhdpi/ic_phone_blue.png"
     },
     {
         "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_home_service.png.flat",
@@ -272,12 +272,12 @@
         "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/drawable-mdpi/image_motel_three.png"
     },
     {
-        "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_time_grey.png.flat",
-        "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/mipmap-xxxhdpi/ic_time_grey.png"
-    },
-    {
         "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_add_white.png.flat",
         "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/drawable-mdpi/ic_add_white.png"
+    },
+    {
+        "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_time_grey.png.flat",
+        "source": "/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/res/mipmap-xxxhdpi/ic_time_grey.png"
     },
     {
         "merged": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/res/merged/debug/layout_progressbar.xml.flat",

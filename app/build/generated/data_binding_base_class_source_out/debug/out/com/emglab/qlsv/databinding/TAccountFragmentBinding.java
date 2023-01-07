@@ -9,7 +9,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -19,16 +18,10 @@ import java.lang.Object;
 
 public abstract class TAccountFragmentBinding extends ViewDataBinding {
   @NonNull
-  public final CardView cardView;
-
-  @NonNull
-  public final ImageView imageStudent;
-
-  @NonNull
   public final ImageView imageView81;
 
   @NonNull
-  public final ImageView imageView88;
+  public final ImageView imageView85;
 
   @NonNull
   public final ImageView imageView91;
@@ -40,19 +33,13 @@ public abstract class TAccountFragmentBinding extends ViewDataBinding {
   public final LinearLayout linearLayout;
 
   @NonNull
-  public final ConstraintLayout runningView;
-
-  @NonNull
-  public final TextView textFullName;
-
-  @NonNull
-  public final TextView textStudentID;
-
-  @NonNull
   public final TextView textVersion;
 
   @NonNull
   public final ConstraintLayout viewChangePassword;
+
+  @NonNull
+  public final ConstraintLayout viewFeedback;
 
   @NonNull
   public final ConstraintLayout viewLogout;
@@ -61,24 +48,18 @@ public abstract class TAccountFragmentBinding extends ViewDataBinding {
   public final ConstraintLayout viewUserInfo;
 
   protected TAccountFragmentBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CardView cardView, ImageView imageStudent, ImageView imageView81, ImageView imageView88,
-      ImageView imageView91, ImageView imageViewx, LinearLayout linearLayout,
-      ConstraintLayout runningView, TextView textFullName, TextView textStudentID,
-      TextView textVersion, ConstraintLayout viewChangePassword, ConstraintLayout viewLogout,
-      ConstraintLayout viewUserInfo) {
+      ImageView imageView81, ImageView imageView85, ImageView imageView91, ImageView imageViewx,
+      LinearLayout linearLayout, TextView textVersion, ConstraintLayout viewChangePassword,
+      ConstraintLayout viewFeedback, ConstraintLayout viewLogout, ConstraintLayout viewUserInfo) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.cardView = cardView;
-    this.imageStudent = imageStudent;
     this.imageView81 = imageView81;
-    this.imageView88 = imageView88;
+    this.imageView85 = imageView85;
     this.imageView91 = imageView91;
     this.imageViewx = imageViewx;
     this.linearLayout = linearLayout;
-    this.runningView = runningView;
-    this.textFullName = textFullName;
-    this.textStudentID = textStudentID;
     this.textVersion = textVersion;
     this.viewChangePassword = viewChangePassword;
+    this.viewFeedback = viewFeedback;
     this.viewLogout = viewLogout;
     this.viewUserInfo = viewUserInfo;
   }
