@@ -110,7 +110,7 @@ class LoginFragment : androidx.fragment.app.Fragment(), Injectable {
             return
         }
 
-        if (userCode != "hung.phammanh@hust.du.vn" && userCode != "quang.dv193066@sis.hust.edu.vn"){
+        if (userCode != "hung.phammanh@hust.edu.vn" && userCode != "quang.dv193066@sis.hust.edu.vn"){
             showToast("Tài khoản không tồn tại")
             return
         }

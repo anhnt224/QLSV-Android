@@ -21,7 +21,7 @@ class UserAddress (
     @SerializedName("CreateID")
     var createID: String = "",
     @SerializedName("City")
-    var city: String = "Thành phố Hà Nội",
+    var city: String = "Thành phố Hồ Chí Minh",
     @SerializedName("District")
     var district: String = "",
     @SerializedName("Wards")

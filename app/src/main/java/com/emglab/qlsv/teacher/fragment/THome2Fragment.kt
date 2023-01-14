@@ -48,9 +48,10 @@ class THome2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
         "Nghiệp vụ" to listOf(
             HomeItem("mark", "Chấm điểm rèn luyện", R.drawable.ic_home_mark),
             HomeItem("service", "Dịch vụ công", R.drawable.ic_home_service),
-            HomeItem("news", "Tin tức", R.drawable.ic_home_new)
+            HomeItem("tutorial", "Hướng dẫn", R.drawable.ic_home_book)
         ),
         "Thông tin" to listOf(
+            HomeItem("news", "Tin tức", R.drawable.ic_home_new),
             HomeItem("activity", "Hoạt động ngoại khóa", R.drawable.ic_home_athletics),
             HomeItem("scholarship", "Học bổng", R.drawable.ic_home_scholarship),
             HomeItem("job", "Việc làm", R.drawable.ic_home_job),
@@ -168,6 +169,11 @@ class THome2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
         openLink(newsLink)
     }
 
+    private fun handleTutorialTap(){
+        val url = remoteConfig.getString("tutorial_link")
+        openLink(url)
+    }
+
     override fun onItemClick(activity: Activity) {
 
     }
@@ -181,6 +187,7 @@ class THome2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
             "job" -> showListJobs()
             "parttime_job" -> navigateMoreJob()
             "news" -> handleNewsTap()
+            "tutorial" -> handleTutorialTap()
         }
     }
 

@@ -93,7 +93,6 @@
                         android:layout_height="wrap_content"
                         tools:ignore="DisableBaselineAlignment">
                     <com.google.android.material.textfield.TextInputLayout
-                            android:layout_marginLeft="4dp"
                             android:layout_weight="1"
                             android:layout_marginTop="8dp"
                             android:layout_width="match_parent"
@@ -166,15 +165,17 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.button.MaterialButton
+                        style="@style/ButtonNoInset"
                         android:id="@+id/buttonSave"
                         android:layout_marginTop="16dp"
+                        app:cornerRadius="8dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/save"/>
             </LinearLayout>
         </ScrollView>
-        <include
-            layout="@layout/loading_action_state"
-                app:resource="@{resource}"/>
+<!--        <include-->
+<!--            layout="@layout/loading_action_state"-->
+<!--                app:resource="@{resource}"/>-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

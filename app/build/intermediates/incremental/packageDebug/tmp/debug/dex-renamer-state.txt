@@ -1,4 +1,4 @@
-#Sat Jan 07 11:30:06 ICT 2023
+#Sat Jan 14 10:42:56 ICT 2023
 base.2=/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
 path.2=classes2.dex
 base.1=/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex

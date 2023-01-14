@@ -54,7 +54,7 @@ class AddNewAddressFragment : Fragment(), Injectable {
     private var cities: List<String> = listOf()
     private var districts: List<String> = listOf()
     private var wards: List<String> = listOf()
-    private var types: List<String> = listOf("KTX Bách Khoa", "KTX Pháp Vân", "Nhà trọ", "Nhà riêng")
+    private var types: List<String> = listOf("Kí túc xá", "Nhà trọ", "Nhà riêng")
     private lateinit var webService : WebService
 
     override fun onCreateView(
@@ -110,14 +110,14 @@ class AddNewAddressFragment : Fragment(), Injectable {
                 if(newLatLng != null){
                     mAddress.latitude = newLatLng!!.latitude
                     mAddress.longtitude = newLatLng!!.longitude
-                    if(mAddress.type == types[0] || mAddress.type == types[1]){
-                        disableClick(textCity.editText!!, textDistrict.editText!!, textWard.editText!!)
-                    }
-                    else{
-                        enableClick(textCity.editText!!, textDistrict.editText!!, textWard.editText!!)
-                    }
+//                    if(mAddress.type == types[0] || mAddress.type == types[1]){
+//                        disableClick(textCity.editText!!, textDistrict.editText!!, textWard.editText!!)
+//                    }
+//                    else{
+//                        enableClick(textCity.editText!!, textDistrict.editText!!, textWard.editText!!)
+//                    }
                 }else{
-                    disableClick(textCity.editText!!, textDistrict.editText!!, textWard.editText!!)
+//                    disableClick(textCity.editText!!, textDistrict.editText!!, textWard.editText!!)
                 }
                 binding.address = mAddress
             }
@@ -192,37 +192,13 @@ class AddNewAddressFragment : Fragment(), Injectable {
             showToast("Vui lòng nhập đầy đủ thông tin")
         } else {
             if (mAddress.isValidEmail()) {
-                if (mAddress.type == types[2]) {
-                    showDialogMotel("Chia sẻ đánh giá về nhà trọ",
-                        "Bạn có sẵn sàng chia sẻ những thông tin, đánh giá về nhà trọ bạn đang ở cho iCTSV. Chúng tôi sử dụng thông tin này để .... ",
-                        R.drawable.ic_share_motel,
-                        "Thêm thông tin",
-                        { navigateToAddMotelFragment() },
-                        "Bỏ qua",
-                        { viewModel.updateUserAddress(mAddress) })
-                }
-                if (mAddress.type == types[0] || mAddress.type == types[1]) {
-                    showDialogMotel("Chia sẻ đánh giá về ktx",
-                        "Bạn có sẵn sàng chia sẻ những thông tin, đánh giá về ktx bạn đang ở cho iCTSV. Chúng tôi sử dụng thông tin này để .... ",
-                        R.drawable.ic_share_motel,
-                        "Thêm thông tin",
-                        { navigateToAddMotelFragment() },
-                        "Bỏ qua",
-                        { viewModel.updateUserAddress(mAddress) })
-                }
-                if (mAddress.type == types[3]){
-                    viewModel.updateUserAddress(mAddress)
-                }
+                viewModel.updateUserAddress(mAddress)
             }else {
                 showToast("Địa chỉ email không hợp lệ")
             }
         }
     }
 
-    private fun navigateToAddMotelFragment(){
-        Navigation.findNavController(requireView()).
-        navigate(AddNewAddressFragmentDirections.actionAddNewAddressFragmentToAddMotelInfoFragment())
-    }
     private fun showAlertPickCity(){
         MaterialAlertDialogBuilder(requireContext())
             .setTitle("Chọn Tỉnh/Thành phố")
@@ -305,49 +281,59 @@ class AddNewAddressFragment : Fragment(), Injectable {
             .setTitle("Chọn loại nơi ở")
             .setItems(types.toTypedArray()){_: DialogInterface?, which: Int ->
                 textType.editText?.setText(types[which])
-                when(which){
-                    0 -> {
-                        binding.apply {
-                            textCity.editText?.setText(DEFAULT_CITY)
-                            textDistrict.editText?.setText(KTX_BK_DISTRICT)
-                            textWard.editText?.setText(KTX_BK_WARD)
-                            textAddress.helperText = "VD: P404 KTX B3"
-                            newLatLng = KTX_BK_LATLNG
-                            mAddress.longtitude = newLatLng!!.longitude
-                            mAddress.latitude = newLatLng!!.latitude
-                            textLocation.editText?.setText(mAddress.getLocation())
-                            textLocation.isEndIconVisible = false
-                            disableClick(textCity.editText!!, textDistrict.editText!!, textWard.editText!!, textLocation.editText!!)
-                        }
-                    }
-
-                    1 -> {
-                        binding.apply {
-                            textCity.editText?.setText(DEFAULT_CITY)
-                            textDistrict.editText?.setText(KTX_PV_DISTRICT)
-                            textWard.editText?.setText(KTX_PV_WARD)
-                            textAddress.helperText = "VD: P404 Tòa A6"
-                            newLatLng = KTX_PV_LATLNG
-                            mAddress.longtitude = newLatLng!!.longitude
-                            mAddress.latitude = newLatLng!!.latitude
-                            textLocation.editText?.setText(mAddress.getLocation())
-                            textLocation.isEndIconVisible = false
-                            disableClick(textCity.editText!!, textDistrict.editText!!, textWard.editText!!, textLocation.editText!!)
-                        }
-                    }
-                    else -> {
-                        mAddress.latitude = 0.0
-                        mAddress.longtitude = 0.0
-                        newLatLng = null
-                        binding.apply {
-                            textLocation.editText?.setText(mAddress.getLocation())
-                            enableClick(textCity.editText!!, textDistrict.editText!!, textWard.editText!!, textLocation.editText!!)
-                            clearText(textDistrict.editText!!, textWard.editText!!)
-                            textAddress.helperText = "VD: Số 1, Đại Cồ Việt, Hai Bà Trưng, Hà Nội"
-                            textLocation.isEndIconVisible = true
-                        }
-                    }
+                mAddress.latitude = 0.0
+                mAddress.longtitude = 0.0
+                newLatLng = null
+                binding.apply {
+                    textLocation.editText?.setText(mAddress.getLocation())
+                    enableClick(textCity.editText!!, textDistrict.editText!!, textWard.editText!!, textLocation.editText!!)
+                    clearText(textDistrict.editText!!, textWard.editText!!)
+                    textAddress.helperText = "VD: Khu phố 6, Phường Linh Trung, Thành phố Thủ Đức, Thành phố Hồ Chí Minh"
+                    textLocation.isEndIconVisible = true
                 }
+//                when(_){
+//                    0 -> {
+//                        binding.apply {
+//                            textCity.editText?.setText(DEFAULT_CITY)
+//                            textDistrict.editText?.setText(KTX_BK_DISTRICT)
+//                            textWard.editText?.setText(KTX_BK_WARD)
+//                            textAddress.helperText = "VD: P404 KTX B3"
+//                            newLatLng = KTX_BK_LATLNG
+//                            mAddress.longtitude = newLatLng!!.longitude
+//                            mAddress.latitude = newLatLng!!.latitude
+//                            textLocation.editText?.setText(mAddress.getLocation())
+//                            textLocation.isEndIconVisible = false
+//                            disableClick(textCity.editText!!, textDistrict.editText!!, textWard.editText!!, textLocation.editText!!)
+//                        }
+//                    }
+//
+//                    1 -> {
+//                        binding.apply {
+//                            textCity.editText?.setText(DEFAULT_CITY)
+//                            textDistrict.editText?.setText(KTX_PV_DISTRICT)
+//                            textWard.editText?.setText(KTX_PV_WARD)
+//                            textAddress.helperText = "VD: P404 Tòa A6"
+//                            newLatLng = KTX_PV_LATLNG
+//                            mAddress.longtitude = newLatLng!!.longitude
+//                            mAddress.latitude = newLatLng!!.latitude
+//                            textLocation.editText?.setText(mAddress.getLocation())
+//                            textLocation.isEndIconVisible = false
+//                            disableClick(textCity.editText!!, textDistrict.editText!!, textWard.editText!!, textLocation.editText!!)
+//                        }
+//                    }
+//                    else -> {
+//                        mAddress.latitude = 0.0
+//                        mAddress.longtitude = 0.0
+//                        newLatLng = null
+//                        binding.apply {
+//                            textLocation.editText?.setText(mAddress.getLocation())
+//                            enableClick(textCity.editText!!, textDistrict.editText!!, textWard.editText!!, textLocation.editText!!)
+//                            clearText(textDistrict.editText!!, textWard.editText!!)
+//                            textAddress.helperText = "VD: Số 1, Đại Cồ Việt, Hai Bà Trưng, Hà Nội"
+//                            textLocation.isEndIconVisible = true
+//                        }
+//                    }
+//                }
             }
             .setNegativeButton("Hủy"){_, _ ->
             }.show()

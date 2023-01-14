@@ -54,7 +54,7 @@ class Home2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
             HomeItem("activity", "Hoạt động ngoại khóa", R.drawable.ic_home_athletics)
         ),
         "Thủ tục hành chính" to listOf(
-            HomeItem("news", "Tin tức", R.drawable.ic_home_new),
+            HomeItem("tutorial", "Hướng dẫn", R.drawable.ic_home_book),
             HomeItem("address", "Sổ địa chỉ", R.drawable.ic_home_address),
             HomeItem("service", "Dịch vụ công", R.drawable.ic_home_service)
         ),
@@ -200,8 +200,8 @@ class Home2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
         Navigation.findNavController(requireView()).navigate(action)
     }
 
-    private fun handleNewsTap(){
-        val newsLink = remoteConfig.getString("news_link")
+    private fun handleTutorialTap(){
+        val newsLink = remoteConfig.getString("tutorial_link")
         openLink(newsLink)
     }
 
@@ -215,7 +215,7 @@ class Home2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
             "address" -> navigateToListAddressFragment()
             "job" -> navigateToListJobsFragment()
             "parttime_job" -> navigateToPartTime()
-            "news" -> handleNewsTap()
+            "tutorial" -> handleTutorialTap()
         }
     }
 }
