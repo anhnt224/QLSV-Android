@@ -80,7 +80,7 @@
 
     <entry>
         <key>image_base_url</key>
-        <value>http://api.iuoss.com/UploadFileUI</value>
+        <value>http://api.iuoss.com/</value>
     </entry>
 
 </defaultsMap>

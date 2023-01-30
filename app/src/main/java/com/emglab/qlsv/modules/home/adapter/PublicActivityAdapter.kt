@@ -23,7 +23,7 @@ class PublicActivityAdapter(
         fun bindView(activity: Activity){
             val remoteConfig = FirebaseRemoteConfig.getInstance()
             val newsLink = remoteConfig.getString("image_base_url")
-            val link = "$newsLink${activity.linkImage}"
+            val link = "$newsLink${activity.linkImage}".replace("UploadFile", "UploadFileUI")
             binding.activity = activity
             binding.apply {
                 statusTextView.setTextColor(
