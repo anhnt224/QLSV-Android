@@ -10,6 +10,7 @@ import android.content.pm.PackageManager
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
+import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View
@@ -466,10 +467,10 @@ fun Fragment.showNotificationDialog(
 
 fun Fragment.openLink(link: String){
     try {
+        Log.d("_LINK", "open link $link")
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
         startActivity(intent)
     }catch (e: Exception){
-        showToast(e.message.toString())
     }
 }
 

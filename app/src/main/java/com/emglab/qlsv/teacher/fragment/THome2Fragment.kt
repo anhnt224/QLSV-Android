@@ -31,11 +31,14 @@ import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.ktx.remoteConfig
 import javax.inject.Inject
 
-class THome2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener, HomeMenuItemListener {
+class THome2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
+    HomeMenuItemListener {
 
     private lateinit var viewModel: THome2ViewModel
+
     @Inject
     lateinit var factory: ViewModelFactory
+
     @Inject
     lateinit var sharedPrefsHelper: SharedPrefsHelper
     private lateinit var binding: THome2FragmentBinding
@@ -55,7 +58,8 @@ class THome2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
             HomeItem("activity", "Hoạt động ngoại khóa", R.drawable.ic_home_athletics),
             HomeItem("scholarship", "Học bổng", R.drawable.ic_home_scholarship),
             HomeItem("job", "Việc làm", R.drawable.ic_home_job),
-            HomeItem("parttime_job", "Việc làm thêm", R.drawable.ic_home_partime_job)
+            HomeItem("parttime_job", "Việc làm thêm", R.drawable.ic_home_partime_job),
+            HomeItem("internship", "Việc làm thêm", R.drawable.ic_home_intership)
         )
     )
 
@@ -83,11 +87,11 @@ class THome2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
         return binding.root
     }
 
-    private fun setUpViewModel(){
+    private fun setUpViewModel() {
         viewModel = ViewModelProvider(this, factory).get(THome2ViewModel::class.java)
     }
 
-    private fun setUpRecyclerView(binding: THome2FragmentBinding){
+    private fun setUpRecyclerView(binding: THome2FragmentBinding) {
         publicActivityAdapter = PublicActivityAdapter(listOf(), requireActivity(), this)
         binding.apply {
             recyclerView.apply {
@@ -114,62 +118,52 @@ class THome2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    private fun subscribeUi(){
-        with(viewModel){
-            activities.observe(viewLifecycleOwner){
+    private fun subscribeUi() {
+        with(viewModel) {
+            activities.observe(viewLifecycleOwner) {
                 binding.getActivityStatus = it.status
-                if (checkResource(it)){
-                    publicActivityAdapter.activities = it.data?: listOf()
+                if (checkResource(it)) {
+                    publicActivityAdapter.activities = it.data ?: listOf()
                     publicActivityAdapter.notifyDataSetChanged()
                 }
             }
         }
     }
 
-    private fun showListForm(){
+    private fun showListForm() {
         val action = THome2FragmentDirections.actionTHome2FragmentToTListFormFragment()
         Navigation.findNavController(requireView()).navigate(action)
     }
 
-    private fun showListActivities(){
+    private fun showListActivities() {
         val action = THome2FragmentDirections.actionTHome2FragmentToTListActivitiesFragment()
         Navigation.findNavController(requireView()).navigate(action)
     }
 
-    private fun showListScholarShips(){
+    private fun showListScholarShips() {
         val action = THome2FragmentDirections.actionTHome2FragmentToTListScholarShipsFragment()
         Navigation.findNavController(requireView()).navigate(action)
     }
 
-    private fun showListJobs(){
-        val action = THome2FragmentDirections.actionTHome2FragmentToTListJobsFragment()
-        Navigation.findNavController(requireView()).navigate(action)
-    }
-
-    private fun showListStudent(){
+    private fun showListStudent() {
         val action = THome2FragmentDirections.actionTHome2FragmentToListStudentFragment()
         Navigation.findNavController(requireView()).navigate(action)
     }
 
-    private fun openLink(link: String){
+    private fun openLink(link: String) {
         try {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
             startActivity(intent)
-        }catch (e: Exception){
+        } catch (e: Exception) {
         }
     }
 
-    private fun navigateMoreJob(){
-        val action = THome2FragmentDirections.actionTHome2FragmentToTMoreJobFragment()
-        Navigation.findNavController(requireView()).navigate(action)
-    }
-
-    private fun handleNewsTap(){
+    private fun handleNewsTap() {
         val newsLink = remoteConfig.getString("news_link")
         openLink(newsLink)
     }
 
-    private fun handleTutorialTap(){
+    private fun handleTutorialTap() {
         val url = remoteConfig.getString("tutorial_link")
         openLink(url)
     }
@@ -178,16 +172,32 @@ class THome2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
 
     }
 
+    private fun handleInternshipViewTap() {
+        val newsLink = remoteConfig.getString("home_link_intership")
+        openLink(newsLink)
+    }
+
+    private fun handleJobViewTap() {
+        val newsLink = remoteConfig.getString("home_link_job")
+        openLink(newsLink)
+    }
+
+    private fun handlePartTimeViewTap() {
+        val newsLink = remoteConfig.getString("home_link_parttime_job")
+        openLink(newsLink)
+    }
+
     override fun onHomeItemClick(homeItem: HomeItem) {
         when (homeItem.id) {
             "mark" -> showListStudent()
             "activity" -> showListActivities()
             "service" -> showListForm()
             "scholarship" -> showListScholarShips()
-            "job" -> showListJobs()
-            "parttime_job" -> navigateMoreJob()
+            "job" -> handleJobViewTap()
+            "parttime_job" -> handlePartTimeViewTap()
             "news" -> handleNewsTap()
             "tutorial" -> handleTutorialTap()
+            "internship" -> handleInternshipViewTap()
         }
     }
 

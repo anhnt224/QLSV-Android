@@ -54,14 +54,14 @@ class Home2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
             HomeItem("activity", "Hoạt động ngoại khóa", R.drawable.ic_home_athletics)
         ),
         "Thủ tục hành chính" to listOf(
-            HomeItem("tutorial", "Hướng dẫn", R.drawable.ic_home_book),
+            HomeItem("service", "Dịch vụ công", R.drawable.ic_home_service),
             HomeItem("address", "Sổ địa chỉ", R.drawable.ic_home_address),
-            HomeItem("service", "Dịch vụ công", R.drawable.ic_home_service)
+            HomeItem("scholarship", "Học bổng", R.drawable.ic_home_scholarship)
         ),
-        "Việc làm - Tài chính" to listOf(
-            HomeItem("scholarship", "Học bổng", R.drawable.ic_home_scholarship),
+        "Hướng nghiệp" to listOf(
             HomeItem("job", "Việc làm", R.drawable.ic_home_job),
-            HomeItem("parttime_job", "Việc làm thêm", R.drawable.ic_home_partime_job)
+            HomeItem("parttime_job", "Việc làm thêm", R.drawable.ic_home_partime_job),
+            HomeItem("internship", "Việc làm thêm", R.drawable.ic_home_intership)
         )
     )
 
@@ -200,8 +200,23 @@ class Home2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
         Navigation.findNavController(requireView()).navigate(action)
     }
 
-    private fun handleTutorialTap(){
+    private fun handleTutorialTap() {
         val newsLink = remoteConfig.getString("tutorial_link")
+        openLink(newsLink)
+    }
+
+    private fun handleInternshipViewTap(){
+        val newsLink = remoteConfig.getString("home_link_intership")
+        openLink(newsLink)
+    }
+
+    private fun handleJobViewTap(){
+        val newsLink = remoteConfig.getString("home_link_job")
+        openLink(newsLink)
+    }
+
+    private fun handlePartTimeViewTap(){
+        val newsLink = remoteConfig.getString("home_link_parttime_job")
         openLink(newsLink)
     }
 
@@ -213,9 +228,10 @@ class Home2Fragment : Fragment(), Injectable, EventAdapter.OnItemClickListener,
             "service" -> navigateToListFormFragment()
             "scholarship" -> navigateToListScholarShips()
             "address" -> navigateToListAddressFragment()
-            "job" -> navigateToListJobsFragment()
-            "parttime_job" -> navigateToPartTime()
+            "job" -> handleJobViewTap()
+            "parttime_job" -> handlePartTimeViewTap()
             "tutorial" -> handleTutorialTap()
+            "internship" -> handleInternshipViewTap()
         }
     }
 }

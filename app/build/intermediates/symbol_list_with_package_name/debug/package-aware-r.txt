@@ -2102,6 +2102,7 @@ drawable ic_home_athletics
 drawable ic_home_black_24dp
 drawable ic_home_book
 drawable ic_home_gift
+drawable ic_home_intership
 drawable ic_home_job
 drawable ic_home_location
 drawable ic_home_mark

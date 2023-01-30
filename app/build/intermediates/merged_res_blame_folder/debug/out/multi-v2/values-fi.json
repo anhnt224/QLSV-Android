@@ -1,8 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fi/values-fi.xml",
+            "outputFile": "/Volumes/Data/DEV/AndroidStudio/QLSV/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fi/values-fi.xml",
             "map": [
+                {
+                    "source": "/Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/res/values-fi/values-fi.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,114,161,321",
+                        "endColumns": "58,46,159,103",
+                        "endOffsets": "109,156,316,420"
+                    },
+                    "to": {
+                        "startLines": "111,112,113,114",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "10528,10587,10634,10794",
+                        "endColumns": "58,46,159,103",
+                        "endOffsets": "10582,10629,10789,10893"
+                    }
+                },
                 {
                     "source": "/Users/anhnt/.gradle/caches/transforms-2/files-2.1/2bb03e433c120bb9c90762e4aaaaa304/material-1.4.0/res/values-fi/values-fi.xml",
                     "from": {
@@ -105,23 +122,6 @@
                         "startOffsets": "3314,3427,3612,3745,3853,4055,4183,4329,4674,4874,4982,5162,5290,5497,5666,5762,5862",
                         "endColumns": "112,184,132,107,201,127,145,135,199,107,179,127,206,168,95,99,111",
                         "endOffsets": "3422,3607,3740,3848,4050,4178,4324,4460,4869,4977,5157,5285,5492,5661,5757,5857,5969"
-                    }
-                },
-                {
-                    "source": "/Users/anhnt/.gradle/caches/transforms-2/files-2.1/4952c28bed1a2e3f3394c8897d6b9338/jetified-zxing-android-embedded-3.3.0/res/values-fi/values-fi.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,114,161,321",
-                        "endColumns": "58,46,159,103",
-                        "endOffsets": "109,156,316,420"
-                    },
-                    "to": {
-                        "startLines": "111,112,113,114",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "10528,10587,10634,10794",
-                        "endColumns": "58,46,159,103",
-                        "endOffsets": "10582,10629,10789,10893"
                     }
                 },
                 {

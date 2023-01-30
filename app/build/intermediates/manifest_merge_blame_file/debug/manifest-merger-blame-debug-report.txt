@@ -1,46 +1,46 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.emglab.qlsv"
-4    android:versionCode="1"
-5    android:versionName="1.0.0" >
+4    android:versionCode="2"
+5    android:versionName="1.0.1" >
 6
 7    <uses-sdk
-7-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:6:5-73
+7-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:6:5-73
 8        android:minSdkVersion="16"
-8-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:6:5-73
+8-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:6:5-73
 9        android:targetSdkVersion="31" />
-9-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:6:5-73
+9-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:6:5-73
 10
 11    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-11-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:8:5-79
-11-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:8:22-76
+11-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:8:5-79
+11-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:8:22-76
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:9:5-67
-12-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:9:22-64
+12-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:9:5-67
+12-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:9:22-64
 13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-13-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:10:5-81
-13-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:10:22-78
+13-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:10:5-81
+13-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:10:22-78
 14    <uses-permission android:name="android.permission.CAMERA" />
-14-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:11:5-65
-14-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:11:22-62
+14-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:11:5-65
+14-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:11:22-62
 15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-15-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:12:5-80
-15-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:12:22-77
+15-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:12:5-80
+15-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:12:22-77
 16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-16-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:13:5-81
-16-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:13:22-78
+16-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:13:5-81
+16-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:13:22-78
 17    <!-- <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" /> -->
 18    <!-- <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> -->
 19    <!-- <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/> -->
 20    <!-- <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/> -->
 21
 22    <queries>
-22-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:19:5-23:15
+22-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:19:5-23:15
 23        <intent>
-23-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:20:9-22:18
+23-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:20:9-22:18
 24            <action android:name="android.media.action.IMAGE_CAPTURE" />
-24-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:21:13-73
-24-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:21:21-70
+24-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:21:13-73
+24-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:21:21-70
 25        </intent>
 26
 27        <package android:name="com.azure.authenticator" />
@@ -59,16 +59,16 @@
 34        <intent>
 34-->[com.microsoft.identity:common:3.6.7] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/83df7b59a071783f3ec7a563c8eecf60/jetified-common-3.6.7/AndroidManifest.xml:27:9-33:18
 35            <action android:name="android.intent.action.VIEW" />
-35-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:48:17-69
-35-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:48:25-66
+35-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:48:17-69
+35-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:48:25-66
 36
 37            <category android:name="android.intent.category.BROWSABLE" />
-37-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:50:17-78
-37-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:50:27-75
+37-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:50:17-78
+37-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:50:27-75
 38
 39            <data android:scheme="https" />
-39-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:51:17-53:72
-39-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:51:23-46
+39-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:51:17-53:72
+39-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:51:23-46
 40        </intent> <!-- Required for API Level 30 to make sure we can detect browsers that support custom tabs -->
 41        <!-- https://developers.google.com/web/updates/2020/07/custom-tabs-android-11#detecting_browsers_that_support_custom_tabs -->
 42        <intent>
@@ -80,44 +80,44 @@
 45    </queries>
 46
 47    <uses-feature android:name="android.hardware.camera" />
-47-->[info.androidhive:barcode-reader:1.1.5] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/7f51449dd13e5dacdc3c523b29e842a2/jetified-barcode-reader-1.1.5/AndroidManifest.xml:13:5-60
-47-->[info.androidhive:barcode-reader:1.1.5] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/7f51449dd13e5dacdc3c523b29e842a2/jetified-barcode-reader-1.1.5/AndroidManifest.xml:13:19-57
+47-->[info.androidhive:barcode-reader:1.1.5] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/761c1f8a07226b4d15eafceebed80998/jetified-barcode-reader-1.1.5/AndroidManifest.xml:13:5-60
+47-->[info.androidhive:barcode-reader:1.1.5] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/761c1f8a07226b4d15eafceebed80998/jetified-barcode-reader-1.1.5/AndroidManifest.xml:13:19-57
 48
 49    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 49-->[com.microsoft.identity.client:msal:2.2.3] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/d6134e763d45127d9a37c3d51fcf3530/jetified-msal-2.2.3/AndroidManifest.xml:11:5-79
 49-->[com.microsoft.identity.client:msal:2.2.3] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/d6134e763d45127d9a37c3d51fcf3530/jetified-msal-2.2.3/AndroidManifest.xml:11:22-76
 50
 51    <uses-feature
-51-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/4952c28bed1a2e3f3394c8897d6b9338/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:27:5-29:36
+51-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:27:5-29:36
 52        android:name="android.hardware.camera.front"
-52-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/4952c28bed1a2e3f3394c8897d6b9338/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:28:9-53
+52-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:28:9-53
 53        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
-53-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/4952c28bed1a2e3f3394c8897d6b9338/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:29:9-33
+53-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:29:9-33
 54    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
 55    <uses-feature
-55-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/4952c28bed1a2e3f3394c8897d6b9338/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:32:5-34:36
+55-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:32:5-34:36
 56        android:name="android.hardware.camera.autofocus"
-56-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/4952c28bed1a2e3f3394c8897d6b9338/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:33:9-57
+56-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:33:9-57
 57        android:required="false" />
-57-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/4952c28bed1a2e3f3394c8897d6b9338/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:34:9-33
+57-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:34:9-33
 58    <uses-feature
-58-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/4952c28bed1a2e3f3394c8897d6b9338/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:35:5-37:36
+58-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:35:5-37:36
 59        android:name="android.hardware.camera.flash"
-59-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/4952c28bed1a2e3f3394c8897d6b9338/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:36:9-53
+59-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:36:9-53
 60        android:required="false" />
-60-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/4952c28bed1a2e3f3394c8897d6b9338/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:37:9-33
+60-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:37:9-33
 61    <uses-feature
-61-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/4952c28bed1a2e3f3394c8897d6b9338/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:38:5-40:36
+61-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:38:5-40:36
 62        android:name="android.hardware.screen.landscape"
-62-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/4952c28bed1a2e3f3394c8897d6b9338/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:39:9-57
+62-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:39:9-57
 63        android:required="false" />
-63-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/4952c28bed1a2e3f3394c8897d6b9338/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:40:9-33
+63-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:40:9-33
 64    <uses-feature
-64-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/4952c28bed1a2e3f3394c8897d6b9338/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:41:5-43:36
+64-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:41:5-43:36
 65        android:name="android.hardware.wifi"
-65-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/4952c28bed1a2e3f3394c8897d6b9338/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:42:9-45
+65-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:42:9-45
 66        android:required="false" /> <!-- Required by older versions of Google Play services to create GCM registration tokens -->
-66-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/4952c28bed1a2e3f3394c8897d6b9338/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:43:9-33
+66-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:43:9-33
 67    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 67-->[com.google.android.gms:play-services-gcm:17.0.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/27946061e568c813b576f04a91e16bed/jetified-play-services-gcm-17.0.0/AndroidManifest.xml:23:5-82
 67-->[com.google.android.gms:play-services-gcm:17.0.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/27946061e568c813b576f04a91e16bed/jetified-play-services-gcm-17.0.0/AndroidManifest.xml:23:22-79
@@ -143,183 +143,183 @@
 76-->[com.github.instacart.truetime-android:library:master-SNAPSHOT] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/ec69aebea83c487c2434b5634b804f8e/jetified-library-master-SNAPSHOT/AndroidManifest.xml:15:22-78
 77
 78    <application
-78-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:25:5-127:19
+78-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:25:5-127:19
 79        android:name="com.emglab.qlsv.App"
-79-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:26:13-47
+79-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:26:13-47
 80        android:allowBackup="true"
-80-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:27:13-39
+80-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:27:13-39
 81        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 81-->[androidx.core:core:1.5.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/e13aef86ba88a8239ac078a098bfb81d/core-1.5.0/AndroidManifest.xml:24:18-86
 82        android:debuggable="true"
 83        android:hardwareAccelerated="true"
-83-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:28:13-47
+83-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:28:13-47
 84        android:icon="@drawable/ic_launcher"
-84-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:29:13-49
+84-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:29:13-49
 85        android:label="@string/app_name"
-85-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:30:13-45
+85-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:30:13-45
 86        android:requestLegacyExternalStorage="true"
-86-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:31:13-56
+86-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:31:13-56
 87        android:roundIcon="@drawable/ic_launcher_round"
-87-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:32:13-60
+87-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:32:13-60
 88        android:supportsRtl="true"
-88-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:33:13-39
+88-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:33:13-39
 89        android:testOnly="true"
 90        android:theme="@style/AppTheme"
-90-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:34:13-44
+90-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:34:13-44
 91        android:usesCleartextTraffic="true" >
-91-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:35:13-48
+91-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:35:13-48
 92        <activity
-92-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:38:9-41:43
+92-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:38:9-41:43
 93            android:name="com.emglab.qlsv.TeacherActivity"
-93-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:39:17-63
+93-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:39:17-63
 94            android:exported="true"
-94-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:41:17-40
+94-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:41:17-40
 95            android:screenOrientation="portrait" />
-95-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:40:17-53
+95-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:40:17-53
 96
 97        <!-- Intent filter to capture System Browser or Authenticator calling back to our app after sign-in -->
 98        <activity
-98-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:44:9-55:20
+98-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:44:9-55:20
 99            android:name="com.microsoft.identity.client.BrowserTabActivity"
-99-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:46:17-80
+99-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:46:17-80
 100            android:exported="true" >
-100-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:45:17-40
+100-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:45:17-40
 101            <intent-filter>
-101-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:47:13-54:29
+101-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:47:13-54:29
 102                <action android:name="android.intent.action.VIEW" />
-102-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:48:17-69
-102-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:48:25-66
+102-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:48:17-69
+102-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:48:25-66
 103
 104                <category android:name="android.intent.category.DEFAULT" />
-104-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:49:17-76
-104-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:49:27-73
+104-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:49:17-76
+104-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:49:27-73
 105                <category android:name="android.intent.category.BROWSABLE" />
-105-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:50:17-78
-105-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:50:27-75
+105-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:50:17-78
+105-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:50:27-75
 106
 107                <data
-107-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:51:17-53:72
+107-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:51:17-53:72
 108                    android:host="qlsv"
-108-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:52:25-44
+108-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:52:25-44
 109                    android:path="/df1TgV3P5EtAP89964bnnVWS9cU="
-109-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:53:25-69
+109-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:53:25-69
 110                    android:scheme="msauth" />
-110-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:51:23-46
+110-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:51:23-46
 111            </intent-filter>
 112        </activity>
 113
 114        <meta-data
-114-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:57:9-59:73
+114-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:57:9-59:73
 115            android:name="com.google.android.gms.version"
-115-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:58:17-62
+115-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:58:17-62
 116            android:value="@integer/google_play_services_version" />
-116-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:59:17-70
+116-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:59:17-70
 117        <meta-data
-117-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:60:9-62:59
+117-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:60:9-62:59
 118            android:name="com.google.android.geo.API_KEY"
-118-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:61:17-62
+118-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:61:17-62
 119            android:value="@string/google_maps_key" />
-119-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:62:17-56
+119-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:62:17-56
 120
 121        <provider
-121-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:64:9-72:20
+121-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:64:9-72:20
 122            android:name="androidx.core.content.FileProvider"
-122-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:65:17-66
+122-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:65:17-66
 123            android:authorities="qlsv"
-123-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:66:17-43
+123-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:66:17-43
 124            android:exported="false"
-124-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:67:17-41
+124-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:67:17-41
 125            android:grantUriPermissions="true" >
-125-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:68:17-51
+125-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:68:17-51
 126            <meta-data
-126-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:69:13-71:58
+126-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:69:13-71:58
 127                android:name="android.support.FILE_PROVIDER_PATHS"
-127-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:70:21-71
+127-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:70:21-71
 128                android:resource="@xml/file_paths" />
-128-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:71:21-55
+128-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:71:21-55
 129        </provider>
 130
 131        <service
-131-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:74:9-80:19
+131-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:74:9-80:19
 132            android:name="com.emglab.qlsv.service.MyFirebaseMessagingService"
-132-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:76:17-82
+132-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:76:17-82
 133            android:exported="false" >
-133-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:75:17-41
+133-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:75:17-41
 134            <intent-filter>
-134-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:77:13-79:29
+134-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:77:13-79:29
 135                <action android:name="com.google.firebase.MESSAGE_EVENT" />
-135-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:78:17-76
-135-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:78:25-73
+135-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:78:17-76
+135-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:78:25-73
 136            </intent-filter>
 137        </service>
 138
 139        <activity
-139-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:82:9-86:56
+139-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:82:9-86:56
 140            android:name="com.emglab.qlsv.MapsActivity"
-140-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:84:17-60
+140-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:84:17-60
 141            android:exported="true"
-141-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:83:17-40
+141-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:83:17-40
 142            android:label="@string/title_activity_maps"
-142-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:85:17-60
+142-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:85:17-60
 143            android:screenOrientation="portrait" />
-143-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:86:17-53
+143-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:86:17-53
 144        <activity
-144-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:87:9-90:56
+144-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:87:9-90:56
 145            android:name="com.emglab.qlsv.QRCodeActivity"
-145-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:89:17-62
+145-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:89:17-62
 146            android:exported="true"
-146-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:88:17-40
+146-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:88:17-40
 147            android:screenOrientation="portrait" />
-147-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:90:17-53
+147-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:90:17-53
 148        <activity
-148-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:91:9-96:63
+148-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:91:9-96:63
 149            android:name="com.emglab.qlsv.MainActivity"
-149-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:93:17-60
+149-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:93:17-60
 150            android:exported="true"
-150-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:92:17-40
+150-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:92:17-40
 151            android:label="@string/app_name"
-151-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:94:17-49
+151-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:94:17-49
 152            android:screenOrientation="portrait"
-152-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:95:17-53
+152-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:95:17-53
 153            android:theme="@style/AppTheme.NoActionBar" />
-153-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:96:17-60
+153-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:96:17-60
 154        <activity
-154-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:97:9-107:20
+154-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:97:9-107:20
 155            android:name="com.emglab.qlsv.LoginActivity"
-155-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:99:17-61
+155-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:99:17-61
 156            android:exported="true"
-156-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:98:17-40
+156-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:98:17-40
 157            android:screenOrientation="portrait"
-157-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:100:17-53
+157-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:100:17-53
 158            android:theme="@style/AppTheme.NoActionBar" >
-158-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:101:17-60
+158-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:101:17-60
 159            <intent-filter>
-159-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:102:13-106:29
+159-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:102:13-106:29
 160                <action android:name="android.intent.action.MAIN" />
-160-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:103:17-69
-160-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:103:25-66
+160-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:103:17-69
+160-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:103:25-66
 161
 162                <category android:name="android.intent.category.LAUNCHER" />
-162-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:105:17-77
-162-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:105:27-74
+162-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:105:17-77
+162-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:105:27-74
 163            </intent-filter>
 164        </activity>
 165        <activity
-165-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:108:9-112:53
+165-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:108:9-112:53
 166            android:name="com.journeyapps.barcodescanner.CaptureActivity"
-166-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:110:17-78
+166-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:110:17-78
 167            android:clearTaskOnLaunch="true"
-167-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/4952c28bed1a2e3f3394c8897d6b9338/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:48:13-45
+167-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:48:13-45
 168            android:exported="true"
-168-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:109:17-40
+168-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:109:17-40
 169            android:screenOrientation="fullSensor"
-169-->/Volumes/Data/AndroidStudioProjects/QLSV/app/src/main/AndroidManifest.xml:111:17-55
+169-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:111:17-55
 170            android:stateNotNeeded="true"
-170-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/4952c28bed1a2e3f3394c8897d6b9338/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:50:13-42
+170-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:50:13-42
 171            android:theme="@style/zxing_CaptureTheme"
-171-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/4952c28bed1a2e3f3394c8897d6b9338/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:51:13-54
+171-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:51:13-54
 172            android:windowSoftInputMode="stateAlwaysHidden" />
-172-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/4952c28bed1a2e3f3394c8897d6b9338/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:52:13-60
+172-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:52:13-60
 173
 174        <!-- <receiver -->
 175        <!-- android:exported="false" -->
@@ -489,13 +489,13 @@
 265-->[com.microsoft.identity:common:3.6.7] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/83df7b59a071783f3ec7a563c8eecf60/jetified-common-3.6.7/AndroidManifest.xml:50:19-94
 266
 267        <provider
-267-->[com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f134abb33535a6d6cbeab79b9c0039c7/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+267-->[com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/5d6f5ef794bd7603e06c5a21ed6aa57e/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
 268            android:name="com.squareup.picasso.PicassoProvider"
-268-->[com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f134abb33535a6d6cbeab79b9c0039c7/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+268-->[com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/5d6f5ef794bd7603e06c5a21ed6aa57e/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
 269            android:authorities="com.emglab.qlsv.com.squareup.picasso"
-269-->[com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f134abb33535a6d6cbeab79b9c0039c7/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+269-->[com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/5d6f5ef794bd7603e06c5a21ed6aa57e/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
 270            android:exported="false" />
-270-->[com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f134abb33535a6d6cbeab79b9c0039c7/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+270-->[com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/5d6f5ef794bd7603e06c5a21ed6aa57e/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
 271        <!--
 272             FirebaseMessagingService performs security checks at runtime,
 273             but set to not exported to explicitly avoid allowing another app to call it.

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Volumes/Data/AndroidStudioProjects/QLSV/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sv/values-sv.xml",
+            "outputFile": "/Volumes/Data/DEV/AndroidStudio/QLSV/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sv/values-sv.xml",
             "map": [
                 {
                     "source": "/Users/anhnt/.gradle/caches/transforms-2/files-2.1/2bb03e433c120bb9c90762e4aaaaa304/material-1.4.0/res/values-sv/values-sv.xml",
@@ -54,23 +54,6 @@
                         "startOffsets": "6174",
                         "endColumns": "105",
                         "endOffsets": "6275"
-                    }
-                },
-                {
-                    "source": "/Users/anhnt/.gradle/caches/transforms-2/files-2.1/4952c28bed1a2e3f3394c8897d6b9338/jetified-zxing-android-embedded-3.3.0/res/values-sv/values-sv.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,114,161,267",
-                        "endColumns": "58,46,105,113",
-                        "endOffsets": "109,156,262,376"
-                    },
-                    "to": {
-                        "startLines": "111,112,113,114",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "10513,10572,10619,10725",
-                        "endColumns": "58,46,105,113",
-                        "endOffsets": "10567,10614,10720,10834"
                     }
                 },
                 {
@@ -139,6 +122,23 @@
                         "startOffsets": "271,374,477,588,672,774,887,964,1039,1132,1227,1322,1416,1518,1613,1710,1808,1904,1997,2077,2183,2282,2378,2483,2586,2688,2842,10332",
                         "endColumns": "102,102,110,83,101,112,76,74,92,94,94,93,101,94,96,97,95,92,79,105,98,95,104,102,101,153,101,79",
                         "endOffsets": "369,472,583,667,769,882,959,1034,1127,1222,1317,1411,1513,1608,1705,1803,1899,1992,2072,2178,2277,2373,2478,2581,2683,2837,2939,10407"
+                    }
+                },
+                {
+                    "source": "/Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/res/values-sv/values-sv.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,114,161,267",
+                        "endColumns": "58,46,105,113",
+                        "endOffsets": "109,156,262,376"
+                    },
+                    "to": {
+                        "startLines": "111,112,113,114",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "10513,10572,10619,10725",
+                        "endColumns": "58,46,105,113",
+                        "endOffsets": "10567,10614,10720,10834"
                     }
                 },
                 {

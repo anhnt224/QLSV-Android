@@ -31,7 +31,7 @@ class AccountFragment : Fragment(), Injectable {
 
     private lateinit var viewModel: AccountViewModel
     private lateinit var binding: AccountFragmentBinding
-    private lateinit var remoteConfig: FirebaseRemoteConfig
+    private var remoteConfig = FirebaseRemoteConfig.getInstance()
 
     @SuppressLint("SetTextI18n")
     override fun onCreateView(
@@ -83,7 +83,7 @@ class AccountFragment : Fragment(), Injectable {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
             startActivity(intent)
         }catch (e: Exception){
-            showToast(e.message.toString())
+
         }
     }
 }

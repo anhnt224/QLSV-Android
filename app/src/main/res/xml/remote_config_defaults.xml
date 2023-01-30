@@ -58,4 +58,29 @@
         <value>https://iuoss.com</value>
     </entry>
 
+    <entry>
+        <key>tutorial_link</key>
+        <value>https://iuoss.com</value>
+    </entry>
+
+    <entry>
+        <key>home_link_intership</key>
+        <value>https://iujobhub.com/job-type/internship/</value>
+    </entry>
+
+    <entry>
+        <key>home_link_parttime_job</key>
+        <value>https://iujobhub.com/job-type/part-time/</value>
+    </entry>
+
+    <entry>
+        <key>home_link_job</key>
+        <value>https://iujobhub.com/job-type/full-time/</value>
+    </entry>
+
+    <entry>
+        <key>image_base_url</key>
+        <value>http://api.iuoss.com/UploadFileUI</value>
+    </entry>
+
 </defaultsMap>

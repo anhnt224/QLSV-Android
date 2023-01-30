@@ -42,11 +42,11 @@ class LoginFragment : androidx.fragment.app.Fragment(), Injectable {
             inflater, R.layout.fragment_login, container, false)
 
         val email = sharedPrefsHelper.getEmail()
-        if (email.contains("@sis.hust.edu.vn")){
+        if (email.contains("@student.hcmiu.edu.vn")){
             nextToMainActivity()
         }
 
-        if(email.contains("@hust.edu.vn")){
+        if(email.contains("@hcmiu.edu.vn")){
             nextToTeacherActivity()
         }
 
@@ -79,7 +79,7 @@ class LoginFragment : androidx.fragment.app.Fragment(), Injectable {
                 binding.loginResource = resource
                 if (resource.data != null && isSuccess){
                     if (resource.status == Status.SUCCESS_NETWORK){
-                        if(email.contains("@hust.edu.vn")){
+                        if(email.contains("@hcmiu.edu.vn")){
                             isSuccess = false
                             nextToTeacherActivity()
                         }else{
@@ -107,11 +107,6 @@ class LoginFragment : androidx.fragment.app.Fragment(), Injectable {
 
         if (password == ""){
             showToast("Nhập mật khẩu")
-            return
-        }
-
-        if (userCode != "hung.phammanh@hust.edu.vn" && userCode != "quang.dv193066@sis.hust.edu.vn"){
-            showToast("Tài khoản không tồn tại")
             return
         }
 

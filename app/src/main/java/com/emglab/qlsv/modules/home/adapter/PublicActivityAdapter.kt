@@ -11,6 +11,7 @@ import com.emglab.qlsv.R
 import com.emglab.qlsv.databinding.ListItemPublicActivityBinding
 import com.emglab.qlsv.models.entity.Activity
 import com.emglab.qlsv.ui.adapter.activity.EventAdapter
+import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 
 class PublicActivityAdapter(
     var activities: List<Activity>,
@@ -20,7 +21,9 @@ class PublicActivityAdapter(
     inner class ViewHolder(private val binding: ListItemPublicActivityBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bindView(activity: Activity){
-            val link = "https://ctsv.hust.edu.vn/api-t/${activity.linkImage}"
+            val remoteConfig = FirebaseRemoteConfig.getInstance()
+            val newsLink = remoteConfig.getString("image_base_url")
+            val link = "$newsLink${activity.linkImage}"
             binding.activity = activity
             binding.apply {
                 statusTextView.setTextColor(

@@ -12,27 +12,21 @@ public class AddNewAddressFragmentBindingImpl extends AddNewAddressFragmentBindi
     @Nullable
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
-        sIncludes = new androidx.databinding.ViewDataBinding.IncludedLayouts(19);
-        sIncludes.setIncludes(0, 
-            new String[] {"loading_action_state"},
-            new int[] {9},
-            new int[] {com.emglab.qlsv.R.layout.loading_action_state});
+        sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.textPhone, 10);
-        sViewsWithIds.put(R.id.emailTextInputLayout, 11);
-        sViewsWithIds.put(R.id.textType, 12);
-        sViewsWithIds.put(R.id.textLocation, 13);
-        sViewsWithIds.put(R.id.textCity, 14);
-        sViewsWithIds.put(R.id.textDistrict, 15);
-        sViewsWithIds.put(R.id.textWard, 16);
-        sViewsWithIds.put(R.id.textAddress, 17);
-        sViewsWithIds.put(R.id.buttonSave, 18);
+        sViewsWithIds.put(R.id.textPhone, 9);
+        sViewsWithIds.put(R.id.emailTextInputLayout, 10);
+        sViewsWithIds.put(R.id.textType, 11);
+        sViewsWithIds.put(R.id.textLocation, 12);
+        sViewsWithIds.put(R.id.textCity, 13);
+        sViewsWithIds.put(R.id.textDistrict, 14);
+        sViewsWithIds.put(R.id.textWard, 15);
+        sViewsWithIds.put(R.id.textAddress, 16);
+        sViewsWithIds.put(R.id.buttonSave, 17);
     }
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
-    @Nullable
-    private final com.emglab.qlsv.databinding.LoadingActionStateBinding mboundView01;
     @NonNull
     private final com.google.android.material.textfield.TextInputEditText mboundView1;
     @NonNull
@@ -55,24 +49,22 @@ public class AddNewAddressFragmentBindingImpl extends AddNewAddressFragmentBindi
     // Inverse Binding Event Handlers
 
     public AddNewAddressFragmentBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 19, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 18, sIncludes, sViewsWithIds));
     }
     private AddNewAddressFragmentBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (com.google.android.material.button.MaterialButton) bindings[18]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[11]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[17]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[14]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[15]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[13]
+            , (com.google.android.material.button.MaterialButton) bindings[17]
             , (com.google.android.material.textfield.TextInputLayout) bindings[10]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[12]
             , (com.google.android.material.textfield.TextInputLayout) bindings[16]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[13]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[14]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[12]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[9]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[11]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[15]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView01 = (com.emglab.qlsv.databinding.LoadingActionStateBinding) bindings[9];
-        setContainedBinding(this.mboundView01);
         this.mboundView1 = (com.google.android.material.textfield.TextInputEditText) bindings[1];
         this.mboundView1.setTag(null);
         this.mboundView2 = (com.google.android.material.textfield.TextInputEditText) bindings[2];
@@ -99,7 +91,6 @@ public class AddNewAddressFragmentBindingImpl extends AddNewAddressFragmentBindi
         synchronized(this) {
                 mDirtyFlags = 0x4L;
         }
-        mboundView01.invalidateAll();
         requestRebind();
     }
 
@@ -109,9 +100,6 @@ public class AddNewAddressFragmentBindingImpl extends AddNewAddressFragmentBindi
             if (mDirtyFlags != 0) {
                 return true;
             }
-        }
-        if (mboundView01.hasPendingBindings()) {
-            return true;
         }
         return false;
     }
@@ -141,17 +129,6 @@ public class AddNewAddressFragmentBindingImpl extends AddNewAddressFragmentBindi
     }
     public void setResource(@Nullable com.emglab.qlsv.common.Resource Resource) {
         this.mResource = Resource;
-        synchronized(this) {
-            mDirtyFlags |= 0x2L;
-        }
-        notifyPropertyChanged(BR.resource);
-        super.requestRebind();
-    }
-
-    @Override
-    public void setLifecycleOwner(@Nullable androidx.lifecycle.LifecycleOwner lifecycleOwner) {
-        super.setLifecycleOwner(lifecycleOwner);
-        mboundView01.setLifecycleOwner(lifecycleOwner);
     }
 
     @Override
@@ -177,7 +154,6 @@ public class AddNewAddressFragmentBindingImpl extends AddNewAddressFragmentBindi
         java.lang.String addressEmail = null;
         java.lang.String addressType = null;
         com.emglab.qlsv.models.entity.UserAddress address = mAddress;
-        com.emglab.qlsv.common.Resource<?> resource = mResource;
 
         if ((dirtyFlags & 0x5L) != 0) {
 
@@ -202,14 +178,7 @@ public class AddNewAddressFragmentBindingImpl extends AddNewAddressFragmentBindi
                     addressType = address.getType();
                 }
         }
-        if ((dirtyFlags & 0x6L) != 0) {
-        }
         // batch finished
-        if ((dirtyFlags & 0x6L) != 0) {
-            // api target 1
-
-            this.mboundView01.setResource(resource);
-        }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
 
@@ -222,7 +191,6 @@ public class AddNewAddressFragmentBindingImpl extends AddNewAddressFragmentBindi
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView7, addressWard);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView8, addressAddress);
         }
-        executeBindingsOn(mboundView01);
     }
     // Listener Stub Implementations
     // callback impls
