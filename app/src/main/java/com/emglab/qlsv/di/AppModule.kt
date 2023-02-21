@@ -18,6 +18,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 /**
@@ -43,6 +44,7 @@ class AppModule {
 
         // Configure this client not to retry when a connectivity problem is encountered.
         builder.retryOnConnectionFailure(false)
+        builder.readTimeout(15, TimeUnit.SECONDS)
 
         // Log requests and responses.
         // Add logging as the last interceptor, because this will also log the information which

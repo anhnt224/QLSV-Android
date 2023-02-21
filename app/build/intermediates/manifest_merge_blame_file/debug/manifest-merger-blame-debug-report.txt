@@ -1,7 +1,7 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.emglab.qlsv"
-4    android:versionCode="2"
+4    android:versionCode="3"
 5    android:versionName="1.0.2" >
 6
 7    <uses-sdk
@@ -80,44 +80,44 @@
 45    </queries>
 46
 47    <uses-feature android:name="android.hardware.camera" />
-47-->[info.androidhive:barcode-reader:1.1.5] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/761c1f8a07226b4d15eafceebed80998/jetified-barcode-reader-1.1.5/AndroidManifest.xml:13:5-60
-47-->[info.androidhive:barcode-reader:1.1.5] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/761c1f8a07226b4d15eafceebed80998/jetified-barcode-reader-1.1.5/AndroidManifest.xml:13:19-57
+47-->[info.androidhive:barcode-reader:1.1.5] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/ef182bdb6e3cad06a54e994b2ad49116/jetified-barcode-reader-1.1.5/AndroidManifest.xml:13:5-60
+47-->[info.androidhive:barcode-reader:1.1.5] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/ef182bdb6e3cad06a54e994b2ad49116/jetified-barcode-reader-1.1.5/AndroidManifest.xml:13:19-57
 48
 49    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 49-->[com.microsoft.identity.client:msal:2.2.3] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/d6134e763d45127d9a37c3d51fcf3530/jetified-msal-2.2.3/AndroidManifest.xml:11:5-79
 49-->[com.microsoft.identity.client:msal:2.2.3] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/d6134e763d45127d9a37c3d51fcf3530/jetified-msal-2.2.3/AndroidManifest.xml:11:22-76
 50
 51    <uses-feature
-51-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:27:5-29:36
+51-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:27:5-29:36
 52        android:name="android.hardware.camera.front"
-52-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:28:9-53
+52-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:28:9-53
 53        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
-53-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:29:9-33
+53-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:29:9-33
 54    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
 55    <uses-feature
-55-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:32:5-34:36
+55-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:32:5-34:36
 56        android:name="android.hardware.camera.autofocus"
-56-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:33:9-57
+56-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:33:9-57
 57        android:required="false" />
-57-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:34:9-33
+57-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:34:9-33
 58    <uses-feature
-58-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:35:5-37:36
+58-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:35:5-37:36
 59        android:name="android.hardware.camera.flash"
-59-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:36:9-53
+59-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:36:9-53
 60        android:required="false" />
-60-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:37:9-33
+60-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:37:9-33
 61    <uses-feature
-61-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:38:5-40:36
+61-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:38:5-40:36
 62        android:name="android.hardware.screen.landscape"
-62-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:39:9-57
+62-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:39:9-57
 63        android:required="false" />
-63-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:40:9-33
+63-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:40:9-33
 64    <uses-feature
-64-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:41:5-43:36
+64-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:41:5-43:36
 65        android:name="android.hardware.wifi"
-65-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:42:9-45
+65-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:42:9-45
 66        android:required="false" /> <!-- Required by older versions of Google Play services to create GCM registration tokens -->
-66-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:43:9-33
+66-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:43:9-33
 67    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 67-->[com.google.android.gms:play-services-gcm:17.0.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/27946061e568c813b576f04a91e16bed/jetified-play-services-gcm-17.0.0/AndroidManifest.xml:23:5-82
 67-->[com.google.android.gms:play-services-gcm:17.0.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/27946061e568c813b576f04a91e16bed/jetified-play-services-gcm-17.0.0/AndroidManifest.xml:23:22-79
@@ -309,17 +309,17 @@
 166            android:name="com.journeyapps.barcodescanner.CaptureActivity"
 166-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:110:17-78
 167            android:clearTaskOnLaunch="true"
-167-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:48:13-45
+167-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:48:13-45
 168            android:exported="true"
 168-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:109:17-40
 169            android:screenOrientation="fullSensor"
 169-->/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:111:17-55
 170            android:stateNotNeeded="true"
-170-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:50:13-42
+170-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:50:13-42
 171            android:theme="@style/zxing_CaptureTheme"
-171-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:51:13-54
+171-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:51:13-54
 172            android:windowSoftInputMode="stateAlwaysHidden" />
-172-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:52:13-60
+172-->[com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:52:13-60
 173
 174        <!-- <receiver -->
 175        <!-- android:exported="false" -->
@@ -489,13 +489,13 @@
 265-->[com.microsoft.identity:common:3.6.7] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/83df7b59a071783f3ec7a563c8eecf60/jetified-common-3.6.7/AndroidManifest.xml:50:19-94
 266
 267        <provider
-267-->[com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/5d6f5ef794bd7603e06c5a21ed6aa57e/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+267-->[com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/46b5446206d29c6dd5bc0e53f35e7137/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
 268            android:name="com.squareup.picasso.PicassoProvider"
-268-->[com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/5d6f5ef794bd7603e06c5a21ed6aa57e/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+268-->[com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/46b5446206d29c6dd5bc0e53f35e7137/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
 269            android:authorities="com.emglab.qlsv.com.squareup.picasso"
-269-->[com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/5d6f5ef794bd7603e06c5a21ed6aa57e/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+269-->[com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/46b5446206d29c6dd5bc0e53f35e7137/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
 270            android:exported="false" />
-270-->[com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/5d6f5ef794bd7603e06c5a21ed6aa57e/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+270-->[com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/46b5446206d29c6dd5bc0e53f35e7137/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
 271        <!--
 272             FirebaseMessagingService performs security checks at runtime,
 273             but set to not exported to explicitly avoid allowing another app to call it.

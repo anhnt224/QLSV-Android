@@ -15,21 +15,21 @@ MERGED from [com.google.firebase:firebase-analytics-ktx:18.0.0] /Users/anhnt/.gr
 MERGED from [com.google.firebase:firebase-common-ktx:19.4.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/91d5f7dada2a0ac7f1c595e14aab2694/jetified-firebase-common-ktx-19.4.0/AndroidManifest.xml:2:1-21:12
 MERGED from [androidx.navigation:navigation-ui:2.0.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/0a910d275fccea08520ad4f60e0b7416/navigation-ui-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.karumi:dexter:6.2.2] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f927fa499677fb7de478f7c3df581e24/jetified-dexter-6.2.2/AndroidManifest.xml:17:1-32:12
-MERGED from [com.leinardi.android:speed-dial:2.0.1] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/75cd05a7c8b692050c0acfd561b9b79c/jetified-speed-dial-2.0.1/AndroidManifest.xml:17:1-26:12
-MERGED from [info.androidhive:barcode-reader:1.1.5] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/761c1f8a07226b4d15eafceebed80998/jetified-barcode-reader-1.1.5/AndroidManifest.xml:2:1-15:12
+MERGED from [com.leinardi.android:speed-dial:2.0.1] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/236f47767e8c1e363341ff182fc3d64d/jetified-speed-dial-2.0.1/AndroidManifest.xml:17:1-26:12
+MERGED from [info.androidhive:barcode-reader:1.1.5] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/ef182bdb6e3cad06a54e994b2ad49116/jetified-barcode-reader-1.1.5/AndroidManifest.xml:2:1-15:12
 MERGED from [com.google.android.material:material:1.4.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/2bb03e433c120bb9c90762e4aaaaa304/material-1.4.0/AndroidManifest.xml:17:1-24:12
-MERGED from [com.github.sundeepk:compact-calendar-view:2.0.2.2] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/0afbbd114967270fa3b7ee8062883d13/jetified-compact-calendar-view-2.0.2.2/AndroidManifest.xml:2:1-11:12
-MERGED from [com.google.dagger:dagger-android-support:2.17] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f9dc56e48252f25cf789c5c21e459779/jetified-dagger-android-support-2.17/AndroidManifest.xml:17:1-22:12
-MERGED from [io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.2.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/df14b80b0a17196c67ae53b8deaa0eb7/jetified-sectionedrecyclerviewadapter-1.2.0/AndroidManifest.xml:2:1-15:12
+MERGED from [com.github.sundeepk:compact-calendar-view:2.0.2.2] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f0f259c40e503be3690e352f877f9445/jetified-compact-calendar-view-2.0.2.2/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.dagger:dagger-android-support:2.17] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/e376d34481c2e2ece623ca0f65ae00d7/jetified-dagger-android-support-2.17/AndroidManifest.xml:17:1-22:12
+MERGED from [io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.2.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/d2013a3c69439814532f89f1e3309cf1/jetified-sectionedrecyclerviewadapter-1.2.0/AndroidManifest.xml:2:1-15:12
 MERGED from [com.microsoft.identity.client:msal:2.2.3] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/d6134e763d45127d9a37c3d51fcf3530/jetified-msal-2.2.3/AndroidManifest.xml:2:1-43:12
 MERGED from [pub.devrel:easypermissions:3.0.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/84affd1220da72f026984f923c461ee1/jetified-easypermissions-3.0.0/AndroidManifest.xml:2:1-19:12
 MERGED from [com.microsoft.identity:common:3.6.7] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/83df7b59a071783f3ec7a563c8eecf60/jetified-common-3.6.7/AndroidManifest.xml:2:1-53:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/e3d5c3d4d5d494abc5f47742b96db4ff/constraintlayout-2.0.1/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/31bf64772bc681df297bb20a5e8d60d3/appcompat-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/5b96966b5e159582a7086feb3a591e64/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:17:1-55:12
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:17:1-55:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/de1cbeb2347b5854c5d5926888e86784/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/5d6f5ef794bd7603e06c5a21ed6aa57e/jetified-picasso-2.71828/AndroidManifest.xml:2:1-14:12
+MERGED from [com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/46b5446206d29c6dd5bc0e53f35e7137/jetified-picasso-2.71828/AndroidManifest.xml:2:1-14:12
 MERGED from [com.google.firebase:firebase-messaging:21.0.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/c926f03c188bdc216687a22ea714a827/jetified-firebase-messaging-21.0.0/AndroidManifest.xml:17:1-45:12
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0-beta01] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/692ec58f49e3af80a424bf9b453e662d/lifecycle-extensions-2.0.0-beta01/AndroidManifest.xml:17:1-25:12
 MERGED from [androidx.room:room-runtime:2.0.0-beta01] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/50cfe81063ef940e9ace1b9ad4123ad4/room-runtime-2.0.0-beta01/AndroidManifest.xml:17:1-22:12
@@ -42,9 +42,9 @@ MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/anhnt/.gra
 MERGED from [com.google.android.gms:play-services-auth:19.0.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f1fdb794cfb1d75f2f133e64a0b84839/jetified-play-services-auth-19.0.0/AndroidManifest.xml:17:1-40:12
 MERGED from [com.google.android.gms:play-services-location:17.1.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/5e32a00d4590e791eccd657ae263e008/jetified-play-services-location-17.1.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/328214687706b3116068994715351aab/jetified-MPAndroidChart-v3.1.0/AndroidManifest.xml:2:1-20:12
-MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/31d1ca035ff04aea8161c2a7d53a76e6/jetified-circleimageview-2.1.0/AndroidManifest.xml:2:1-11:12
+MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/b10e9466db2a3ed0d3890ccdbd6ce2ff/jetified-circleimageview-2.1.0/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.gms:play-services-vision:20.1.3] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/15b5abc377f4577c8dca5d21982d3a66/jetified-play-services-vision-20.1.3/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.dagger:dagger-android:2.17] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/c6289e5bb2af643ffc10aa544d37d8bf/jetified-dagger-android-2.17/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.dagger:dagger-android:2.17] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/d8ee63d318440e7dcc0ab444e5810e7a/jetified-dagger-android-2.17/AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.instacart.truetime-android:library-extension-rx:master-SNAPSHOT] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/12cd811b16d048145b2bb6f6b9485c1b/jetified-library-extension-rx-master-SNAPSHOT/AndroidManifest.xml:2:1-11:12
 MERGED from [io.reactivex.rxjava2:rxandroid:2.0.2] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/40dd3bb6a04ec9d7786036a0f8ed2231/jetified-rxandroid-2.0.2/AndroidManifest.xml:15:1-21:12
 MERGED from [me.relex:circleindicator:2.1.6] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/1776a8bb7ec02c14e2e05922286bc256/jetified-circleindicator-2.1.6/AndroidManifest.xml:2:1-11:12
@@ -180,18 +180,18 @@ MERGED from [androidx.navigation:navigation-ui:2.0.0] /Users/anhnt/.gradle/cache
 MERGED from [androidx.navigation:navigation-ui:2.0.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/0a910d275fccea08520ad4f60e0b7416/navigation-ui-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.karumi:dexter:6.2.2] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f927fa499677fb7de478f7c3df581e24/jetified-dexter-6.2.2/AndroidManifest.xml:22:5-24:41
 MERGED from [com.karumi:dexter:6.2.2] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f927fa499677fb7de478f7c3df581e24/jetified-dexter-6.2.2/AndroidManifest.xml:22:5-24:41
-MERGED from [com.leinardi.android:speed-dial:2.0.1] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/75cd05a7c8b692050c0acfd561b9b79c/jetified-speed-dial-2.0.1/AndroidManifest.xml:22:5-24:41
-MERGED from [com.leinardi.android:speed-dial:2.0.1] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/75cd05a7c8b692050c0acfd561b9b79c/jetified-speed-dial-2.0.1/AndroidManifest.xml:22:5-24:41
-MERGED from [info.androidhive:barcode-reader:1.1.5] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/761c1f8a07226b4d15eafceebed80998/jetified-barcode-reader-1.1.5/AndroidManifest.xml:7:5-9:41
-MERGED from [info.androidhive:barcode-reader:1.1.5] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/761c1f8a07226b4d15eafceebed80998/jetified-barcode-reader-1.1.5/AndroidManifest.xml:7:5-9:41
+MERGED from [com.leinardi.android:speed-dial:2.0.1] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/236f47767e8c1e363341ff182fc3d64d/jetified-speed-dial-2.0.1/AndroidManifest.xml:22:5-24:41
+MERGED from [com.leinardi.android:speed-dial:2.0.1] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/236f47767e8c1e363341ff182fc3d64d/jetified-speed-dial-2.0.1/AndroidManifest.xml:22:5-24:41
+MERGED from [info.androidhive:barcode-reader:1.1.5] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/ef182bdb6e3cad06a54e994b2ad49116/jetified-barcode-reader-1.1.5/AndroidManifest.xml:7:5-9:41
+MERGED from [info.androidhive:barcode-reader:1.1.5] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/ef182bdb6e3cad06a54e994b2ad49116/jetified-barcode-reader-1.1.5/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.material:material:1.4.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/2bb03e433c120bb9c90762e4aaaaa304/material-1.4.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.4.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/2bb03e433c120bb9c90762e4aaaaa304/material-1.4.0/AndroidManifest.xml:20:5-44
-MERGED from [com.github.sundeepk:compact-calendar-view:2.0.2.2] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/0afbbd114967270fa3b7ee8062883d13/jetified-compact-calendar-view-2.0.2.2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.sundeepk:compact-calendar-view:2.0.2.2] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/0afbbd114967270fa3b7ee8062883d13/jetified-compact-calendar-view-2.0.2.2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.dagger:dagger-android-support:2.17] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f9dc56e48252f25cf789c5c21e459779/jetified-dagger-android-support-2.17/AndroidManifest.xml:20:5-44
-MERGED from [com.google.dagger:dagger-android-support:2.17] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f9dc56e48252f25cf789c5c21e459779/jetified-dagger-android-support-2.17/AndroidManifest.xml:20:5-44
-MERGED from [io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.2.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/df14b80b0a17196c67ae53b8deaa0eb7/jetified-sectionedrecyclerviewadapter-1.2.0/AndroidManifest.xml:8:5-10:41
-MERGED from [io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.2.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/df14b80b0a17196c67ae53b8deaa0eb7/jetified-sectionedrecyclerviewadapter-1.2.0/AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.sundeepk:compact-calendar-view:2.0.2.2] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f0f259c40e503be3690e352f877f9445/jetified-compact-calendar-view-2.0.2.2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.sundeepk:compact-calendar-view:2.0.2.2] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f0f259c40e503be3690e352f877f9445/jetified-compact-calendar-view-2.0.2.2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.dagger:dagger-android-support:2.17] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/e376d34481c2e2ece623ca0f65ae00d7/jetified-dagger-android-support-2.17/AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:dagger-android-support:2.17] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/e376d34481c2e2ece623ca0f65ae00d7/jetified-dagger-android-support-2.17/AndroidManifest.xml:20:5-44
+MERGED from [io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.2.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/d2013a3c69439814532f89f1e3309cf1/jetified-sectionedrecyclerviewadapter-1.2.0/AndroidManifest.xml:8:5-10:41
+MERGED from [io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.2.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/d2013a3c69439814532f89f1e3309cf1/jetified-sectionedrecyclerviewadapter-1.2.0/AndroidManifest.xml:8:5-10:41
 MERGED from [com.microsoft.identity.client:msal:2.2.3] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/d6134e763d45127d9a37c3d51fcf3530/jetified-msal-2.2.3/AndroidManifest.xml:6:5-8:41
 MERGED from [com.microsoft.identity.client:msal:2.2.3] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/d6134e763d45127d9a37c3d51fcf3530/jetified-msal-2.2.3/AndroidManifest.xml:6:5-8:41
 MERGED from [pub.devrel:easypermissions:3.0.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/84affd1220da72f026984f923c461ee1/jetified-easypermissions-3.0.0/AndroidManifest.xml:7:5-9:41
@@ -204,12 +204,12 @@ MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/anhnt/.gradle/caches/tra
 MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/31bf64772bc681df297bb20a5e8d60d3/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cardview:cardview:1.0.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/5b96966b5e159582a7086feb3a591e64/cardview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/5b96966b5e159582a7086feb3a591e64/cardview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:19:5-43
-MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:19:5-43
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:19:5-43
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:19:5-43
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/de1cbeb2347b5854c5d5926888e86784/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/de1cbeb2347b5854c5d5926888e86784/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/5d6f5ef794bd7603e06c5a21ed6aa57e/jetified-picasso-2.71828/AndroidManifest.xml:5:5-44
-MERGED from [com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/5d6f5ef794bd7603e06c5a21ed6aa57e/jetified-picasso-2.71828/AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/46b5446206d29c6dd5bc0e53f35e7137/jetified-picasso-2.71828/AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/46b5446206d29c6dd5bc0e53f35e7137/jetified-picasso-2.71828/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-messaging:21.0.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/c926f03c188bdc216687a22ea714a827/jetified-firebase-messaging-21.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-messaging:21.0.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/c926f03c188bdc216687a22ea714a827/jetified-firebase-messaging-21.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0-beta01] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/692ec58f49e3af80a424bf9b453e662d/lifecycle-extensions-2.0.0-beta01/AndroidManifest.xml:20:5-44
@@ -234,12 +234,12 @@ MERGED from [com.google.android.gms:play-services-location:17.1.0] /Users/anhnt/
 MERGED from [com.google.android.gms:play-services-location:17.1.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/5e32a00d4590e791eccd657ae263e008/jetified-play-services-location-17.1.0/AndroidManifest.xml:5:5-44
 MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/328214687706b3116068994715351aab/jetified-MPAndroidChart-v3.1.0/AndroidManifest.xml:16:5-18:41
 MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/328214687706b3116068994715351aab/jetified-MPAndroidChart-v3.1.0/AndroidManifest.xml:16:5-18:41
-MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/31d1ca035ff04aea8161c2a7d53a76e6/jetified-circleimageview-2.1.0/AndroidManifest.xml:5:5-7:41
-MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/31d1ca035ff04aea8161c2a7d53a76e6/jetified-circleimageview-2.1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/b10e9466db2a3ed0d3890ccdbd6ce2ff/jetified-circleimageview-2.1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/b10e9466db2a3ed0d3890ccdbd6ce2ff/jetified-circleimageview-2.1.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.gms:play-services-vision:20.1.3] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/15b5abc377f4577c8dca5d21982d3a66/jetified-play-services-vision-20.1.3/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-vision:20.1.3] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/15b5abc377f4577c8dca5d21982d3a66/jetified-play-services-vision-20.1.3/AndroidManifest.xml:5:5-44
-MERGED from [com.google.dagger:dagger-android:2.17] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/c6289e5bb2af643ffc10aa544d37d8bf/jetified-dagger-android-2.17/AndroidManifest.xml:20:5-44
-MERGED from [com.google.dagger:dagger-android:2.17] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/c6289e5bb2af643ffc10aa544d37d8bf/jetified-dagger-android-2.17/AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:dagger-android:2.17] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/d8ee63d318440e7dcc0ab444e5810e7a/jetified-dagger-android-2.17/AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:dagger-android:2.17] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/d8ee63d318440e7dcc0ab444e5810e7a/jetified-dagger-android-2.17/AndroidManifest.xml:20:5-44
 MERGED from [com.github.instacart.truetime-android:library-extension-rx:master-SNAPSHOT] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/12cd811b16d048145b2bb6f6b9485c1b/jetified-library-extension-rx-master-SNAPSHOT/AndroidManifest.xml:7:5-43
 MERGED from [com.github.instacart.truetime-android:library-extension-rx:master-SNAPSHOT] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/12cd811b16d048145b2bb6f6b9485c1b/jetified-library-extension-rx-master-SNAPSHOT/AndroidManifest.xml:7:5-43
 MERGED from [io.reactivex.rxjava2:rxandroid:2.0.2] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/40dd3bb6a04ec9d7786036a0f8ed2231/jetified-rxandroid-2.0.2/AndroidManifest.xml:19:5-43
@@ -480,10 +480,10 @@ ADDED from /Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml
 		ADDED from /Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:10:22-78
 uses-permission#android.permission.CAMERA
 ADDED from /Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:11:5-65
-MERGED from [info.androidhive:barcode-reader:1.1.5] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/761c1f8a07226b4d15eafceebed80998/jetified-barcode-reader-1.1.5/AndroidManifest.xml:11:5-65
-MERGED from [info.androidhive:barcode-reader:1.1.5] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/761c1f8a07226b4d15eafceebed80998/jetified-barcode-reader-1.1.5/AndroidManifest.xml:11:5-65
-MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:21:5-65
-MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:21:5-65
+MERGED from [info.androidhive:barcode-reader:1.1.5] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/ef182bdb6e3cad06a54e994b2ad49116/jetified-barcode-reader-1.1.5/AndroidManifest.xml:11:5-65
+MERGED from [info.androidhive:barcode-reader:1.1.5] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/ef182bdb6e3cad06a54e994b2ad49116/jetified-barcode-reader-1.1.5/AndroidManifest.xml:11:5-65
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:21:5-65
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:21:5-65
 	android:name
 		ADDED from /Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:11:22-62
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
@@ -518,8 +518,8 @@ MERGED from [com.karumi:dexter:6.2.2] /Users/anhnt/.gradle/caches/transforms-2/f
 MERGED from [com.karumi:dexter:6.2.2] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f927fa499677fb7de478f7c3df581e24/jetified-dexter-6.2.2/AndroidManifest.xml:26:5-30:19
 MERGED from [com.google.android.material:material:1.4.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/2bb03e433c120bb9c90762e4aaaaa304/material-1.4.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/2bb03e433c120bb9c90762e4aaaaa304/material-1.4.0/AndroidManifest.xml:22:5-20
-MERGED from [io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.2.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/df14b80b0a17196c67ae53b8deaa0eb7/jetified-sectionedrecyclerviewadapter-1.2.0/AndroidManifest.xml:12:5-13:19
-MERGED from [io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.2.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/df14b80b0a17196c67ae53b8deaa0eb7/jetified-sectionedrecyclerviewadapter-1.2.0/AndroidManifest.xml:12:5-13:19
+MERGED from [io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.2.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/d2013a3c69439814532f89f1e3309cf1/jetified-sectionedrecyclerviewadapter-1.2.0/AndroidManifest.xml:12:5-13:19
+MERGED from [io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.2.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/d2013a3c69439814532f89f1e3309cf1/jetified-sectionedrecyclerviewadapter-1.2.0/AndroidManifest.xml:12:5-13:19
 MERGED from [com.microsoft.identity.client:msal:2.2.3] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/d6134e763d45127d9a37c3d51fcf3530/jetified-msal-2.2.3/AndroidManifest.xml:13:5-41:19
 MERGED from [com.microsoft.identity.client:msal:2.2.3] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/d6134e763d45127d9a37c3d51fcf3530/jetified-msal-2.2.3/AndroidManifest.xml:13:5-41:19
 MERGED from [pub.devrel:easypermissions:3.0.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/84affd1220da72f026984f923c461ee1/jetified-easypermissions-3.0.0/AndroidManifest.xml:11:5-17:19
@@ -528,10 +528,10 @@ MERGED from [com.microsoft.identity:common:3.6.7] /Users/anhnt/.gradle/caches/tr
 MERGED from [com.microsoft.identity:common:3.6.7] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/83df7b59a071783f3ec7a563c8eecf60/jetified-common-3.6.7/AndroidManifest.xml:41:5-51:19
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/e3d5c3d4d5d494abc5f47742b96db4ff/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/e3d5c3d4d5d494abc5f47742b96db4ff/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
-MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:45:5-53:19
-MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:45:5-53:19
-MERGED from [com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/5d6f5ef794bd7603e06c5a21ed6aa57e/jetified-picasso-2.71828/AndroidManifest.xml:7:5-12:19
-MERGED from [com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/5d6f5ef794bd7603e06c5a21ed6aa57e/jetified-picasso-2.71828/AndroidManifest.xml:7:5-12:19
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:45:5-53:19
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:45:5-53:19
+MERGED from [com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/46b5446206d29c6dd5bc0e53f35e7137/jetified-picasso-2.71828/AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/46b5446206d29c6dd5bc0e53f35e7137/jetified-picasso-2.71828/AndroidManifest.xml:7:5-12:19
 MERGED from [com.google.firebase:firebase-messaging:21.0.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/c926f03c188bdc216687a22ea714a827/jetified-firebase-messaging-21.0.0/AndroidManifest.xml:22:5-43:19
 MERGED from [com.google.firebase:firebase-messaging:21.0.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/c926f03c188bdc216687a22ea714a827/jetified-firebase-messaging-21.0.0/AndroidManifest.xml:22:5-43:19
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0-beta01] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/692ec58f49e3af80a424bf9b453e662d/lifecycle-extensions-2.0.0-beta01/AndroidManifest.xml:22:5-23:19
@@ -548,8 +548,8 @@ MERGED from [com.google.android.gms:play-services-auth:19.0.0] /Users/anhnt/.gra
 MERGED from [com.google.android.gms:play-services-auth:19.0.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f1fdb794cfb1d75f2f133e64a0b84839/jetified-play-services-auth-19.0.0/AndroidManifest.xml:22:5-38:19
 MERGED from [com.google.android.gms:play-services-location:17.1.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/5e32a00d4590e791eccd657ae263e008/jetified-play-services-location-17.1.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-location:17.1.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/5e32a00d4590e791eccd657ae263e008/jetified-play-services-location-17.1.0/AndroidManifest.xml:7:5-20
-MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/31d1ca035ff04aea8161c2a7d53a76e6/jetified-circleimageview-2.1.0/AndroidManifest.xml:9:5-20
-MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/31d1ca035ff04aea8161c2a7d53a76e6/jetified-circleimageview-2.1.0/AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/b10e9466db2a3ed0d3890ccdbd6ce2ff/jetified-circleimageview-2.1.0/AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/b10e9466db2a3ed0d3890ccdbd6ce2ff/jetified-circleimageview-2.1.0/AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.gms:play-services-vision:20.1.3] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/15b5abc377f4577c8dca5d21982d3a66/jetified-play-services-vision-20.1.3/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-vision:20.1.3] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/15b5abc377f4577c8dca5d21982d3a66/jetified-play-services-vision-20.1.3/AndroidManifest.xml:7:5-20
 MERGED from [com.github.instacart.truetime-android:library-extension-rx:master-SNAPSHOT] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/12cd811b16d048145b2bb6f6b9485c1b/jetified-library-extension-rx-master-SNAPSHOT/AndroidManifest.xml:9:5-20
@@ -778,21 +778,21 @@ ADDED from /Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml
 		ADDED from /Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:105:27-74
 activity#com.journeyapps.barcodescanner.CaptureActivity
 ADDED from /Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:108:9-112:53
-MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:46:9-52:63
-MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:46:9-52:63
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:46:9-52:63
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:46:9-52:63
 	android:clearTaskOnLaunch
-		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:48:13-45
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:48:13-45
 	android:screenOrientation
 		ADDED from /Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:111:17-55
-		REJECTED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:49:13-56
+		REJECTED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:49:13-56
 	android:stateNotNeeded
-		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:50:13-42
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:50:13-42
 	android:windowSoftInputMode
-		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:52:13-60
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:52:13-60
 	android:exported
 		ADDED from /Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:109:17-40
 	android:theme
-		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:51:13-54
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:51:13-54
 	tools:replace
 		ADDED from /Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/AndroidManifest.xml:112:17-50
 	android:name
@@ -864,11 +864,11 @@ ADDED from [com.karumi:dexter:6.2.2] /Users/anhnt/.gradle/caches/transforms-2/fi
 	android:name
 		ADDED from [com.karumi:dexter:6.2.2] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f927fa499677fb7de478f7c3df581e24/jetified-dexter-6.2.2/AndroidManifest.xml:28:13-60
 uses-feature#android.hardware.camera
-ADDED from [info.androidhive:barcode-reader:1.1.5] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/761c1f8a07226b4d15eafceebed80998/jetified-barcode-reader-1.1.5/AndroidManifest.xml:13:5-60
-MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:24:5-26:36
-MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:24:5-26:36
+ADDED from [info.androidhive:barcode-reader:1.1.5] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/ef182bdb6e3cad06a54e994b2ad49116/jetified-barcode-reader-1.1.5/AndroidManifest.xml:13:5-60
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:24:5-26:36
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:24:5-26:36
 	android:name
-		ADDED from [info.androidhive:barcode-reader:1.1.5] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/761c1f8a07226b4d15eafceebed80998/jetified-barcode-reader-1.1.5/AndroidManifest.xml:13:19-57
+		ADDED from [info.androidhive:barcode-reader:1.1.5] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/ef182bdb6e3cad06a54e994b2ad49116/jetified-barcode-reader-1.1.5/AndroidManifest.xml:13:19-57
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.microsoft.identity.client:msal:2.2.3] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/d6134e763d45127d9a37c3d51fcf3530/jetified-msal-2.2.3/AndroidManifest.xml:11:5-79
 MERGED from [com.microsoft.identity:common:3.6.7] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/83df7b59a071783f3ec7a563c8eecf60/jetified-common-3.6.7/AndroidManifest.xml:12:5-79
@@ -976,43 +976,43 @@ ADDED from [com.microsoft.identity:common:3.6.7] /Users/anhnt/.gradle/caches/tra
 	android:name
 		ADDED from [com.microsoft.identity:common:3.6.7] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/83df7b59a071783f3ec7a563c8eecf60/jetified-common-3.6.7/AndroidManifest.xml:50:19-94
 uses-feature#android.hardware.camera.front
-ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:27:5-29:36
+ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:27:5-29:36
 	android:required
-		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:29:9-33
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:29:9-33
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:28:9-53
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:28:9-53
 uses-feature#android.hardware.camera.autofocus
-ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:32:5-34:36
+ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:32:5-34:36
 	android:required
-		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:34:9-33
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:34:9-33
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:33:9-57
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:33:9-57
 uses-feature#android.hardware.camera.flash
-ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:35:5-37:36
+ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:35:5-37:36
 	android:required
-		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:37:9-33
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:37:9-33
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:36:9-53
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:36:9-53
 uses-feature#android.hardware.screen.landscape
-ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:38:5-40:36
+ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:38:5-40:36
 	android:required
-		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:40:9-33
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:40:9-33
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:39:9-57
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:39:9-57
 uses-feature#android.hardware.wifi
-ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:41:5-43:36
+ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:41:5-43:36
 	android:required
-		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:43:9-33
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:43:9-33
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/14d8566492c46e1e30e7c92c78700481/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:42:9-45
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/f5f810ce545c4de4fa7ff3fe5817f625/jetified-zxing-android-embedded-3.3.0/AndroidManifest.xml:42:9-45
 provider#com.squareup.picasso.PicassoProvider
-ADDED from [com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/5d6f5ef794bd7603e06c5a21ed6aa57e/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+ADDED from [com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/46b5446206d29c6dd5bc0e53f35e7137/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
 	android:authorities
-		ADDED from [com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/5d6f5ef794bd7603e06c5a21ed6aa57e/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+		ADDED from [com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/46b5446206d29c6dd5bc0e53f35e7137/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
 	android:exported
-		ADDED from [com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/5d6f5ef794bd7603e06c5a21ed6aa57e/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+		ADDED from [com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/46b5446206d29c6dd5bc0e53f35e7137/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
 	android:name
-		ADDED from [com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/5d6f5ef794bd7603e06c5a21ed6aa57e/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+		ADDED from [com.squareup.picasso:picasso:2.71828] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/46b5446206d29c6dd5bc0e53f35e7137/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
 service#com.google.firebase.messaging.FirebaseMessagingService
 ADDED from [com.google.firebase:firebase-messaging:21.0.0] /Users/anhnt/.gradle/caches/transforms-2/files-2.1/c926f03c188bdc216687a22ea714a827/jetified-firebase-messaging-21.0.0/AndroidManifest.xml:28:9-35:19
 	android:exported

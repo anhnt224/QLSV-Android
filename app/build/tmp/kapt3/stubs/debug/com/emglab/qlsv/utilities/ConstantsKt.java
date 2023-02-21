@@ -16,15 +16,15 @@ public final class ConstantsKt {
     public static final java.lang.String AUTO = "auto";
     public static final int VERSION_DB = 29;
     @org.jetbrains.annotations.NotNull()
-    public static final java.lang.String API_SERVICE_BASE_URL = "http://api.iuoss.com/iCTSVUI/";
+    public static final java.lang.String API_SERVICE_BASE_URL = "https://api.iuoss.com/iCTSVUI/";
     @org.jetbrains.annotations.NotNull()
-    public static final java.lang.String API_SERVICE_FORM_BASE_URL = "http://api.iuoss.com/GiayToUI/";
+    public static final java.lang.String API_SERVICE_FORM_BASE_URL = "https://api.iuoss.com/GiayToUI/";
     @org.jetbrains.annotations.NotNull()
     public static final java.lang.String API_TIMETABLE = "https://ctsv.hust.edu.vn/api-t/UploadFile/CTSV/";
     @org.jetbrains.annotations.NotNull()
-    public static final java.lang.String API_SERVICE_RUN_URL = "http://api.iuoss.com/iCTSVUI/";
+    public static final java.lang.String API_SERVICE_RUN_URL = "https://api.iuoss.com/iCTSVUI/";
     @org.jetbrains.annotations.NotNull()
-    public static final java.lang.String API_UPLOAD_SERVICE_BASE_URL = "http://api.iuoss.com/UploadFileUI";
+    public static final java.lang.String API_UPLOAD_SERVICE_BASE_URL = "https://api.iuoss.com/UploadFileUI";
     @org.jetbrains.annotations.NotNull()
     public static final java.lang.String API_MAP = "https://maps.vnpost.vn/addr-service/api/";
     @org.jetbrains.annotations.NotNull()
