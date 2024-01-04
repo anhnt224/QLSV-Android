@@ -4,6 +4,7 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/88c325577f6c61239ec1e601655e8f3f/jetified-speed-dial-2.0.1/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/75cd05a7c8b692050c0acfd561b9b79c/jetified-speed-dial-2.0.1/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/236f47767e8c1e363341ff182fc3d64d/jetified-speed-dial-2.0.1/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2b49e26dc38f9e5d80de0f74010f6e1f/jetified-speed-dial-2.0.1/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/88c325577f6c61239ec1e601655e8f3f/jetified-speed-dial-2.0.1/jars/classes.jar!/" />
@@ -15,6 +16,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/236f47767e8c1e363341ff182fc3d64d/jetified-speed-dial-2.0.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/236f47767e8c1e363341ff182fc3d64d/jetified-speed-dial-2.0.1/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/236f47767e8c1e363341ff182fc3d64d/jetified-speed-dial-2.0.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2b49e26dc38f9e5d80de0f74010f6e1f/jetified-speed-dial-2.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2b49e26dc38f9e5d80de0f74010f6e1f/jetified-speed-dial-2.0.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2b49e26dc38f9e5d80de0f74010f6e1f/jetified-speed-dial-2.0.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.leinardi.android/speed-dial/2.0.1/ea518207deb4f42d1e8297a1fe185a2c1e63997b/speed-dial-2.0.1-javadoc.jar!/" />

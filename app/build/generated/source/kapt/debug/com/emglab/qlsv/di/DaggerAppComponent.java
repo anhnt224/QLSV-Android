@@ -489,6 +489,8 @@ public final class DaggerAppComponent implements AppComponent {
 
   private Provider<CountStepsDAO> provideCountStepsDAOProvider;
 
+  private Provider<GiftWebService> provideGiftServiceProvider;
+
   private Provider<ActivityRepository> activityRepositoryProvider;
 
   private Provider<CriteriaRepository> criteriaRepositoryProvider;
@@ -653,8 +655,6 @@ public final class DaggerAppComponent implements AppComponent {
 
   private TGiftInfoViewModel_Factory tGiftInfoViewModelProvider;
 
-  private Provider<GiftWebService> provideGiftServiceProvider;
-
   private Provider<ImageMotelDao> provideImageMotelDaoProvider;
 
   private MotelRepository_Factory motelRepositoryProvider;
@@ -802,6 +802,10 @@ public final class DaggerAppComponent implements AppComponent {
     this.provideCountStepsDAOProvider =
         DoubleCheck.provider(
             AppModule_ProvideCountStepsDAOFactory.create(builder.appModule, provideDbProvider));
+    this.provideGiftServiceProvider =
+        DoubleCheck.provider(
+            AppModule_ProvideGiftServiceFactory.create(
+                builder.appModule, provideHttpClientProvider));
     this.activityRepositoryProvider =
         DoubleCheck.provider(
             ActivityRepository_Factory.create(
@@ -811,7 +815,8 @@ public final class DaggerAppComponent implements AppComponent {
                 provideApiServiceProvider,
                 appExecutorsProvider,
                 sharedPrefsHelperProvider,
-                provideCountStepsDAOProvider));
+                provideCountStepsDAOProvider,
+                provideGiftServiceProvider));
     this.criteriaRepositoryProvider =
         DoubleCheck.provider(
             CriteriaRepository_Factory.create(
@@ -984,10 +989,6 @@ public final class DaggerAppComponent implements AppComponent {
         ReceiverAddressViewModel_Factory.create(userRepositoryProvider);
     this.tGiftViewModelProvider = TGiftViewModel_Factory.create(giftRepositoryProvider);
     this.tGiftInfoViewModelProvider = TGiftInfoViewModel_Factory.create(giftRepositoryProvider);
-    this.provideGiftServiceProvider =
-        DoubleCheck.provider(
-            AppModule_ProvideGiftServiceFactory.create(
-                builder.appModule, provideHttpClientProvider));
     this.provideImageMotelDaoProvider =
         DoubleCheck.provider(
             AppModule_ProvideImageMotelDaoFactory.create(builder.appModule, provideDbProvider));

@@ -23,6 +23,8 @@ import com.emglab.qlsv.teacher.adapters.OnItemStudentButtonClickLister
 import com.emglab.qlsv.teacher.adapters.StudentAdapter
 import com.emglab.qlsv.teacher.viewmodel.student.ListStudentViewModel
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.remoteconfig.ktx.remoteConfig
 import javax.inject.Inject
 
 @SuppressLint("SetTextI18n")
@@ -42,6 +44,7 @@ class ListStudentFragment : Fragment(), Injectable, OnItemStudentButtonClickList
     private var filterTypes = FilterType.values()
     private var selectedFilterType = FilterType.ALL
     private var isGetStudentsFirst = false
+    private val remoteConfig = Firebase.remoteConfig
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -50,6 +53,9 @@ class ListStudentFragment : Fragment(), Injectable, OnItemStudentButtonClickList
         setUpViewModel()
         setHasOptionsMenu(true)
         binding = DataBindingUtil.inflate(inflater, R.layout.list_student_fragment, container, false)
+
+        semesters = remoteConfig.getString("semesters").split(',').toTypedArray()
+        semesterSelected = semesters.lastOrNull() ?: "2022-1"
 
         studentAdapter = StudentAdapter(listOf(), this)
         binding.recyclerView.apply {

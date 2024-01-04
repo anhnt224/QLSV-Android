@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.instacart.truetime-android:library:3.5@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ec69aebea83c487c2434b5634b804f8e/jetified-library-3.5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ec69aebea83c487c2434b5634b804f8e/jetified-library-3.5/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ec69aebea83c487c2434b5634b804f8e/jetified-library-3.5/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.instacart.truetime-android/library/3.5/5556c678450d8c0d2fef78cd62c97721e006baf/library-3.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

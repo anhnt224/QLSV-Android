@@ -16,12 +16,12 @@
         "source": "/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/res/layout/list_item_motel_info.xml"
     },
     {
-        "merged": "/Volumes/Data/DEV/AndroidStudio/QLSV/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/t_scholar_ship_detail_fragment.xml",
-        "source": "/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/res/layout/t_scholar_ship_detail_fragment.xml"
-    },
-    {
         "merged": "/Volumes/Data/DEV/AndroidStudio/QLSV/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/home_fragment.xml",
         "source": "/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/res/layout/home_fragment.xml"
+    },
+    {
+        "merged": "/Volumes/Data/DEV/AndroidStudio/QLSV/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/t_scholar_ship_detail_fragment.xml",
+        "source": "/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/res/layout/t_scholar_ship_detail_fragment.xml"
     },
     {
         "merged": "/Volumes/Data/DEV/AndroidStudio/QLSV/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_t_image_motel.xml",
@@ -80,12 +80,12 @@
         "source": "/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/res/layout/fragment_motel_registration_info.xml"
     },
     {
-        "merged": "/Volumes/Data/DEV/AndroidStudio/QLSV/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_schedule.xml",
-        "source": "/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/res/layout/fragment_schedule.xml"
-    },
-    {
         "merged": "/Volumes/Data/DEV/AndroidStudio/QLSV/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/list_run_result_item.xml",
         "source": "/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/res/layout/list_run_result_item.xml"
+    },
+    {
+        "merged": "/Volumes/Data/DEV/AndroidStudio/QLSV/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_schedule.xml",
+        "source": "/Volumes/Data/DEV/AndroidStudio/QLSV/app/src/main/res/layout/fragment_schedule.xml"
     },
     {
         "merged": "/Volumes/Data/DEV/AndroidStudio/QLSV/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/regist_gift_fragment.xml",

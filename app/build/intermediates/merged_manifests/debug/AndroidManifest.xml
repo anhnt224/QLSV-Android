@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.emglab.qlsv"
-    android:versionCode="3"
-    android:versionName="1.0.2" >
+    android:versionCode="10"
+    android:versionName="1.0.4" >
 
     <uses-sdk
         android:minSdkVersion="16"
-        android:targetSdkVersion="31" />
+        android:targetSdkVersion="33" />
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -80,6 +80,7 @@
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
+        android:exported="true"
         android:hardwareAccelerated="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -120,7 +121,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="qlsv"
+            android:authorities="com.emglab.qlsv"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
@@ -138,16 +139,16 @@
 
         <activity
             android:name="com.emglab.qlsv.MapsActivity"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/title_activity_maps"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.emglab.qlsv.QRCodeActivity"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.emglab.qlsv.MainActivity"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -171,19 +172,6 @@
             android:theme="@style/zxing_CaptureTheme"
             android:windowSoftInputMode="stateAlwaysHidden" />
 
-        <!-- <receiver -->
-        <!-- android:exported="false" -->
-        <!-- android:name="com.emglab.qlsv.utilities.noti.AlarmReceiver"> -->
-        <!-- <intent-filter> -->
-        <!-- <action android:name="android.intent.action.BOOT_COMPLETED" /> -->
-        <!-- </intent-filter> -->
-        <!-- </receiver> -->
-        <!-- <service -->
-        <!-- android:exported="false" -->
-        <!-- android:name="com.emglab.qlsv.service.RunningService"/> -->
-        <!-- <service -->
-        <!-- android:exported="false" -->
-        <!-- android:name="com.emglab.qlsv.service.RunService"/> -->
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"
             android:directBootAware="true"

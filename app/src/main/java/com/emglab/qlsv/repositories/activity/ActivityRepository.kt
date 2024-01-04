@@ -16,6 +16,7 @@ import com.emglab.qlsv.dao.UserCheckInActivityDAO
 import com.emglab.qlsv.helper.SharedPrefsHelper
 import com.emglab.qlsv.models.entity.*
 import com.emglab.qlsv.webservices.ApiResponse
+import com.emglab.qlsv.webservices.GiftWebService
 import com.emglab.qlsv.webservices.WebService
 import okhttp3.MultipartBody
 import javax.inject.Inject
@@ -30,23 +31,23 @@ class ActivityRepository @Inject constructor(
     private val webservice: WebService,
     private val appExecutors: AppExecutors,
     private val sharedPrefsHelper: SharedPrefsHelper,
-    private val countStepsDAO: CountStepsDAO
-)
-{
+    private val countStepsDAO: CountStepsDAO,
+    private val giftWebService: GiftWebService
+) {
 
-   // private val appExecutors: AppExecutors = AppExecutors()
-    private var activitiesByUserUnitLiveData  = MediatorLiveData<List<Activity>>()
-    private var activitiesByUserLiveData   = MediatorLiveData<List<Activity>>()
-    private var activitiesByGIdLiveData  = MediatorLiveData<List<Activity>>()
-    private var activitiesByCIdLiveData  = MediatorLiveData<List<Activity>>()
-    private var activityByIdLiveData  = MediatorLiveData<Activity>()
-    private var ctsvCapLiveData  = MediatorLiveData<MyCTSVCap>()
-    private var userActivityLstLiveData  = MediatorLiveData<List<UserActivity>>()
-    private var userActivityPendingByAIdLiveData  = MediatorLiveData<List<UserActivity>>()
-    private var userCheckInActivityLiveData  = MediatorLiveData<List<UserCheckInActivity>>()
+    // private val appExecutors: AppExecutors = AppExecutors()
+    private var activitiesByUserUnitLiveData = MediatorLiveData<List<Activity>>()
+    private var activitiesByUserLiveData = MediatorLiveData<List<Activity>>()
+    private var activitiesByGIdLiveData = MediatorLiveData<List<Activity>>()
+    private var activitiesByCIdLiveData = MediatorLiveData<List<Activity>>()
+    private var activityByIdLiveData = MediatorLiveData<Activity>()
+    private var ctsvCapLiveData = MediatorLiveData<MyCTSVCap>()
+    private var userActivityLstLiveData = MediatorLiveData<List<UserActivity>>()
+    private var userActivityPendingByAIdLiveData = MediatorLiveData<List<UserActivity>>()
+    private var userCheckInActivityLiveData = MediatorLiveData<List<UserCheckInActivity>>()
     private var getPublicActivities = MediatorLiveData<List<Activity>>()
 
-    private var activityGroupByIdListLiveData  = MediatorLiveData<List<ActivityGroup>>()
+    private var activityGroupByIdListLiveData = MediatorLiveData<List<ActivityGroup>>()
 
     init {
         activitiesByUserUnitLiveData.value = ArrayList()
@@ -62,11 +63,11 @@ class ActivityRepository @Inject constructor(
         getPublicActivities.value = listOf()
     }
 
-    fun getCountSteps(id: String) : LiveData<CountSteps>{
+    fun getCountSteps(id: String): LiveData<CountSteps> {
         return countStepsDAO.getCountSteps(id)
     }
 
-    fun getAllCountSteps() : LiveData<List<CountSteps>>{
+    fun getAllCountSteps(): LiveData<List<CountSteps>> {
         return countStepsDAO.getAllCountSteps()
     }
 
@@ -76,9 +77,16 @@ class ActivityRepository @Inject constructor(
         }
     }
 
-    fun getActivityByUser(signature:String, search:String, numberRow:Int, pageNumber: Int,shouldFetch: Boolean = true) :  LiveData<Resource<List<Activity>>> {
+    fun getActivityByUser(
+        signature: String,
+        search: String,
+        numberRow: Int,
+        pageNumber: Int,
+        shouldFetch: Boolean = true
+    ): LiveData<Resource<List<Activity>>> {
 
-        return object : NetworkBoundResource<List<Activity>, CTSVGetActivityByUserRes>(appExecutors) {
+        return object :
+            NetworkBoundResource<List<Activity>, CTSVGetActivityByUserRes>(appExecutors) {
 
             override fun saveCallResult(item: CTSVGetActivityByUserRes) {
                 Thread(Runnable {
@@ -91,25 +99,32 @@ class ActivityRepository @Inject constructor(
             }
 
             override fun loadFromDb(): LiveData<List<Activity>> {
-               return activitiesByUserLiveData
+                return activitiesByUserLiveData
             }
 
             override fun createCall(): LiveData<ApiResponse<CTSVGetActivityByUserRes>> =
-                webservice.getActivityByUser(sharedPrefsHelper.getUserName(),sharedPrefsHelper.getToken(),
-                    sharedPrefsHelper.getUserName(),signature,search,numberRow,pageNumber)
+                webservice.getActivityByUser(
+                    sharedPrefsHelper.getUserName(), sharedPrefsHelper.getToken(),
+                    sharedPrefsHelper.getUserName(), signature, search, numberRow, pageNumber
+                )
 
         }.asLiveData()
     }
 
-    fun getActivityByUserUnit(shouldFetch: Boolean = true, callDelay: Long = 0) :  LiveData<Resource<List<Activity>>> {
+    fun getActivityByUserUnit(
+        shouldFetch: Boolean = true,
+        callDelay: Long = 0
+    ): LiveData<Resource<List<Activity>>> {
 
-        return object : NetworkBoundResource<List<Activity>, CTSVGetActivityByUserUnitRes>(appExecutors) {
+        return object :
+            NetworkBoundResource<List<Activity>, CTSVGetActivityByUserUnitRes>(appExecutors) {
 
             override fun saveCallResult(item: CTSVGetActivityByUserUnitRes) {
-                if (item.activities != null){
+                if (item.activities != null) {
                     Thread(Runnable { activitiesByUserUnitLiveData.postValue(item.activities) }).start()
                 }
             }
+
             override fun shouldFetch(data: List<Activity>?): Boolean {
                 return data == null || shouldFetch
             }
@@ -124,16 +139,30 @@ class ActivityRepository @Inject constructor(
 
 
             override fun createCall(): LiveData<ApiResponse<CTSVGetActivityByUserUnitRes>> =
-                webservice.getActivityByUserUnit(sharedPrefsHelper.getUserName(),sharedPrefsHelper.getToken())
+                webservice.getActivityByUserUnit(
+                    sharedPrefsHelper.getUserName(),
+                    sharedPrefsHelper.getToken()
+                )
 
         }.asLiveData()
     }
 
-    fun getActivityByGId(userName: String, token: String,GId: Int,Signature: String,Search:String, NumberRow: Int,PageNumber: Int,shouldFetch: Boolean = true, callDelay: Long = 0) :  LiveData<Resource<List<Activity>>> {
-        return object : NetworkBoundResource<List<Activity>, CTSVGetActivityByGIdRes>(appExecutors) {
+    fun getActivityByGId(
+        userName: String,
+        token: String,
+        GId: Int,
+        Signature: String,
+        Search: String,
+        NumberRow: Int,
+        PageNumber: Int,
+        shouldFetch: Boolean = true,
+        callDelay: Long = 0
+    ): LiveData<Resource<List<Activity>>> {
+        return object :
+            NetworkBoundResource<List<Activity>, CTSVGetActivityByGIdRes>(appExecutors) {
 
             override fun saveCallResult(item: CTSVGetActivityByGIdRes) {
-                if (item.activities != null){
+                if (item.activities != null) {
                     Thread(Runnable { activitiesByGIdLiveData.postValue(item.activities) }).start()
                 }
             }
@@ -151,16 +180,31 @@ class ActivityRepository @Inject constructor(
             }
 
             override fun createCall(): LiveData<ApiResponse<CTSVGetActivityByGIdRes>> =
-                webservice.getActivityByGId(userName,token,GId,Signature,Search,NumberRow,PageNumber)
+                webservice.getActivityByGId(
+                    userName,
+                    token,
+                    GId,
+                    Signature,
+                    Search,
+                    NumberRow,
+                    PageNumber
+                )
 
         }.asLiveData()
     }
 
-    fun getActivityGroupByGId(userName: String, token: String,GId: Int,shouldFetch: Boolean = true, callDelay: Long = 0) :  LiveData<Resource<List<ActivityGroup>>> {
-        return object : NetworkBoundResource<List<ActivityGroup>, CTSVGetActivityGroupByGIdRes>(appExecutors) {
+    fun getActivityGroupByGId(
+        userName: String,
+        token: String,
+        GId: Int,
+        shouldFetch: Boolean = true,
+        callDelay: Long = 0
+    ): LiveData<Resource<List<ActivityGroup>>> {
+        return object :
+            NetworkBoundResource<List<ActivityGroup>, CTSVGetActivityGroupByGIdRes>(appExecutors) {
 
             override fun saveCallResult(item: CTSVGetActivityGroupByGIdRes) {
-                if (item.activityGroupLst != null){
+                if (item.activityGroupLst != null) {
                     Thread(Runnable { activityGroupByIdListLiveData.postValue(item.activityGroupLst) }).start()
                 }
             }
@@ -178,16 +222,27 @@ class ActivityRepository @Inject constructor(
             }
 
             override fun createCall(): LiveData<ApiResponse<CTSVGetActivityGroupByGIdRes>> =
-                webservice.getActivityGroupByGId(userName,token,GId)
+                webservice.getActivityGroupByGId(userName, token, GId)
 
         }.asLiveData()
     }
 
-    fun getActivityByCId(userName: String, token: String,CId: Int,Signature: String,Search:String, NumberRow: Int,PageNumber: Int,shouldFetch: Boolean = true, callDelay: Long = 0) :  LiveData<Resource<List<Activity>>> {
-        return object : NetworkBoundResource<List<Activity>, CTSVGetActivityByCIdRes>(appExecutors) {
+    fun getActivityByCId(
+        userName: String,
+        token: String,
+        CId: Int,
+        Signature: String,
+        Search: String,
+        NumberRow: Int,
+        PageNumber: Int,
+        shouldFetch: Boolean = true,
+        callDelay: Long = 0
+    ): LiveData<Resource<List<Activity>>> {
+        return object :
+            NetworkBoundResource<List<Activity>, CTSVGetActivityByCIdRes>(appExecutors) {
 
             override fun saveCallResult(item: CTSVGetActivityByCIdRes) {
-                if (item.activities != null){
+                if (item.activities != null) {
                     Thread(Runnable { activitiesByCIdLiveData.postValue(item.activities) }).start()
                 }
             }
@@ -205,16 +260,35 @@ class ActivityRepository @Inject constructor(
             }
 
             override fun createCall(): LiveData<ApiResponse<CTSVGetActivityByCIdRes>> =
-                webservice.getActivityByCId(userName,token,CId,Signature,Search,NumberRow,PageNumber)
+                webservice.getActivityByCId(
+                    userName,
+                    token,
+                    CId,
+                    Signature,
+                    Search,
+                    NumberRow,
+                    PageNumber
+                )
 
         }.asLiveData()
     }
 
-    fun getUserActivityApprovedByAId(userName: String, token: String,aId: Int,Signature: String,Search:String, NumberRow: Int,PageNumber: Int,shouldFetch: Boolean = true, callDelay: Long = 0) :  LiveData<Resource<List<UserActivity>>> {
-        return object : NetworkBoundResource<List<UserActivity>, CTSVGetUserActivityByAIdRes>(appExecutors) {
+    fun getUserActivityApprovedByAId(
+        userName: String,
+        token: String,
+        aId: Int,
+        Signature: String,
+        Search: String,
+        NumberRow: Int,
+        PageNumber: Int,
+        shouldFetch: Boolean = true,
+        callDelay: Long = 0
+    ): LiveData<Resource<List<UserActivity>>> {
+        return object :
+            NetworkBoundResource<List<UserActivity>, CTSVGetUserActivityByAIdRes>(appExecutors) {
 
             override fun saveCallResult(item: CTSVGetUserActivityByAIdRes) {
-                if (item.userActivityLst != null){
+                if (item.userActivityLst != null) {
                     Thread(Runnable { userActivityLstLiveData.postValue(item.userActivityLst) }).start()
                 }
             }
@@ -232,22 +306,34 @@ class ActivityRepository @Inject constructor(
             }
 
             override fun createCall(): LiveData<ApiResponse<CTSVGetUserActivityByAIdRes>> =
-                webservice.getUserActivityApprovedByAId(userName,token,aId,Signature,Search,NumberRow,PageNumber)
+                webservice.getUserActivityApprovedByAId(
+                    userName,
+                    token,
+                    aId,
+                    Signature,
+                    Search,
+                    NumberRow,
+                    PageNumber
+                )
 
         }.asLiveData()
     }
 
-    fun getActivityById(AId: Int, shouldFetch: Boolean = true, callDelay: Long = 0) :  LiveData<Resource<Activity>> {
+    fun getActivityById(
+        AId: Int,
+        shouldFetch: Boolean = true,
+        callDelay: Long = 0
+    ): LiveData<Resource<Activity>> {
         return object : NetworkBoundResource<Activity, CTSVGetActivityByIdRes>(appExecutors) {
 
             override fun saveCallResult(item: CTSVGetActivityByIdRes) {
-                if (item.activities != null && item.activities.size > 0){
+                if (item.activities != null && item.activities.size > 0) {
                     //Thread(Runnable { activityByIdLiveData.postValue(item.user[0]) }).start()
                     val activity = item.activities[0]
                     insertToRoom(activity)
                     val criterias = activity.criteriaLst
                     criterias?.let {
-                        for (criteria in criterias){
+                        for (criteria in criterias) {
                             criteria.aId = activity.id
                         }
                         insertCriteriaByActivityToRoom(criterias)
@@ -269,17 +355,30 @@ class ActivityRepository @Inject constructor(
             }
 
             override fun createCall(): LiveData<ApiResponse<CTSVGetActivityByIdRes>> =
-                webservice.getActivityById(sharedPrefsHelper.getUserName(),sharedPrefsHelper.getToken(),AId)
+                webservice.getActivityById(
+                    sharedPrefsHelper.getUserName(),
+                    sharedPrefsHelper.getToken(),
+                    AId
+                )
 
         }.asLiveData()
     }
 
-    fun assignUserActivity(Reason: String,AId : Int,UserRole: Int,CheckInPlace: String,UAStatus:Int,Signature: String, shouldFetch: Boolean = true, callDelay: Long = 0) :  LiveData<Resource<MyCTSVCap>> {
+    fun assignUserActivity(
+        Reason: String,
+        AId: Int,
+        UserRole: Int,
+        CheckInPlace: String,
+        UAStatus: Int,
+        Signature: String,
+        shouldFetch: Boolean = true,
+        callDelay: Long = 0
+    ): LiveData<Resource<MyCTSVCap>> {
         return object : NetworkBoundResource<MyCTSVCap, CTSVAssignUserActivityRes>(appExecutors) {
 
             override fun saveCallResult(item: CTSVAssignUserActivityRes) {
-                if (item.respCode == 0){
-                    updateStatusToRoom(UserActivity.REGISTER,AId)
+                if (item.respCode == 0) {
+                    updateStatusToRoom(UserActivity.REGISTER, AId)
                 }
             }
 
@@ -291,22 +390,45 @@ class ActivityRepository @Inject constructor(
                 return callDelay
             }
 
-            override fun loadFromDb() : LiveData<MyCTSVCap> {
+            override fun loadFromDb(): LiveData<MyCTSVCap> {
                 return ctsvCapLiveData
             }
 
             override fun createCall(): LiveData<ApiResponse<CTSVAssignUserActivityRes>> =
-                webservice.assignUserActivity(sharedPrefsHelper.getUserName(),sharedPrefsHelper.getUserName(),sharedPrefsHelper.getToken(),Reason,AId,UserRole,CheckInPlace,UAStatus,Signature)
+                webservice.assignUserActivity(
+                    sharedPrefsHelper.getUserName(),
+                    sharedPrefsHelper.getUserName(),
+                    sharedPrefsHelper.getToken(),
+                    Reason,
+                    AId,
+                    UserRole,
+                    CheckInPlace,
+                    UAStatus,
+                    Signature
+                )
 
         }.asLiveData()
     }
 
-    fun assignUserActivityByEmail(userName: String,email: String, token: String,Reason: String,AId : Int,UserRole: Int,CheckInPlace: String,UAStatus:Int,Signature: String, shouldFetch: Boolean = true, callDelay: Long = 0) :  LiveData<Resource<MyCTSVCap>> {
-        return object : NetworkBoundResource<MyCTSVCap, CTSVAssignUserActivityByEmailRes>(appExecutors) {
+    fun assignUserActivityByEmail(
+        userName: String,
+        email: String,
+        token: String,
+        Reason: String,
+        AId: Int,
+        UserRole: Int,
+        CheckInPlace: String,
+        UAStatus: Int,
+        Signature: String,
+        shouldFetch: Boolean = true,
+        callDelay: Long = 0
+    ): LiveData<Resource<MyCTSVCap>> {
+        return object :
+            NetworkBoundResource<MyCTSVCap, CTSVAssignUserActivityByEmailRes>(appExecutors) {
 
             override fun saveCallResult(item: CTSVAssignUserActivityByEmailRes) {
-                if (item.respCode == 0){
-                    updateStatusToRoom(UserActivity.REGISTER,AId)
+                if (item.respCode == 0) {
+                    updateStatusToRoom(UserActivity.REGISTER, AId)
                 }
             }
 
@@ -318,21 +440,42 @@ class ActivityRepository @Inject constructor(
                 return callDelay
             }
 
-            override fun loadFromDb() : LiveData<MyCTSVCap> {
+            override fun loadFromDb(): LiveData<MyCTSVCap> {
                 return ctsvCapLiveData
             }
 
             override fun createCall(): LiveData<ApiResponse<CTSVAssignUserActivityByEmailRes>> =
-                webservice.assignUserActivityByEmail(userName,email,token,Reason,AId,UserRole,CheckInPlace,UAStatus,Signature)
+                webservice.assignUserActivityByEmail(
+                    userName,
+                    email,
+                    token,
+                    Reason,
+                    AId,
+                    UserRole,
+                    CheckInPlace,
+                    UAStatus,
+                    Signature
+                )
 
         }.asLiveData()
     }
 
-    fun getUserActivityPendingByAId(userName: String, token: String,aId: Int,Signature: String,Search:String, NumberRow: Int,PageNumber: Int,shouldFetch: Boolean = true, callDelay: Long = 0) :  LiveData<Resource<List<UserActivity>>> {
-        return object : NetworkBoundResource<List<UserActivity>, CTSVGetUserActivityByAIdRes>(appExecutors) {
+    fun getUserActivityPendingByAId(
+        userName: String,
+        token: String,
+        aId: Int,
+        Signature: String,
+        Search: String,
+        NumberRow: Int,
+        PageNumber: Int,
+        shouldFetch: Boolean = true,
+        callDelay: Long = 0
+    ): LiveData<Resource<List<UserActivity>>> {
+        return object :
+            NetworkBoundResource<List<UserActivity>, CTSVGetUserActivityByAIdRes>(appExecutors) {
 
             override fun saveCallResult(item: CTSVGetUserActivityByAIdRes) {
-                if (item.userActivityLst != null){
+                if (item.userActivityLst != null) {
                     Thread(Runnable { userActivityPendingByAIdLiveData.postValue(item.userActivityLst) }).start()
                 }
             }
@@ -350,13 +493,31 @@ class ActivityRepository @Inject constructor(
             }
 
             override fun createCall(): LiveData<ApiResponse<CTSVGetUserActivityByAIdRes>> =
-                webservice.getUserActivityPendingByAId(userName,token,aId,Signature,Search,NumberRow,PageNumber)
+                webservice.getUserActivityPendingByAId(
+                    userName,
+                    token,
+                    aId,
+                    Signature,
+                    Search,
+                    NumberRow,
+                    PageNumber
+                )
 
         }.asLiveData()
     }
 
-    fun approveUserActivity(userName: String, token: String,usercode: String,userRole: Int,aId : Int,Signature: String, shouldFetch: Boolean = true, callDelay: Long = 0) :  LiveData<Resource<MyCTSVCap>> {
-        return object : NetworkBoundResource<MyCTSVCap, CTSVAssignUserActivityByEmailRes>(appExecutors) {
+    fun approveUserActivity(
+        userName: String,
+        token: String,
+        usercode: String,
+        userRole: Int,
+        aId: Int,
+        Signature: String,
+        shouldFetch: Boolean = true,
+        callDelay: Long = 0
+    ): LiveData<Resource<MyCTSVCap>> {
+        return object :
+            NetworkBoundResource<MyCTSVCap, CTSVAssignUserActivityByEmailRes>(appExecutors) {
 
             override fun saveCallResult(item: CTSVAssignUserActivityByEmailRes) {
 
@@ -370,21 +531,30 @@ class ActivityRepository @Inject constructor(
                 return callDelay
             }
 
-            override fun loadFromDb() : LiveData<MyCTSVCap> {
+            override fun loadFromDb(): LiveData<MyCTSVCap> {
                 return ctsvCapLiveData
             }
 
             override fun createCall(): LiveData<ApiResponse<CTSVAssignUserActivityByEmailRes>> =
-                webservice.approveUserActivity(userName,token,usercode,userRole,aId,Signature)
+                webservice.approveUserActivity(userName, token, usercode, userRole, aId, Signature)
 
         }.asLiveData()
     }
 
-    fun getUserCheckInActivity(userCode: String,aId: Int,signature: String,shouldFetch: Boolean = true, callDelay: Long = 0) :  LiveData<Resource<List<UserCheckInActivity>>> {
-        return object : NetworkBoundResource<List<UserCheckInActivity>, CTSVGetUserCheckInActivityRes>(appExecutors) {
+    fun getUserCheckInActivity(
+        userCode: String,
+        aId: Int,
+        signature: String,
+        shouldFetch: Boolean = true,
+        callDelay: Long = 0
+    ): LiveData<Resource<List<UserCheckInActivity>>> {
+        return object :
+            NetworkBoundResource<List<UserCheckInActivity>, CTSVGetUserCheckInActivityRes>(
+                appExecutors
+            ) {
 
             override fun saveCallResult(item: CTSVGetUserCheckInActivityRes) {
-                if (item.userCheckInActivityLst != null){
+                if (item.userCheckInActivityLst != null) {
                     deleteAndInsertNewUserCheckInActivity(item.userCheckInActivityLst)
                 }
             }
@@ -398,16 +568,34 @@ class ActivityRepository @Inject constructor(
             }
 
             override fun loadFromDb(): LiveData<List<UserCheckInActivity>> {
-                return userCheckInActivityDAO.getByAIdAndUserName(aId,sharedPrefsHelper.getUserName())
+                return userCheckInActivityDAO.getByAIdAndUserName(
+                    aId,
+                    sharedPrefsHelper.getUserName()
+                )
             }
 
             override fun createCall(): LiveData<ApiResponse<CTSVGetUserCheckInActivityRes>> =
-                webservice.getUserCheckInActivity(sharedPrefsHelper.getUserName(),sharedPrefsHelper.getToken(),sharedPrefsHelper.getUserName(),aId,signature)
+                webservice.getUserCheckInActivity(
+                    sharedPrefsHelper.getUserName(),
+                    sharedPrefsHelper.getToken(),
+                    sharedPrefsHelper.getUserName(),
+                    aId,
+                    signature
+                )
 
         }.asLiveData()
     }
 
-    fun userCheckinActivity(userCode: String,AId : Int,longitude: Double, latitude: Double,address: String,Signature: String, shouldFetch: Boolean = true, callDelay: Long = 0) :  LiveData<Resource<MyCTSVCap>> {
+    fun userCheckinActivity(
+        userCode: String,
+        AId: Int,
+        longitude: Double,
+        latitude: Double,
+        address: String,
+        Signature: String,
+        shouldFetch: Boolean = true,
+        callDelay: Long = 0
+    ): LiveData<Resource<MyCTSVCap>> {
         return object : NetworkBoundResource<MyCTSVCap, CTSVAssignUserActivityRes>(appExecutors) {
 
             override fun saveCallResult(item: CTSVAssignUserActivityRes) {
@@ -422,19 +610,36 @@ class ActivityRepository @Inject constructor(
                 return callDelay
             }
 
-            override fun loadFromDb() : LiveData<MyCTSVCap> {
+            override fun loadFromDb(): LiveData<MyCTSVCap> {
                 return ctsvCapLiveData
             }
 
             override fun createCall(): LiveData<ApiResponse<CTSVAssignUserActivityRes>> =
-                webservice.userCheckinActivity(sharedPrefsHelper.getUserName(),sharedPrefsHelper.getToken(),sharedPrefsHelper.getUserName(),AId,longitude,latitude,address,Signature)
+                webservice.userCheckinActivity(
+                    sharedPrefsHelper.getUserName(),
+                    sharedPrefsHelper.getToken(),
+                    sharedPrefsHelper.getUserName(),
+                    AId,
+                    longitude,
+                    latitude,
+                    address,
+                    Signature
+                )
 
         }.asLiveData()
     }
 
-    fun updateTokenDevice(tokenDevice: String, deviceType: String, shouldFetch: Boolean = true, callDelay: Long = 0): LiveData<Resource<MyCTSVCap>>{
-        Log.d("MessagingService", "Username: ${sharedPrefsHelper.getUserName()} \nToken:${sharedPrefsHelper.getToken()} \ntokenDevice: $tokenDevice ")
-        return object : NetworkBoundResource<MyCTSVCap, MyCTSVCap> (appExecutors) {
+    fun updateTokenDevice(
+        tokenDevice: String,
+        deviceType: String,
+        shouldFetch: Boolean = true,
+        callDelay: Long = 0
+    ): LiveData<Resource<MyCTSVCap>> {
+        Log.d(
+            "MessagingService",
+            "Username: ${sharedPrefsHelper.getUserName()} \nToken:${sharedPrefsHelper.getToken()} \ntokenDevice: $tokenDevice "
+        )
+        return object : NetworkBoundResource<MyCTSVCap, MyCTSVCap>(appExecutors) {
             override fun saveCallResult(item: MyCTSVCap) {
                 Log.d("MessagingService", "saveCallResult")
                 Thread(Runnable { ctsvCapLiveData.postValue(item) }).start()
@@ -448,18 +653,28 @@ class ActivityRepository @Inject constructor(
                 return callDelay
             }
 
-            override fun loadFromDb() : LiveData<MyCTSVCap> {
+            override fun loadFromDb(): LiveData<MyCTSVCap> {
                 Log.d("MessagingService", "loadFromDb, ${ctsvCapLiveData.value.toString()}")
                 return ctsvCapLiveData
             }
 
             override fun createCall(): LiveData<ApiResponse<MyCTSVCap>> =
-                webservice.updateDeviceToken(sharedPrefsHelper.getUserName(), sharedPrefsHelper.getToken(), tokenDevice, deviceType)
+                webservice.updateDeviceToken(
+                    sharedPrefsHelper.getUserName(),
+                    sharedPrefsHelper.getToken(),
+                    tokenDevice,
+                    deviceType
+                )
 
         }.asLiveData()
     }
 
-    fun uploadFile(aId: Int, multipartBody : MultipartBody.Part, shouldFetch: Boolean = true, callDelay: Long = 0) :  LiveData<Resource<MyCTSVCap>> {
+    fun uploadFile(
+        aId: Int,
+        multipartBody: MultipartBody.Part,
+        shouldFetch: Boolean = true,
+        callDelay: Long = 0
+    ): LiveData<Resource<MyCTSVCap>> {
 
         return object : NetworkBoundResource<MyCTSVCap, CTSVAssignUserActivityRes>(appExecutors) {
 
@@ -480,7 +695,12 @@ class ActivityRepository @Inject constructor(
             }
 
             override fun createCall(): LiveData<ApiResponse<CTSVAssignUserActivityRes>> =
-                webservice.uploadFile(sharedPrefsHelper.getUserName(),sharedPrefsHelper.getToken(),aId,multipartBody)
+                giftWebService.uploadFile(
+                    sharedPrefsHelper.getUserName(),
+                    sharedPrefsHelper.getToken(),
+                    aId,
+                    multipartBody
+                )
 
         }.asLiveData()
     }
@@ -488,9 +708,9 @@ class ActivityRepository @Inject constructor(
     fun getPublicActivities(
         page: Int = 1, row: Int = 15, shouldFetch: Boolean = true
     ): LiveData<Resource<List<Activity>>> {
-        return object : NetworkBoundResource<List<Activity>, GetPublicActivity>(appExecutors){
+        return object : NetworkBoundResource<List<Activity>, GetPublicActivity>(appExecutors) {
             override fun saveCallResult(item: GetPublicActivity) {
-                Thread{
+                Thread {
                     getPublicActivities.postValue(item.activities)
                 }.start()
             }
@@ -510,7 +730,7 @@ class ActivityRepository @Inject constructor(
         }.asLiveData()
     }
 
-    fun getActiviyByCIdFromRoom(CId: Int) =  activityDAO.getActiviyByCIdFromRoom(CId)
+    fun getActiviyByCIdFromRoom(CId: Int) = activityDAO.getActiviyByCIdFromRoom(CId)
 
     private fun insertAllToRoom(activities: List<Activity>) {
         runOnIoThread {
@@ -518,9 +738,9 @@ class ActivityRepository @Inject constructor(
         }
     }
 
-    fun updateStatusToRoom(status: Int,id: Int) {
+    fun updateStatusToRoom(status: Int, id: Int) {
         runOnIoThread {
-            activityDAO.updateStatus(status,id)
+            activityDAO.updateStatus(status, id)
         }
     }
 
@@ -536,7 +756,7 @@ class ActivityRepository @Inject constructor(
         }
     }
 
-    fun updateToRoom(activity : Activity){
+    fun updateToRoom(activity: Activity) {
         runOnIoThread {
             activityDAO.update(activity)
         }
@@ -548,14 +768,14 @@ class ActivityRepository @Inject constructor(
         }
     }
 
-    fun deleteAndInsertNewUserCheckInActivity(userCheckInActivities: List<UserCheckInActivity>){
+    fun deleteAndInsertNewUserCheckInActivity(userCheckInActivities: List<UserCheckInActivity>) {
         runOnIoThread {
             userCheckInActivityDAO.deleteAll()
             userCheckInActivityDAO.insertAll(userCheckInActivities)
         }
     }
 
-    fun deleteAndInsertNewActivity(activities: List<Activity>){
+    fun deleteAndInsertNewActivity(activities: List<Activity>) {
         runOnIoThread {
             activityDAO.deleteAll()
             activityDAO.insertAll(activities)

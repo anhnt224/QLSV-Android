@@ -25,6 +25,7 @@
     <application
             android:name="com.emglab.qlsv.App"
             android:allowBackup="true"
+            android:exported="true"
             android:hardwareAccelerated="true"
             android:icon="@drawable/ic_launcher"
             android:label="@string/app_name"
@@ -63,7 +64,7 @@
 
         <provider
                 android:name="androidx.core.content.FileProvider"
-                android:authorities="qlsv"
+                android:authorities="com.emglab.qlsv"
                 android:exported="false"
                 android:grantUriPermissions="true">
             <meta-data
@@ -80,16 +81,16 @@
         </service>
 
         <activity
-                android:exported="true"
+                android:exported="false"
                 android:name="com.emglab.qlsv.MapsActivity"
                 android:label="@string/title_activity_maps"
                 android:screenOrientation="portrait" />
         <activity
-                android:exported="true"
+                android:exported="false"
                 android:name="com.emglab.qlsv.QRCodeActivity"
                 android:screenOrientation="portrait" />
         <activity
-                android:exported="true"
+                android:exported="false"
                 android:name="com.emglab.qlsv.MainActivity"
                 android:label="@string/app_name"
                 android:screenOrientation="portrait"
@@ -110,20 +111,6 @@
                 android:name="com.journeyapps.barcodescanner.CaptureActivity"
                 android:screenOrientation="fullSensor"
                 tools:replace="screenOrientation" />
-
-<!--        <receiver-->
-<!--                android:exported="false"-->
-<!--                android:name="com.emglab.qlsv.utilities.noti.AlarmReceiver">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.BOOT_COMPLETED" />-->
-<!--            </intent-filter>-->
-<!--        </receiver>-->
-<!--        <service-->
-<!--                android:exported="false"-->
-<!--                android:name="com.emglab.qlsv.service.RunningService"/>-->
-<!--        <service-->
-<!--                android:exported="false"-->
-<!--                android:name="com.emglab.qlsv.service.RunService"/>-->
     </application>
 
 </manifest>

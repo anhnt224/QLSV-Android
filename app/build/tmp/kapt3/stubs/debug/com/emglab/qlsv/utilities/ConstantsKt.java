@@ -24,7 +24,7 @@ public final class ConstantsKt {
     @org.jetbrains.annotations.NotNull()
     public static final java.lang.String API_SERVICE_RUN_URL = "https://api.iuoss.com/iCTSVUI/";
     @org.jetbrains.annotations.NotNull()
-    public static final java.lang.String API_UPLOAD_SERVICE_BASE_URL = "https://api.iuoss.com/UploadFileUI";
+    public static final java.lang.String API_UPLOAD_SERVICE_BASE_URL = "https://api.iuoss.com/UploadFileUI/";
     @org.jetbrains.annotations.NotNull()
     public static final java.lang.String API_MAP = "https://maps.vnpost.vn/addr-service/api/";
     @org.jetbrains.annotations.NotNull()

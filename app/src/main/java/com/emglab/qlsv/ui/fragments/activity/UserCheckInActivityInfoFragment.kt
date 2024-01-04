@@ -267,7 +267,7 @@ class UserCheckInActivityInfoFragment : FragmentLocationBase(), OnMapReadyCallba
     private fun showImage() {
         val userName = sharedPrefsHelper.get(SharedPrefsHelper.USER_CODE,"")
         val token = sharedPrefsHelper.get(SharedPrefsHelper.TOKEN,"")
-        binding.imgActivity.loadFromURL("${API_SERVICE_BASE_URL}UploadFile/CTSV/Download?UserName=${userName}&UserCode=${userName}&AId=${AId}&TokenCode=${token}")
+        binding.imgActivity.loadFromURL("${API_UPLOAD_SERVICE_BASE_URL}CTSV/Download?UserName=${userName}&UserCode=${userName}&AId=${AId}&TokenCode=${token}")
     }
 
     override fun locationUpdate(locationModel: LocationModel) {

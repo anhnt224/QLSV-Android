@@ -83,4 +83,9 @@
         <value>http://api.iuoss.com/</value>
     </entry>
 
+    <entry>
+        <key>semesters</key>
+        <value>2022-1,2022-2,2023-1</value>
+    </entry>
+
 </defaultsMap>

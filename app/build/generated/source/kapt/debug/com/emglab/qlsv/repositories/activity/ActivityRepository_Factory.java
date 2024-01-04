@@ -6,6 +6,7 @@ import com.emglab.qlsv.dao.CountStepsDAO;
 import com.emglab.qlsv.dao.CriteriaDAO;
 import com.emglab.qlsv.dao.UserCheckInActivityDAO;
 import com.emglab.qlsv.helper.SharedPrefsHelper;
+import com.emglab.qlsv.webservices.GiftWebService;
 import com.emglab.qlsv.webservices.WebService;
 import dagger.internal.Factory;
 import javax.annotation.processing.Generated;
@@ -30,6 +31,8 @@ public final class ActivityRepository_Factory implements Factory<ActivityReposit
 
   private final Provider<CountStepsDAO> countStepsDAOProvider;
 
+  private final Provider<GiftWebService> giftWebServiceProvider;
+
   public ActivityRepository_Factory(
       Provider<ActivityDAO> activityDAOProvider,
       Provider<CriteriaDAO> criteriaDAOProvider,
@@ -37,7 +40,8 @@ public final class ActivityRepository_Factory implements Factory<ActivityReposit
       Provider<WebService> webserviceProvider,
       Provider<AppExecutors> appExecutorsProvider,
       Provider<SharedPrefsHelper> sharedPrefsHelperProvider,
-      Provider<CountStepsDAO> countStepsDAOProvider) {
+      Provider<CountStepsDAO> countStepsDAOProvider,
+      Provider<GiftWebService> giftWebServiceProvider) {
     this.activityDAOProvider = activityDAOProvider;
     this.criteriaDAOProvider = criteriaDAOProvider;
     this.userCheckInActivityDAOProvider = userCheckInActivityDAOProvider;
@@ -45,6 +49,7 @@ public final class ActivityRepository_Factory implements Factory<ActivityReposit
     this.appExecutorsProvider = appExecutorsProvider;
     this.sharedPrefsHelperProvider = sharedPrefsHelperProvider;
     this.countStepsDAOProvider = countStepsDAOProvider;
+    this.giftWebServiceProvider = giftWebServiceProvider;
   }
 
   @Override
@@ -56,7 +61,8 @@ public final class ActivityRepository_Factory implements Factory<ActivityReposit
         webserviceProvider,
         appExecutorsProvider,
         sharedPrefsHelperProvider,
-        countStepsDAOProvider);
+        countStepsDAOProvider,
+        giftWebServiceProvider);
   }
 
   public static ActivityRepository provideInstance(
@@ -66,7 +72,8 @@ public final class ActivityRepository_Factory implements Factory<ActivityReposit
       Provider<WebService> webserviceProvider,
       Provider<AppExecutors> appExecutorsProvider,
       Provider<SharedPrefsHelper> sharedPrefsHelperProvider,
-      Provider<CountStepsDAO> countStepsDAOProvider) {
+      Provider<CountStepsDAO> countStepsDAOProvider,
+      Provider<GiftWebService> giftWebServiceProvider) {
     return new ActivityRepository(
         activityDAOProvider.get(),
         criteriaDAOProvider.get(),
@@ -74,7 +81,8 @@ public final class ActivityRepository_Factory implements Factory<ActivityReposit
         webserviceProvider.get(),
         appExecutorsProvider.get(),
         sharedPrefsHelperProvider.get(),
-        countStepsDAOProvider.get());
+        countStepsDAOProvider.get(),
+        giftWebServiceProvider.get());
   }
 
   public static ActivityRepository_Factory create(
@@ -84,7 +92,8 @@ public final class ActivityRepository_Factory implements Factory<ActivityReposit
       Provider<WebService> webserviceProvider,
       Provider<AppExecutors> appExecutorsProvider,
       Provider<SharedPrefsHelper> sharedPrefsHelperProvider,
-      Provider<CountStepsDAO> countStepsDAOProvider) {
+      Provider<CountStepsDAO> countStepsDAOProvider,
+      Provider<GiftWebService> giftWebServiceProvider) {
     return new ActivityRepository_Factory(
         activityDAOProvider,
         criteriaDAOProvider,
@@ -92,7 +101,8 @@ public final class ActivityRepository_Factory implements Factory<ActivityReposit
         webserviceProvider,
         appExecutorsProvider,
         sharedPrefsHelperProvider,
-        countStepsDAOProvider);
+        countStepsDAOProvider,
+        giftWebServiceProvider);
   }
 
   public static ActivityRepository newActivityRepository(
@@ -102,7 +112,8 @@ public final class ActivityRepository_Factory implements Factory<ActivityReposit
       WebService webservice,
       AppExecutors appExecutors,
       SharedPrefsHelper sharedPrefsHelper,
-      CountStepsDAO countStepsDAO) {
+      CountStepsDAO countStepsDAO,
+      GiftWebService giftWebService) {
     return new ActivityRepository(
         activityDAO,
         criteriaDAO,
@@ -110,6 +121,7 @@ public final class ActivityRepository_Factory implements Factory<ActivityReposit
         webservice,
         appExecutors,
         sharedPrefsHelper,
-        countStepsDAO);
+        countStepsDAO,
+        giftWebService);
   }
 }
